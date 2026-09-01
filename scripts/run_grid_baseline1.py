@@ -45,7 +45,7 @@ GRID_RESULTS_CSV = os.path.join(RESULTS_DIR, "grid_results.csv")
 DEPTHS = [1, 2, 3, 4, 5, 6, 7, 8]
 N_REPLICATES = 3
 MAX_ITERATIONS = 6
-N_PARALLEL_RUNS = 14
+N_PARALLEL_RUNS = int(os.environ.get("ASEM_GRID_WORKERS", "14"))
 
 _SEQ_CACHE: dict[str, str] = {}
 

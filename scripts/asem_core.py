@@ -19,7 +19,7 @@ from dataclasses import dataclass, field
 
 import numpy as np
 
-from common import LocalAlignment, placement_base_calls
+from common import LocalAlignment, placement_observations
 
 # Symbol -> row index into the (5, n) count array used by build_theta.
 # A numpy count array (not one Counter object per reference position) is
@@ -29,6 +29,8 @@ from common import LocalAlignment, placement_base_calls
 # a contiguous (5, n) int array is not).
 SYMBOLS = "ACGT-"
 SYMBOL_IDX = {s: i for i, s in enumerate(SYMBOLS)}
+BASES = SYMBOLS[:-1]
+BASE_IDX = {s: i for i, s in enumerate(BASES)}
 
 # AlignReadFn: (read, theta) -> accepted local alignments for that read
 # (already threshold-filtered by the caller; empty list means unplaced).
@@ -48,6 +50,26 @@ class AsemResult:
     theta: str
     history: list[IterationStats] = field(default_factory=list)
     theta_by_iteration: list[str] = field(default_factory=list)
+
+
+@dataclass
+class CombinedAlignmentCounts:
+    """Streaming counts for reference columns and between-column insertions."""
+
+    reference: np.ndarray
+    insertion_bases: dict[int, np.ndarray]
+    insertion_spans: np.ndarray
+
+    @classmethod
+    def empty(cls, reference_length: int) -> "CombinedAlignmentCounts":
+        return cls(
+            reference=np.zeros((len(SYMBOLS), reference_length), dtype=np.int64),
+            insertion_bases={},
+            insertion_spans=np.zeros(reference_length + 1, dtype=np.int64),
+        )
+
+    def reference_depths(self) -> np.ndarray:
+        return self.reference.sum(axis=0)
 
 
 def run_asem_em_loop(
@@ -72,7 +94,7 @@ def run_asem_em_loop(
         for it in range(1, max_iterations + 1):
             theta_prev = theta
             n = len(theta)
-            counts = np.zeros((len(SYMBOLS), n), dtype=np.int64)
+            counts = CombinedAlignmentCounts.empty(n)
             n_placed = 0
             n_unplaced = 0
 
@@ -110,27 +132,68 @@ def run_asem_em_loop(
     return AsemResult(theta=theta, history=history, theta_by_iteration=theta_by_iteration)
 
 
-def accumulate_alignment(counts: np.ndarray, aln: LocalAlignment, n: int) -> None:
-    """Add one alignment's base calls into the (5, n) position/symbol count
-    array in place. Calls outside A/C/G/T/- (e.g. an 'N' or IUPAC ambiguity
-    code -- the human rCRS reference NC_012920 itself contains one 'N') carry
-    no information about the true base and are skipped rather than counted."""
-    for pos, base in placement_base_calls(aln).items():
-        if 0 <= pos < n and base in SYMBOL_IDX:
-            counts[SYMBOL_IDX[base], pos] += 1
+def accumulate_alignment(
+    counts: CombinedAlignmentCounts, aln: LocalAlignment, n: int | None = None
+) -> None:
+    """Stream one gapped pairwise alignment into combined-alignment counts."""
+    reference_length = counts.reference.shape[1]
+    if n is not None and n != reference_length:
+        raise ValueError("count layout length does not match reference length")
+
+    calls, insertions, ref_end = placement_observations(aln)
+    for pos, base in calls.items():
+        if 0 <= pos < reference_length and base in SYMBOL_IDX:
+            counts.reference[SYMBOL_IDX[base], pos] += 1
+
+    first_internal_slot = max(aln.ref_start + 1, 1)
+    last_internal_slot = min(ref_end, reference_length)
+    if first_internal_slot < last_internal_slot:
+        counts.insertion_spans[first_internal_slot:last_internal_slot] += 1
+
+    for slot, sequence in insertions.items():
+        if not 0 <= slot <= reference_length:
+            continue
+        if slot == 0 or slot == reference_length:
+            counts.insertion_spans[slot] += 1
+        matrix = counts.insertion_bases.get(slot)
+        if matrix is None:
+            matrix = np.zeros((len(BASES), 0), dtype=np.int64)
+        if matrix.shape[1] < len(sequence):
+            matrix = np.pad(matrix, ((0, 0), (0, len(sequence) - matrix.shape[1])))
+            counts.insertion_bases[slot] = matrix
+        for offset, base in enumerate(sequence):
+            if base in BASE_IDX:
+                matrix[BASE_IDX[base], offset] += 1
 
 
-def build_theta(theta_prev: str, counts: np.ndarray, w: float) -> str:
+def build_theta(theta_prev: str, counts: CombinedAlignmentCounts, w: float) -> str:
     n = len(theta_prev)
-    depths = counts.sum(axis=0)
-    mean_depth = depths.mean() if n else 0.0
+    reference_depths = counts.reference_depths()
+    combined_depths = list(reference_depths)
+    for slot, matrix in counts.insertion_bases.items():
+        combined_depths.extend([counts.insertion_spans[slot]] * matrix.shape[1])
+    mean_depth = float(np.mean(combined_depths)) if combined_depths else 0.0
     min_support = w * mean_depth
-    well_supported = depths > min_support
 
-    winner_idx = counts.argmax(axis=0)
-    symbol_array = np.frombuffer(SYMBOLS.encode(), dtype="S1")
-    winner_symbols = symbol_array[winner_idx]
-    prior_symbols = np.frombuffer(theta_prev.encode(), dtype="S1")
+    output: list[str] = []
+    for slot in range(n + 1):
+        insertion_depth = int(counts.insertion_spans[slot])
+        insertion_matrix = counts.insertion_bases.get(slot)
+        if insertion_matrix is not None and insertion_depth > min_support:
+            for offset in range(insertion_matrix.shape[1]):
+                nucleotide_counts = insertion_matrix[:, offset]
+                gap_count = insertion_depth - int(nucleotide_counts.sum())
+                if 2 * gap_count <= insertion_depth:
+                    output.append(BASES[int(nucleotide_counts.argmax())])
 
-    final = np.where(well_supported, winner_symbols, prior_symbols)
-    return final[final != b"-"].tobytes().decode()
+        if slot == n:
+            continue
+        depth = int(reference_depths[slot])
+        if depth <= min_support:
+            output.append(theta_prev[slot])
+            continue
+        if 2 * int(counts.reference[SYMBOL_IDX["-"], slot]) > depth:
+            continue
+        output.append(BASES[int(counts.reference[: len(BASES), slot].argmax())])
+
+    return "".join(output)

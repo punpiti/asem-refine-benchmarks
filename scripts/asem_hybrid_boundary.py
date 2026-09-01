@@ -23,7 +23,7 @@ from dataclasses import dataclass, field
 
 import numpy as np
 
-from asem_core import SYMBOLS, accumulate_alignment, build_theta
+from asem_core import CombinedAlignmentCounts, accumulate_alignment, build_theta
 from asem_hybrid import anchor_contigs, assemble_overlap_contigs
 from common import LocalAlignment
 
@@ -126,7 +126,7 @@ def run_asem_boundary_hybrid_loop(
         for it in range(1, max_iterations + 1):
             theta_prev = theta
             n = len(theta)
-            counts = np.zeros((len(SYMBOLS), n), dtype=np.int64)
+            counts = CombinedAlignmentCounts.empty(n)
             n_placed = 0
             unplaced_reads: list[str] = []
             placed: list[tuple[str, list[LocalAlignment]]] = []
@@ -144,7 +144,7 @@ def run_asem_boundary_hybrid_loop(
                 else:
                     unplaced_reads.append(read)
 
-            gaps = uncovered_gaps(counts.sum(axis=0), min_anchor_len)
+            gaps = uncovered_gaps(counts.reference_depths(), min_anchor_len)
             boundary_reads = recruit_boundary_reads(placed, gaps, boundary_flank)
             if gaps:
                 contigs = assemble_overlap_contigs(

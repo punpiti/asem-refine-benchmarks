@@ -164,22 +164,32 @@ def align_local(read: str, reference: str) -> LocalAlignment | None:
     )
 
 
-def placement_base_calls(aln: LocalAlignment) -> dict[int, str]:
-    """Map an alignment's read bases onto absolute reference-column positions.
+def placement_observations(
+    aln: LocalAlignment,
+) -> tuple[dict[int, str], dict[int, str], int]:
+    """Return reference-column calls, insertion-slot sequences, and ref end.
 
-    Only positions where the reference has a base contribute a call: either
-    the read's base (a match/mismatch vote) or "-" (a deletion vote, when the
-    read has a gap at that reference column). Insertions in the read (extra
-    read bases not present in the reference) are dropped — the original
-    papers' "match-state-only" design does not let reads extend the
-    reference with new columns.
+    Insertion slot ``p`` is immediately before reference coordinate ``p``;
+    slot 0 precedes the reference and slot ``len(reference)`` follows it.
+    Consecutive read bases aligned to reference gaps are kept in their aligned
+    order so the structural update can construct combined-alignment columns.
     """
     calls: dict[int, str] = {}
+    insertions: dict[int, list[str]] = {}
     ref_pos = aln.ref_start
     for ref_ch, read_ch in zip(aln.ref_aligned, aln.read_aligned):
-        if ref_ch != "-":
-            calls[ref_pos] = read_ch  # read_ch may be "-" (deletion vote)
-            ref_pos += 1
+        if ref_ch == "-":
+            if read_ch != "-":
+                insertions.setdefault(ref_pos, []).append(read_ch)
+            continue
+        calls[ref_pos] = read_ch  # read_ch may be "-" (deletion vote)
+        ref_pos += 1
+    return calls, {slot: "".join(seq) for slot, seq in insertions.items()}, ref_pos
+
+
+def placement_base_calls(aln: LocalAlignment) -> dict[int, str]:
+    """Map an alignment's calls onto existing reference coordinates only."""
+    calls, _, _ = placement_observations(aln)
     return calls
 
 
