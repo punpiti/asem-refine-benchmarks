@@ -24,8 +24,10 @@ reproducibility):
   full-quadratic-space implementation took 30-90s and ~4GB RAM per pair for
   ~16-17kb mtDNA sequences, which is not affordable across the grid's
   thousands of evaluation calls. We use skbio's `pair_align_nucl(mode=
-  "global")` instead: same Needleman-Wunsch global-alignment algorithm,
-  ~10-30x faster in practice.
+  "global")` instead, retaining its default `free_ends=True`. This runs the
+  global dynamic-programming kernel with unpenalized terminal gaps (an overlap
+  or semi-global alignment), and was ~10-30x faster in practice. It is not a
+  strict end-to-end reproduction of EMBOSS `needle`.
 """
 
 from __future__ import annotations
@@ -194,8 +196,9 @@ def placement_base_calls(aln: LocalAlignment) -> dict[int, str]:
 
 
 def evaluate_theta_vs_target(theta: str, target: str) -> dict:
-    """Global-align the estimated Theta to the true target (Needleman-Wunsch,
-    via skbio -- see module docstring) and compute identity/recall/precision/
+    """Overlap-align the estimated Theta to the true target (scikit-bio global
+    mode with its default free ends; see module docstring) and compute
+    identity/recall/precision/
     F1 as defined in the original papers:
 
         c_theta = correctly assembled positions of Theta (matches)

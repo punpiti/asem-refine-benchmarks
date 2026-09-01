@@ -80,7 +80,7 @@ else:
 
 # Stop the clock and sample peak RSS right after the algorithm itself
 # returns, before any post-hoc scoring -- evaluate_theta_vs_target's
-# Needleman-Wunsch scoring pass is reporting overhead, not part of the
+# semi-global scoring pass is reporting overhead, not part of the
 # algorithm's own cost.
 wall_s = time.time() - t0
 peak_rss_kb = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss

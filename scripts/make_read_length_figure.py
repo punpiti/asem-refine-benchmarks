@@ -4,10 +4,10 @@ and (b) SRSC -- so each algorithm's own read-length behavior is legible on
 its own axis, instead of six overlapping lines competing in one panel.
 
 ASEM's two variants (ieee_access = no recursion, ojemb = with recursion)
-are pooled into one "ASEM" panel: F1 is identical between them at every
-point in this experiment (0/63 differ); identity_pct differs very slightly
-in 4/63 (up to 0.28pp), so pooling is safe for the F1 values plotted here
-specifically, not a general "byte-identical" claim about the two variants.
+are pooled into one "ASEM" panel. In the insertion-aware rerun, F1 differs
+in only 2/63 matched jobs (maximum 0.000071), and every pooled mean is
+unchanged at the four-decimal precision reported in the manuscript.
+Identity differs in 5/63 jobs (maximum 0.29 percentage points).
 """
 
 from __future__ import annotations
@@ -34,7 +34,7 @@ DIVERGENCE_COLOR = {"same-genus": "tab:green", "same-family": "tab:orange", "sam
 
 # (panel label, set of `baseline` values pooled into this panel).
 #
-# bmc/thai-sections/03d-read-length-displays.tex's figure caption and
+# bmc/english-sections/03d-read-length-displays.tex's figure caption and
 # Table 4 (tbl:read-length) currently describe a 2-panel (a)/(b) figure.
 # ASEM-Hybrid ("hybrid") is deliberately NOT in this list -- see main()'s
 # --include-hybrid guard below, which fails loudly instead of silently

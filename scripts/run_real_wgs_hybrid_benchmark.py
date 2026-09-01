@@ -55,7 +55,7 @@ DEPTHS = range(1, 9)
 N_REPLICATES = 3
 MAX_ITERATIONS = 6
 READ_LENGTH = 150
-N_PARALLEL_RUNS = 12
+N_PARALLEL_RUNS = int(os.environ.get("ASEM_REAL_WGS_WORKERS", "2"))
 TAU = 0.5
 
 def _extract_reads() -> list[str]:

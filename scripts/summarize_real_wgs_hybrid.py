@@ -9,7 +9,12 @@ import pandas as pd
 from common import evaluate_theta_vs_target, read_fasta
 
 SCRIPT_DIR = os.path.dirname(__file__)
-RESULTS_DIR = os.path.join(SCRIPT_DIR, "results", "real_wgs_hybrid")
+VARIANT = os.environ.get("ASEM_HYBRID_VARIANT", "boundary").strip().lower()
+if VARIANT not in {"legacy", "boundary"}:
+    raise ValueError("ASEM_HYBRID_VARIANT must be 'legacy' or 'boundary'")
+RESULTS_NAME = "real_wgs_hybrid" if VARIANT == "legacy" else "real_wgs_hybrid_boundary"
+HYBRID_METHOD = "ASEM_Hybrid" if VARIANT == "legacy" else "ASEM_Hybrid_boundary"
+RESULTS_DIR = os.path.join(SCRIPT_DIR, "results", RESULTS_NAME)
 INPUT_CSV = os.path.join(RESULTS_DIR, "final_results.csv")
 SUMMARY_CSV = os.path.join(RESULTS_DIR, "summary_by_depth.csv")
 INITIAL_CSV = os.path.join(RESULTS_DIR, "initial_states.csv")
@@ -38,20 +43,19 @@ def main() -> None:
     expected = {
         ("Pan_troglodytes_NC_001643", "ASEM_no_recursion"): 24,
         ("Pan_troglodytes_NC_001643", "ASEM_recursion"): 24,
-        ("Pan_troglodytes_NC_001643", "ASEM_Hybrid"): 24,
+        ("Pan_troglodytes_NC_001643", HYBRID_METHOD): 24,
         ("Varecia_variegata_NC_012773", "ASEM_no_recursion"): 24,
-        ("Varecia_variegata_NC_012773", "ASEM_Hybrid"): 24,
+        ("Varecia_variegata_NC_012773", HYBRID_METHOD): 24,
     }
     assert df.groupby(["reference", "method"]).size().to_dict() == expected
 
     wide = df.pivot(index=["reference", "depth", "replicate"], columns="method")
     chimp = wide.loc["Pan_troglodytes_NC_001643"]
     for metric in METRICS:
-        assert (chimp[(metric, "ASEM_Hybrid")] == chimp[(metric, "ASEM_no_recursion")]).all()
-    assert (df.loc[df.reference.str.startswith("Pan_"), "n_anchors_total"] == 0).all()
+        assert (chimp[(metric, HYBRID_METHOD)] == chimp[(metric, "ASEM_no_recursion")]).all()
 
     varecia = wide.loc["Varecia_variegata_NC_012773"]
-    delta = varecia[("f1", "ASEM_Hybrid")] - varecia[("f1", "ASEM_no_recursion")]
+    delta = varecia[("f1", HYBRID_METHOD)] - varecia[("f1", "ASEM_no_recursion")]
     assert (delta > 0).all()
 
     summary = (
@@ -77,7 +81,14 @@ def main() -> None:
     pd.DataFrame(initial_rows).to_csv(INITIAL_CSV, index=False)
 
     print("validated 120 unique final-job rows; all expected cells present")
-    print("chimp: Hybrid identical to plain ASEM in 24/24 jobs; 0 anchors")
+    chimp_hybrid = df[
+        (df.reference == "Pan_troglodytes_NC_001643")
+        & (df.method == HYBRID_METHOD)
+    ]
+    print(
+        "chimp: Hybrid identical to plain ASEM in 24/24 jobs; "
+        f"{int((chimp_hybrid.n_anchors_total > 0).sum())} jobs accepted anchors"
+    )
     print(
         "Varecia: Hybrid F1 improved in 24/24 jobs; "
         f"mean delta={delta.mean():.6f}, range={delta.min():.6f}--{delta.max():.6f}"

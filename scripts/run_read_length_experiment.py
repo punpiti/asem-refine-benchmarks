@@ -15,9 +15,10 @@ algorithm_sketch_iterative_refinement.md's "read length" row:
 Reduced scope vs. the main 30-pair grids (deliberately -- this is a
 diagnostic sweep, not a benchmark): 3 representative pairs (one per
 divergence level), depth fixed at 4X, 3 replicates, all three baselines.
-3 pairs x 7 length-conditions x 3 replicates x 4 baselines (ieee_access,
-ojemb, ecticon, hybrid -- hybrid added later than the other three, see
-git history) = 252 jobs,
+The reported experiment uses 3 pairs x 7 length-conditions x 3 replicates x
+3 baselines (ieee_access, ojemb, ecticon) = 189 jobs. The later legacy Hybrid
+variant remains selectable through ``READ_LENGTH_METHODS`` but is not run by
+default because it is not reported in the manuscript.
 each cheap (~1-10s based on the main grids' per-job rates).
 
 Output: scripts/refine_reference/results/read_length_experiment/results.csv
@@ -65,11 +66,11 @@ PAIRS = [
 DEPTH = 4.0  # held constant so the read-length effect isn't confounded with depth
 FIXED_LENGTHS = [50, 75, 100, 150, 250, 300]
 N_REPLICATES = 3
-N_PARALLEL_RUNS = 6  # deliberately modest: two other grids (NOVOPlasty, GetOrganelle) are already running
+N_PARALLEL_RUNS = int(os.environ.get("ASEM_READ_LENGTH_WORKERS", "2"))
 
 _HYBRID_ALIGN_FN = functools.partial(_align_read_ieee_access, tau=0.5)  # matches run_grid_baseline_hybrid.py's TAU
 
-BASELINES = {
+_ALL_BASELINES = {
     "ieee_access": lambda theta_init, reads: run_asem_ieee_access(theta_init, reads),
     "ojemb": lambda theta_init, reads: run_asem_ojemb(theta_init, reads),
     "ecticon": lambda theta_init, reads: run_ecticon(theta_init, reads),
@@ -77,6 +78,10 @@ BASELINES = {
         theta_init, reads, align_read_fn=_HYBRID_ALIGN_FN, boundary_flank=None, max_iterations=6, n_workers=1
     ),
 }
+_requested_methods = os.environ.get(
+    "READ_LENGTH_METHODS", "ieee_access,ojemb,ecticon"
+).split(",")
+BASELINES = {name: _ALL_BASELINES[name.strip()] for name in _requested_methods}
 
 _SEQ_CACHE: dict[str, str] = {}
 
