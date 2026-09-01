@@ -1,5 +1,7 @@
 # asem-refine-benchmarks
 
+Current frozen benchmark release: **v1.1.0**.
+
 Reproduction package for the benchmarks reported in the ASEM/ASEM-Hybrid
 BMC Bioinformatics paper: the 720-job Phase-1 simulation grid, the
 external-tool comparison, the read-length experiment, the computational-cost
@@ -11,6 +13,13 @@ which is a separately maintained, independent reimplementation meant for
 general use rather than as a frozen benchmark harness. Where the two
 differ, this repository is the one that generated the reported tables and
 figures.
+
+Version 1.1.0 contains the insertion-aware combined-alignment consensus used
+by the submission manuscript and the complete result CSVs regenerated with
+that implementation. Its consensus update removes a sufficiently supported
+column only under a strict gap majority; otherwise it selects the nucleotide
+plurality among A/C/G/T, and it can retain read-supported candidate insertion
+columns between reference positions.
 
 ## Layout
 
