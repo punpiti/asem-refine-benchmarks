@@ -771,7 +771,7 @@ micromamba run -n genome python scripts/make_report.py
 
 ## 12. สถานะ reproducibility ของ revision snapshot
 
-revision candidate `v1.2.0` รวม tie-safe consensus, full post-tie grids,
+revision snapshot `v1.2.0` รวม tie-safe consensus, full post-tie grids,
 MIA/Pilon wrappers และ raw results, parameter sensitivity, circular-boundary
 diagnostic, evaluator sanity check และ strand/origin-normalized external-tool
 evaluator แล้ว คำสั่ง Hybrid ระบุ `ASEM_HYBRID_VARIANT=boundary` และเอกสาร MIA

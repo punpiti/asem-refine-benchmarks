@@ -1,6 +1,6 @@
 # asem-refine-benchmarks
 
-Current revision benchmark candidate: **v1.2.0**.
+Current frozen benchmark release: **v1.2.0**.
 
 Reproduction package for the benchmarks reported in the ASEM/ASEM-Hybrid
 BMC Genomics paper: the 720-job Phase-1 simulation grid, the
