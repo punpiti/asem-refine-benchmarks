@@ -183,8 +183,14 @@ def build_theta(theta_prev: str, counts: CombinedAlignmentCounts, w: float) -> s
             for offset in range(insertion_matrix.shape[1]):
                 nucleotide_counts = insertion_matrix[:, offset]
                 gap_count = insertion_depth - int(nucleotide_counts.sum())
-                if 2 * gap_count <= insertion_depth:
-                    output.append(BASES[int(nucleotide_counts.argmax())])
+                max_count = int(nucleotide_counts.max())
+                winners = np.flatnonzero(nucleotide_counts == max_count)
+                # A tied insertion has neither a prior reference base nor
+                # enough evidence for one unambiguous nucleotide. Omitting it
+                # avoids the former lexicographic A/C/G/T bias while keeping
+                # the consensus deterministic.
+                if 2 * gap_count <= insertion_depth and len(winners) == 1:
+                    output.append(BASES[int(winners[0])])
 
         if slot == n:
             continue
@@ -194,6 +200,12 @@ def build_theta(theta_prev: str, counts: CombinedAlignmentCounts, w: float) -> s
             continue
         if 2 * int(counts.reference[SYMBOL_IDX["-"], slot]) > depth:
             continue
-        output.append(BASES[int(counts.reference[: len(BASES), slot].argmax())])
+        nucleotide_counts = counts.reference[: len(BASES), slot]
+        max_count = int(nucleotide_counts.max())
+        winners = np.flatnonzero(nucleotide_counts == max_count)
+        previous_base = theta_prev[slot]
+        # A unique plurality updates the column. Any nucleotide tie retains
+        # the prior reference base, avoiding an arbitrary alphabetic choice.
+        output.append(BASES[int(winners[0])] if len(winners) == 1 else previous_base)
 
     return "".join(output)

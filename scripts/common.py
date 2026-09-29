@@ -41,6 +41,7 @@ from skbio.alignment import pair_align_nucl
 from skbio.sequence import DNA
 
 _SW_MATRIX = parasail.matrix_create("ACGT", 2, -3)  # match=2, mismatch=-3: same defaults as before
+_CIRCULAR_ANCHOR_MATRIX = parasail.matrix_create("ACGTN", 2, -3)
 _SW_GAP_OPEN = 5
 _SW_GAP_EXTEND = 2
 
@@ -59,6 +60,14 @@ def read_fasta(path: str) -> tuple[str, str]:
     if header is None:
         raise ValueError(f"no FASTA record found in {path}")
     return header, "".join(parts).upper()
+
+
+def write_fasta(path: str, header: str, sequence: str) -> None:
+    """Write one FASTA record with deterministic 80-base wrapping."""
+    with open(path, "w") as handle:
+        handle.write(f">{header}\n")
+        for start in range(0, len(sequence), 80):
+            handle.write(sequence[start : start + 80] + "\n")
 
 
 def stable_seed(*parts: object) -> int:
@@ -195,21 +204,8 @@ def placement_base_calls(aln: LocalAlignment) -> dict[int, str]:
     return calls
 
 
-def evaluate_theta_vs_target(theta: str, target: str) -> dict:
-    """Overlap-align the estimated Theta to the true target (scikit-bio global
-    mode with its default free ends; see module docstring) and compute
-    identity/recall/precision/
-    F1 as defined in the original papers:
-
-        c_theta = correctly assembled positions of Theta (matches)
-        w_theta = incorrectly assembled positions of Theta (mismatches)
-        u_t     = unassembled positions of target (gaps in Theta's alignment,
-                  i.e. target bases Theta failed to reproduce)
-        recall    = c_theta / (c_theta + u_t)
-        precision = c_theta / (c_theta + w_theta)
-        F1        = harmonic mean of precision and recall
-        identity  = percent identical positions over the aligned length
-    """
+def _evaluate_linear_theta_vs_target(theta: str, target: str) -> dict:
+    """Evaluate one fixed orientation and linear origin."""
     result = pair_align_nucl(DNA(theta), DNA(target), mode="global")
     path = result.paths[0]
     aligned_theta, aligned_target = path.to_aligned([DNA(theta), DNA(target)])
@@ -219,9 +215,9 @@ def evaluate_theta_vs_target(theta: str, target: str) -> dict:
     for a_ch, b_ch in zip(aligned_theta, aligned_target):
         aligned_len += 1
         if a_ch == "-":
-            u_t += 1  # Theta has nothing where target has a base
+            u_t += 1
         elif b_ch == "-":
-            pass  # Theta has an extra base target does not have; not scored per paper's definitions
+            pass
         elif a_ch == b_ch:
             c_theta += 1
             identical += 1
@@ -241,3 +237,88 @@ def evaluate_theta_vs_target(theta: str, target: str) -> dict:
         "w_theta": w_theta,
         "u_t": u_t,
     }
+
+
+def _anchor_transform(theta: str, reference: str) -> tuple[int, int]:
+    """Return the inferred theta-to-reference offset and alignment score.
+
+    Subtracting the aligned theta start accounts for incomplete or noisy
+    leading sequence.  The 32-bit kernel avoids score saturation for complete
+    mitochondrial genomes.
+    """
+    if not theta or not reference or set(theta + reference) - set("ACGTN"):
+        return 0, 0
+    result = parasail.sw_trace_striped_32(
+        theta,
+        reference,
+        _SW_GAP_OPEN,
+        _SW_GAP_EXTEND,
+        _CIRCULAR_ANCHOR_MATRIX,
+    )
+    if result.score <= 0:
+        return 0, 0
+    traceback = result.get_traceback("-")
+    ref_length = len(traceback.ref) - traceback.ref.count("-")
+    theta_length = len(traceback.query) - traceback.query.count("-")
+    ref_start = result.end_ref - ref_length + 1
+    theta_start = result.end_query - theta_length + 1
+    return ref_start - theta_start, int(result.score)
+
+
+def _rotation_offset_and_score(theta: str, target: str) -> tuple[int, int]:
+    """Infer the circular target origin corresponding to theta coordinate 0."""
+    offset, score = _anchor_transform(theta, target + target)
+    return offset % len(target) if target else 0, score
+
+
+def evaluate_theta_vs_target(
+    theta: str,
+    target: str,
+    *,
+    normalize_strand: bool = False,
+    normalize_circular_origin: bool = False,
+) -> dict:
+    """Align estimated Theta to the target and compute the published metrics.
+
+    The default preserves the historical fixed-orientation, fixed-origin
+    evaluator.  External organelle assemblers must set both normalization
+    flags because a biologically equivalent circular assembly may be emitted
+    on either strand and from any circular origin. Candidate transforms are
+    chosen by local-alignment score before reporting metrics are calculated;
+    the metric definitions remain unchanged.
+
+    Metrics follow the original papers:
+
+        c_theta = correctly assembled positions of Theta (matches)
+        w_theta = incorrectly assembled positions of Theta (mismatches)
+        u_t     = unassembled positions of target (gaps in Theta's alignment,
+                  i.e. target bases Theta failed to reproduce)
+        recall    = c_theta / (c_theta + u_t)
+        precision = c_theta / (c_theta + w_theta)
+        F1        = harmonic mean of precision and recall
+        identity  = percent identical positions over the aligned length
+    """
+    if not theta or not target:
+        return _evaluate_linear_theta_vs_target(theta, target)
+
+    orientations = [theta]
+    if normalize_strand:
+        reverse = str(DNA(theta).reverse_complement())
+        if reverse != theta:
+            orientations.append(reverse)
+
+    candidates = []
+    for oriented_theta in orientations:
+        if normalize_circular_origin:
+            offset, transform_score = _rotation_offset_and_score(oriented_theta, target)
+        elif normalize_strand:
+            _, transform_score = _anchor_transform(oriented_theta, target)
+            offset = 0
+        else:
+            transform_score = 0
+            offset = 0
+        rotated_target = target[offset:] + target[:offset]
+        metrics = _evaluate_linear_theta_vs_target(oriented_theta, rotated_target)
+        candidates.append((transform_score, metrics))
+
+    return max(candidates, key=lambda candidate: candidate[0])[1]

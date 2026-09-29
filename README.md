@@ -1,11 +1,12 @@
 # asem-refine-benchmarks
 
-Current frozen benchmark release: **v1.1.0**.
+Current revision benchmark candidate: **v1.2.0**.
 
 Reproduction package for the benchmarks reported in the ASEM/ASEM-Hybrid
-BMC Bioinformatics paper: the 720-job Phase-1 simulation grid, the
+BMC Genomics paper: the 720-job Phase-1 simulation grid, the
 external-tool comparison, the read-length experiment, the computational-cost
-profiling, and the real-WGS (NA07000) validation.
+profiling, parameter and circular-boundary diagnostics, MIA/Pilon comparisons,
+and the real-WGS (NA07000) validation.
 
 This is the exact research code and raw results that produced the numbers
 in the paper -- not the `asem-refine` package (https://github.com/punpiti/asem-refine),
@@ -14,12 +15,13 @@ general use rather than as a frozen benchmark harness. Where the two
 differ, this repository is the one that generated the reported tables and
 figures.
 
-Version 1.1.0 contains the insertion-aware combined-alignment consensus used
-by the submission manuscript and the complete result CSVs regenerated with
-that implementation. Its consensus update removes a sufficiently supported
-column only under a strict gap majority; otherwise it selects the nucleotide
-plurality among A/C/G/T, and it can retain read-supported candidate insertion
-columns between reference positions.
+Version 1.2.0 contains the insertion-aware combined-alignment consensus used
+by the revision manuscript and complete result CSVs regenerated with that
+implementation. Its consensus update removes a sufficiently supported column
+only under a strict gap majority. A unique nucleotide plurality is called;
+tied current-reference columns retain their previous base, while tied candidate
+insertions are omitted. Read-supported candidate insertion columns can be
+retained between reference positions.
 
 ## Layout
 
@@ -79,9 +81,18 @@ example:
 
 ```bash
 cd scripts
-python3 run_grid_baseline1.py   # non-recursive + recursive ASEM, full 720-job grid
+python3 run_grid_baseline1.py   # non-recursive ASEM, full 720-job grid
+python3 run_grid_baseline2.py   # recursive ASEM, full 720-job grid
 python3 run_grid_baseline3.py   # SRSC, same grid
-python3 run_grid_baseline_hybrid.py   # ASEM-Hybrid (boundary-recruited), same grid
+ASEM_HYBRID_VARIANT=boundary python3 run_grid_baseline_hybrid.py
+```
+
+The complete tie-rule verification can be resumed with one command from the
+repository root:
+
+```bash
+bash scripts/run_post_tie_rule_grids.sh
+bash scripts/check_post_tie_rule_status.sh
 ```
 
 External-tool comparators (`run_grid_ext_novoplasty.py`,

@@ -1,0 +1,4 @@
+reference,target,divergence,depth,replicate,free_f1,strict_f1,delta_f1_strict_minus_free,free_identity_pct,strict_identity_pct,delta_identity_pp_strict_minus_free
+Saimiri_boliviensis,Saimiri_sciureus,same-genus,4,0,1.0,1.0,0.0,100.0,100.0,0.0
+Gorilla_gorilla,Homo_sapiens,same-family,4,0,0.9775693437413224,0.9775693437413224,0.0,92.84416573873293,92.84416573873293,0.0
+Varecia_variegata,Homo_sapiens,same-order,4,0,0.9196009389671362,0.9220610240062456,0.0024600850391093276,79.92179530771847,80.47354076765842,0.5517454599399514

@@ -1,0 +1,28 @@
+reference,target,divergence,depth,replicate,n_reads,theta_len,n_ambiguous,runtime_s,error,identity_pct,recall,precision,f1,c_theta,w_theta,u_t
+Homo_sapiens,Gorilla_gorilla,same-family,1,1,110,16575,5952,30.924399852752686,,61.10170975083153,0.9490619051935104,0.6626376408049613,0.7803987329979504,10471,5331,562
+Homo_sapiens,Gorilla_gorilla,same-family,1,2,110,16565,5651,31.354822874069214,,62.41196670740935,0.9456742217126731,0.6809118618237237,0.7917451175840808,10723,5025,616
+Homo_sapiens,Gorilla_gorilla,same-family,1,0,110,16560,6149,32.11192607879639,,60.0258049381268,0.9542233824352042,0.6448056448056448,0.76957780367683,10235,5638,491
+Homo_sapiens,Gorilla_gorilla,same-family,2,1,219,16570,2977,79.60010814666748,,78.16893158388004,0.9637466599263378,0.8413188752994578,0.8983809619980476,13345,2517,502
+Homo_sapiens,Gorilla_gorilla,same-family,2,2,219,16570,2817,81.2807068824768,,78.76600698486612,0.9568660726912742,0.8589564555033642,0.9052716082419052,13532,2222,610
+Homo_sapiens,Gorilla_gorilla,same-family,2,0,219,16570,3515,83.55416011810303,,76.02049729226111,0.9558500512520135,0.8283103863968022,0.8875216696692614,13055,2706,603
+Homo_sapiens,Gorilla_gorilla,same-family,3,0,328,16531,1262,202.78269267082214,,87.62234073726778,0.9656397339016987,0.9443532086912582,0.9548778540635477,14951,881,532
+Homo_sapiens,Gorilla_gorilla,same-family,3,1,328,16540,1239,203.19836902618408,,87.64505919587387,0.9662703540966658,0.9439464714051257,0.9549779679417587,14954,888,522
+Homo_sapiens,Gorilla_gorilla,same-family,3,2,328,0,0,300.2142493724823,timed out after 300s,nan,nan,nan,nan,0,0,0
+Homo_sapiens,Gorilla_gorilla,same-family,4,0,437,0,0,300.1955609321594,timed out after 300s,nan,nan,nan,nan,0,0,0
+Homo_sapiens,Gorilla_gorilla,same-family,4,1,437,0,0,300.1795754432678,timed out after 300s,nan,nan,nan,nan,0,0,0
+Homo_sapiens,Gorilla_gorilla,same-family,4,2,437,0,0,300.22688031196594,timed out after 300s,nan,nan,nan,nan,0,0,0
+Homo_sapiens,Gorilla_gorilla,same-family,5,0,546,0,0,300.1836965084076,timed out after 300s,nan,nan,nan,nan,0,0,0
+Homo_sapiens,Gorilla_gorilla,same-family,5,1,546,0,0,300.2947380542755,timed out after 300s,nan,nan,nan,nan,0,0,0
+Homo_sapiens,Gorilla_gorilla,same-family,5,2,546,0,0,300.18201899528503,timed out after 300s,nan,nan,nan,nan,0,0,0
+Homo_sapiens,Gorilla_gorilla,same-family,6,0,655,0,0,300.2578909397125,timed out after 300s,nan,nan,nan,nan,0,0,0
+Homo_sapiens,Gorilla_gorilla,same-family,6,1,655,0,0,300.20484137535095,timed out after 300s,nan,nan,nan,nan,0,0,0
+Homo_sapiens,Gorilla_gorilla,same-family,6,2,655,0,0,300.1675012111664,timed out after 300s,nan,nan,nan,nan,0,0,0
+Homo_sapiens,Gorilla_gorilla,same-family,7,0,764,0,0,300.17592215538025,timed out after 300s,nan,nan,nan,nan,0,0,0
+Homo_sapiens,Gorilla_gorilla,same-family,7,1,764,0,0,300.2551312446594,timed out after 300s,nan,nan,nan,nan,0,0,0
+Homo_sapiens,Gorilla_gorilla,same-family,7,2,764,0,0,300.18159580230713,timed out after 300s,nan,nan,nan,nan,0,0,0
+Homo_sapiens,Gorilla_gorilla,same-family,8,0,873,0,0,300.1929452419281,timed out after 300s,nan,nan,nan,nan,0,0,0
+Homo_sapiens,Saimiri_boliviensis,same-order,1,1,110,16584,11120,113.26398205757141,,0.0,0.0,0.0,0.0,0,0,16471
+Homo_sapiens,Saimiri_boliviensis,same-order,1,2,110,16581,11490,118.99494218826294,,0.0,0.0,0.0,0.0,0,0,16471
+Homo_sapiens,Saimiri_boliviensis,same-order,1,0,110,16595,11003,119.7101719379425,,0.0,0.0,0.0,0.0,0,0,16471
+Homo_sapiens,Gorilla_gorilla,same-family,8,1,873,0,0,300.16618299484253,timed out after 300s,nan,nan,nan,nan,0,0,0
+Homo_sapiens,Gorilla_gorilla,same-family,8,2,873,0,0,300.21339893341064,timed out after 300s,nan,nan,nan,nan,0,0,0

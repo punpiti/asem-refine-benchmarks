@@ -53,7 +53,19 @@ class IndelConsensusTests(unittest.TestCase):
             aln("ACGT", "ACCT"),
             aln("ACGT", "ACTT"),
         ]
-        self.assertEqual(consensus("ACGT", alignments), "ACAT")
+        self.assertEqual(consensus("ACGT", alignments), "ACGT")
+
+
+    def test_tied_reference_column_retains_previous_base(self) -> None:
+        self.assertEqual(
+            consensus("C", [aln("C", "A"), aln("C", "T")]),
+            "C",
+        )
+
+    def test_tied_candidate_insertion_is_omitted(self) -> None:
+        insert_a = aln("A-C", "AAC")
+        insert_t = aln("A-C", "ATC")
+        self.assertEqual(consensus("AC", [insert_a, insert_t]), "AC")
 
 
 if __name__ == "__main__":

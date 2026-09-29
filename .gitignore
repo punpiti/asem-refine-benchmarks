@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 *.egg-info/
 .DS_Store
+scripts/results/ext_mia_representative/grid_results.concurrent_invalid.csv
+scripts/results/ext_pilon_representative/grid_results.launcher_invalid.csv

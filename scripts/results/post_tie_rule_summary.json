@@ -1,0 +1,730 @@
+{
+  "baseline1": {
+    "changed_final_jobs": 26,
+    "changed_jobs": [
+      {
+        "depth": 3,
+        "f1": 7.078280846184448e-05,
+        "identity_pct": 0.006886744499524866,
+        "precision": 0.00017577042909877605,
+        "recall": -5.844471500648929e-05,
+        "reference": "Aotus_azarai",
+        "replicate": 0,
+        "target": "Varecia_variegata"
+      },
+      {
+        "depth": 3,
+        "f1": -3.417421929485798e-05,
+        "identity_pct": -0.0059944850737281286,
+        "precision": -6.159152500617715e-05,
+        "recall": -1.4387062216014712e-06,
+        "reference": "Gorilla_gorilla",
+        "replicate": 2,
+        "target": "Aotus_azarai"
+      },
+      {
+        "depth": 7,
+        "f1": -0.0010093282577995355,
+        "identity_pct": -0.18072289156626198,
+        "precision": -0.0018494544109488587,
+        "recall": -3.302441924624144e-05,
+        "reference": "Gorilla_gorilla",
+        "replicate": 0,
+        "target": "Saimiri_boliviensis"
+      },
+      {
+        "depth": 5,
+        "f1": -3.4310571184636984e-05,
+        "identity_pct": -0.006013229104027573,
+        "precision": -6.169412055034851e-05,
+        "recall": -1.2131832086703653e-06,
+        "reference": "Gorilla_gorilla",
+        "replicate": 2,
+        "target": "Saimiri_sciureus"
+      },
+      {
+        "depth": 2,
+        "f1": 0.0,
+        "identity_pct": -0.009139150405360397,
+        "precision": 0.0,
+        "recall": 0.0,
+        "reference": "Homo_sapiens",
+        "replicate": 2,
+        "target": "Aotus_azarai"
+      },
+      {
+        "depth": 3,
+        "f1": 0.0,
+        "identity_pct": -0.00937683840041359,
+        "precision": 0.0,
+        "recall": 0.0,
+        "reference": "Homo_sapiens",
+        "replicate": 0,
+        "target": "Saimiri_boliviensis"
+      },
+      {
+        "depth": 1,
+        "f1": 3.811189472302523e-05,
+        "identity_pct": 0.00581293960355822,
+        "precision": 6.31034265160535e-05,
+        "recall": 3.412215557552223e-06,
+        "reference": "Homo_sapiens",
+        "replicate": 2,
+        "target": "Saimiri_sciureus"
+      },
+      {
+        "depth": 5,
+        "f1": -3.438820692325262e-05,
+        "identity_pct": -0.0058298839853137,
+        "precision": -6.296039790965047e-05,
+        "recall": -2.6021489875072135e-06,
+        "reference": "Homo_sapiens",
+        "replicate": 2,
+        "target": "Saimiri_sciureus"
+      },
+      {
+        "depth": 7,
+        "f1": 3.400919749163567e-05,
+        "identity_pct": 0.0058305638155218276,
+        "precision": 6.296039790976149e-05,
+        "recall": 2.543753791939274e-06,
+        "reference": "Homo_sapiens",
+        "replicate": 0,
+        "target": "Saimiri_sciureus"
+      },
+      {
+        "depth": 6,
+        "f1": -3.3600508089537406e-05,
+        "identity_pct": -0.006021557174690884,
+        "precision": -6.16029076572211e-05,
+        "recall": -5.840508152665791e-07,
+        "reference": "Saimiri_boliviensis",
+        "replicate": 2,
+        "target": "Gorilla_gorilla"
+      },
+      {
+        "depth": 4,
+        "f1": -0.00010270832537173646,
+        "identity_pct": -0.017485574401121085,
+        "precision": -0.00018869111264852023,
+        "recall": -8.685501090899272e-06,
+        "reference": "Saimiri_boliviensis",
+        "replicate": 0,
+        "target": "Homo_sapiens"
+      },
+      {
+        "depth": 3,
+        "f1": 7.213698449792805e-05,
+        "identity_pct": -0.002258149367790452,
+        "precision": 0.00022674330892702432,
+        "recall": -0.00012512310157120066,
+        "reference": "Saimiri_boliviensis",
+        "replicate": 1,
+        "target": "Varecia_variegata"
+      },
+      {
+        "depth": 4,
+        "f1": -3.596874127476113e-05,
+        "identity_pct": -0.005811588307082616,
+        "precision": -6.149305128522187e-05,
+        "recall": -3.3661190456113488e-06,
+        "reference": "Saimiri_boliviensis",
+        "replicate": 1,
+        "target": "Varecia_variegata"
+      },
+      {
+        "depth": 6,
+        "f1": -3.359620205733993e-05,
+        "identity_pct": -0.006019020103536832,
+        "precision": -6.162568558576442e-05,
+        "recall": -6.101492130428099e-07,
+        "reference": "Saimiri_sciureus",
+        "replicate": 2,
+        "target": "Gorilla_gorilla"
+      },
+      {
+        "depth": 4,
+        "f1": -0.00010265552497401575,
+        "identity_pct": -0.01747844325331016,
+        "precision": -0.00018877422602570082,
+        "recall": -8.75896339314064e-06,
+        "reference": "Saimiri_sciureus",
+        "replicate": 0,
+        "target": "Homo_sapiens"
+      },
+      {
+        "depth": 3,
+        "f1": 7.29672700020556e-05,
+        "identity_pct": -0.00205902167108718,
+        "precision": 0.00022596463660651267,
+        "recall": -0.00012574762643990933,
+        "reference": "Saimiri_sciureus",
+        "replicate": 1,
+        "target": "Varecia_variegata"
+      },
+      {
+        "depth": 4,
+        "f1": -3.619465211246453e-05,
+        "identity_pct": -0.005803830528151366,
+        "precision": -6.158393890864922e-05,
+        "recall": -3.515983603374906e-06,
+        "reference": "Saimiri_sciureus",
+        "replicate": 1,
+        "target": "Varecia_variegata"
+      },
+      {
+        "depth": 5,
+        "f1": -3.512088410206893e-05,
+        "identity_pct": -0.005840098113651493,
+        "precision": -6.185822095750027e-05,
+        "recall": -9.601212197507536e-07,
+        "reference": "Varecia_variegata",
+        "replicate": 0,
+        "target": "Gorilla_gorilla"
+      },
+      {
+        "depth": 6,
+        "f1": -3.444509486827396e-05,
+        "identity_pct": -0.005845560296961594,
+        "precision": -6.177033788379305e-05,
+        "recall": -8.17001626463032e-07,
+        "reference": "Varecia_variegata",
+        "replicate": 2,
+        "target": "Gorilla_gorilla"
+      },
+      {
+        "depth": 7,
+        "f1": 6.81915502019903e-05,
+        "identity_pct": 0.011700011700014556,
+        "precision": 0.00012356357345855162,
+        "recall": 1.6261528127392566e-06,
+        "reference": "Varecia_variegata",
+        "replicate": 0,
+        "target": "Gorilla_gorilla"
+      },
+      {
+        "depth": 7,
+        "f1": -3.447864310479609e-05,
+        "identity_pct": -0.005853087503666643,
+        "precision": -6.17512659010222e-05,
+        "recall": -7.958323103851583e-07,
+        "reference": "Varecia_variegata",
+        "replicate": 1,
+        "target": "Gorilla_gorilla"
+      },
+      {
+        "depth": 8,
+        "f1": -3.412632984012287e-05,
+        "identity_pct": -0.005677624481918997,
+        "precision": -6.30238860528376e-05,
+        "recall": -3.001003797242774e-06,
+        "reference": "Varecia_variegata",
+        "replicate": 2,
+        "target": "Homo_sapiens"
+      },
+      {
+        "depth": 7,
+        "f1": 0.0,
+        "identity_pct": 0.039629554962743896,
+        "precision": 0.0,
+        "recall": 0.0,
+        "reference": "Varecia_variegata",
+        "replicate": 1,
+        "target": "Saimiri_boliviensis"
+      },
+      {
+        "depth": 5,
+        "f1": 0.0013702902064688383,
+        "identity_pct": 0.2655517626191255,
+        "precision": 0.0024028094387283927,
+        "recall": 4.575721189570281e-05,
+        "reference": "Varecia_variegata",
+        "replicate": 2,
+        "target": "Saimiri_sciureus"
+      },
+      {
+        "depth": 7,
+        "f1": -0.0010179527969467195,
+        "identity_pct": -0.18993747972064057,
+        "precision": -0.0016794352566863457,
+        "recall": -0.0002285521834782811,
+        "reference": "Varecia_variegata",
+        "replicate": 2,
+        "target": "Saimiri_sciureus"
+      },
+      {
+        "depth": 8,
+        "f1": 0.00010169406254267876,
+        "identity_pct": 0.017495771855138287,
+        "precision": 0.00018459266551806852,
+        "recall": 2.9900238527336143e-06,
+        "reference": "Varecia_variegata",
+        "replicate": 2,
+        "target": "Saimiri_sciureus"
+      }
+    ],
+    "iterations": {
+      "1": 720,
+      "2": 720,
+      "3": 666,
+      "4": 648,
+      "5": 543,
+      "6": 474
+    },
+    "jobs": 720,
+    "max_abs_delta_f1": 0.0013702902064688383,
+    "mean_delta_f1_changed_jobs": -3.0187114752081664e-05,
+    "rows": 3771
+  },
+  "baseline2": {
+    "changed_final_jobs": 27,
+    "changed_jobs": [
+      {
+        "depth": 3,
+        "f1": 7.078280846184448e-05,
+        "identity_pct": 0.006886744499524866,
+        "precision": 0.00017577042909877605,
+        "recall": -5.844471500648929e-05,
+        "reference": "Aotus_azarai",
+        "replicate": 0,
+        "target": "Varecia_variegata"
+      },
+      {
+        "depth": 3,
+        "f1": -3.417421929485798e-05,
+        "identity_pct": -0.0059944850737281286,
+        "precision": -6.159152500617715e-05,
+        "recall": -1.4387062216014712e-06,
+        "reference": "Gorilla_gorilla",
+        "replicate": 2,
+        "target": "Aotus_azarai"
+      },
+      {
+        "depth": 7,
+        "f1": -0.0010093282577995355,
+        "identity_pct": -0.18072289156626198,
+        "precision": -0.0018494544109488587,
+        "recall": -3.302441924624144e-05,
+        "reference": "Gorilla_gorilla",
+        "replicate": 0,
+        "target": "Saimiri_boliviensis"
+      },
+      {
+        "depth": 5,
+        "f1": -3.4310571184636984e-05,
+        "identity_pct": -0.006013229104027573,
+        "precision": -6.169412055034851e-05,
+        "recall": -1.2131832086703653e-06,
+        "reference": "Gorilla_gorilla",
+        "replicate": 2,
+        "target": "Saimiri_sciureus"
+      },
+      {
+        "depth": 2,
+        "f1": 3.692425094492524e-05,
+        "identity_pct": 0.005811588307082616,
+        "precision": 6.199243692273093e-05,
+        "recall": 4.1462975656214596e-06,
+        "reference": "Gorilla_gorilla",
+        "replicate": 0,
+        "target": "Varecia_variegata"
+      },
+      {
+        "depth": 2,
+        "f1": 0.0,
+        "identity_pct": -0.009139150405360397,
+        "precision": 0.0,
+        "recall": 0.0,
+        "reference": "Homo_sapiens",
+        "replicate": 2,
+        "target": "Aotus_azarai"
+      },
+      {
+        "depth": 3,
+        "f1": 0.0,
+        "identity_pct": -0.00937683840041359,
+        "precision": 0.0,
+        "recall": 0.0,
+        "reference": "Homo_sapiens",
+        "replicate": 0,
+        "target": "Saimiri_boliviensis"
+      },
+      {
+        "depth": 1,
+        "f1": 3.811189472302523e-05,
+        "identity_pct": 0.00581293960355822,
+        "precision": 6.31034265160535e-05,
+        "recall": 3.412215557552223e-06,
+        "reference": "Homo_sapiens",
+        "replicate": 2,
+        "target": "Saimiri_sciureus"
+      },
+      {
+        "depth": 5,
+        "f1": -3.438820692325262e-05,
+        "identity_pct": -0.0058298839853137,
+        "precision": -6.296039790965047e-05,
+        "recall": -2.6021489875072135e-06,
+        "reference": "Homo_sapiens",
+        "replicate": 2,
+        "target": "Saimiri_sciureus"
+      },
+      {
+        "depth": 7,
+        "f1": 3.400919749163567e-05,
+        "identity_pct": 0.0058305638155218276,
+        "precision": 6.296039790976149e-05,
+        "recall": 2.543753791939274e-06,
+        "reference": "Homo_sapiens",
+        "replicate": 0,
+        "target": "Saimiri_sciureus"
+      },
+      {
+        "depth": 6,
+        "f1": -3.3600508089537406e-05,
+        "identity_pct": -0.006021557174690884,
+        "precision": -6.16029076572211e-05,
+        "recall": -5.840508152665791e-07,
+        "reference": "Saimiri_boliviensis",
+        "replicate": 2,
+        "target": "Gorilla_gorilla"
+      },
+      {
+        "depth": 4,
+        "f1": -0.00010270832537173646,
+        "identity_pct": -0.017485574401121085,
+        "precision": -0.00018869111264852023,
+        "recall": -8.685501090899272e-06,
+        "reference": "Saimiri_boliviensis",
+        "replicate": 0,
+        "target": "Homo_sapiens"
+      },
+      {
+        "depth": 3,
+        "f1": 7.213698449792805e-05,
+        "identity_pct": -0.002258149367790452,
+        "precision": 0.00022674330892702432,
+        "recall": -0.00012512310157120066,
+        "reference": "Saimiri_boliviensis",
+        "replicate": 1,
+        "target": "Varecia_variegata"
+      },
+      {
+        "depth": 4,
+        "f1": -3.596874127476113e-05,
+        "identity_pct": -0.005811588307082616,
+        "precision": -6.149305128522187e-05,
+        "recall": -3.3661190456113488e-06,
+        "reference": "Saimiri_boliviensis",
+        "replicate": 1,
+        "target": "Varecia_variegata"
+      },
+      {
+        "depth": 6,
+        "f1": -3.359620205733993e-05,
+        "identity_pct": -0.006019020103536832,
+        "precision": -6.162568558576442e-05,
+        "recall": -6.101492130428099e-07,
+        "reference": "Saimiri_sciureus",
+        "replicate": 2,
+        "target": "Gorilla_gorilla"
+      },
+      {
+        "depth": 4,
+        "f1": -0.00010265552497401575,
+        "identity_pct": -0.01747844325331016,
+        "precision": -0.00018877422602570082,
+        "recall": -8.75896339314064e-06,
+        "reference": "Saimiri_sciureus",
+        "replicate": 0,
+        "target": "Homo_sapiens"
+      },
+      {
+        "depth": 3,
+        "f1": 7.29672700020556e-05,
+        "identity_pct": -0.00205902167108718,
+        "precision": 0.00022596463660651267,
+        "recall": -0.00012574762643990933,
+        "reference": "Saimiri_sciureus",
+        "replicate": 1,
+        "target": "Varecia_variegata"
+      },
+      {
+        "depth": 4,
+        "f1": -3.619465211246453e-05,
+        "identity_pct": -0.005803830528151366,
+        "precision": -6.158393890864922e-05,
+        "recall": -3.515983603374906e-06,
+        "reference": "Saimiri_sciureus",
+        "replicate": 1,
+        "target": "Varecia_variegata"
+      },
+      {
+        "depth": 5,
+        "f1": -3.512088410206893e-05,
+        "identity_pct": -0.005840098113651493,
+        "precision": -6.185822095750027e-05,
+        "recall": -9.601212197507536e-07,
+        "reference": "Varecia_variegata",
+        "replicate": 0,
+        "target": "Gorilla_gorilla"
+      },
+      {
+        "depth": 6,
+        "f1": -3.444509486827396e-05,
+        "identity_pct": -0.005845560296961594,
+        "precision": -6.177033788379305e-05,
+        "recall": -8.17001626463032e-07,
+        "reference": "Varecia_variegata",
+        "replicate": 2,
+        "target": "Gorilla_gorilla"
+      },
+      {
+        "depth": 7,
+        "f1": 6.81915502019903e-05,
+        "identity_pct": 0.011700011700014556,
+        "precision": 0.00012356357345855162,
+        "recall": 1.6261528127392566e-06,
+        "reference": "Varecia_variegata",
+        "replicate": 0,
+        "target": "Gorilla_gorilla"
+      },
+      {
+        "depth": 7,
+        "f1": -3.447864310479609e-05,
+        "identity_pct": -0.005853087503666643,
+        "precision": -6.17512659010222e-05,
+        "recall": -7.958323103851583e-07,
+        "reference": "Varecia_variegata",
+        "replicate": 1,
+        "target": "Gorilla_gorilla"
+      },
+      {
+        "depth": 8,
+        "f1": -3.412632984012287e-05,
+        "identity_pct": -0.005677624481918997,
+        "precision": -6.30238860528376e-05,
+        "recall": -3.001003797242774e-06,
+        "reference": "Varecia_variegata",
+        "replicate": 2,
+        "target": "Homo_sapiens"
+      },
+      {
+        "depth": 7,
+        "f1": 0.0,
+        "identity_pct": 0.039629554962743896,
+        "precision": 0.0,
+        "recall": 0.0,
+        "reference": "Varecia_variegata",
+        "replicate": 1,
+        "target": "Saimiri_boliviensis"
+      },
+      {
+        "depth": 5,
+        "f1": 0.0013702902064688383,
+        "identity_pct": 0.2655517626191255,
+        "precision": 0.0024028094387283927,
+        "recall": 4.575721189570281e-05,
+        "reference": "Varecia_variegata",
+        "replicate": 2,
+        "target": "Saimiri_sciureus"
+      },
+      {
+        "depth": 7,
+        "f1": -0.0010179527969467195,
+        "identity_pct": -0.18993747972064057,
+        "precision": -0.0016794352566863457,
+        "recall": -0.0002285521834782811,
+        "reference": "Varecia_variegata",
+        "replicate": 2,
+        "target": "Saimiri_sciureus"
+      },
+      {
+        "depth": 8,
+        "f1": 0.00010169406254267876,
+        "identity_pct": 0.017495771855138287,
+        "precision": 0.00018459266551806852,
+        "recall": 2.9900238527336143e-06,
+        "reference": "Varecia_variegata",
+        "replicate": 2,
+        "target": "Saimiri_sciureus"
+      }
+    ],
+    "iterations": {
+      "1": 720,
+      "2": 720,
+      "3": 668,
+      "4": 651,
+      "5": 553,
+      "6": 477
+    },
+    "jobs": 720,
+    "max_abs_delta_f1": 0.0013702902064688383,
+    "mean_delta_f1_changed_jobs": -2.7701508615155483e-05,
+    "rows": 3789
+  },
+  "hybrid_boundary": {
+    "changed_final_jobs": 7,
+    "changed_jobs": [
+      {
+        "depth": 2,
+        "f1": 0.0,
+        "identity_pct": 0.004965899676221852,
+        "precision": 0.0,
+        "recall": 0.0,
+        "reference": "Aotus_azarai",
+        "replicate": 2,
+        "target": "Varecia_variegata"
+      },
+      {
+        "depth": 3,
+        "f1": 6.44880047749874e-05,
+        "identity_pct": 0.006397478694921688,
+        "precision": 0.0001800129077781376,
+        "recall": -5.522369100752211e-05,
+        "reference": "Aotus_azarai",
+        "replicate": 0,
+        "target": "Varecia_variegata"
+      },
+      {
+        "depth": 3,
+        "f1": 0.0,
+        "identity_pct": -0.016739952082815535,
+        "precision": 0.0,
+        "recall": 0.0,
+        "reference": "Gorilla_gorilla",
+        "replicate": 0,
+        "target": "Saimiri_boliviensis"
+      },
+      {
+        "depth": 5,
+        "f1": -3.178818180293863e-05,
+        "identity_pct": -0.00603573153065895,
+        "precision": -6.101281269066394e-05,
+        "recall": -3.362929515970947e-07,
+        "reference": "Gorilla_gorilla",
+        "replicate": 2,
+        "target": "Saimiri_sciureus"
+      },
+      {
+        "depth": 1,
+        "f1": 3.666141810199086e-05,
+        "identity_pct": 0.0058193668528758735,
+        "precision": 6.300006299997385e-05,
+        "recall": 3.0206297957358075e-06,
+        "reference": "Homo_sapiens",
+        "replicate": 2,
+        "target": "Saimiri_sciureus"
+      },
+      {
+        "depth": 5,
+        "f1": -3.148039795075608e-05,
+        "identity_pct": -0.005863039399628178,
+        "precision": -6.25978090766921e-05,
+        "recall": -1.860622921956434e-06,
+        "reference": "Homo_sapiens",
+        "replicate": 2,
+        "target": "Saimiri_sciureus"
+      },
+      {
+        "depth": 5,
+        "f1": 0.0,
+        "identity_pct": -0.010781719594433525,
+        "precision": 0.0,
+        "recall": 0.0,
+        "reference": "Varecia_variegata",
+        "replicate": 2,
+        "target": "Aotus_azarai"
+      }
+    ],
+    "iterations": {
+      "1": 720,
+      "2": 720,
+      "3": 668,
+      "4": 391,
+      "5": 71,
+      "6": 1
+    },
+    "jobs": 720,
+    "max_abs_delta_f1": 6.44880047749874e-05,
+    "mean_delta_f1_changed_jobs": 5.411549017611936e-06,
+    "rows": 2571
+  },
+  "manuscript_metrics": {
+    "baseline1_vs_baseline2": {
+      "jobs_with_any_final_metric_or_length_difference": 53,
+      "jobs_with_f1_difference": 36,
+      "mean_signed_f1_difference": -2.8732022872397326e-06
+    },
+    "divergence_means": {
+      "baseline1": {
+        "same-family": {
+          "f1": 0.9776484447122098,
+          "identity_pct": 92.40600126751188,
+          "precision": 0.9912886669560094,
+          "recall": 0.9644691971083793
+        },
+        "same-genus": {
+          "f1": 0.9999430762883011,
+          "identity_pct": 99.98545682004776,
+          "precision": 0.9999177851771069,
+          "recall": 0.9999683750024475
+        },
+        "same-order": {
+          "f1": 0.9318025551152971,
+          "identity_pct": 85.2904839304758,
+          "precision": 0.8969125060899293,
+          "recall": 0.9709407844967461
+        }
+      },
+      "baseline2": {
+        "same-family": {
+          "f1": 0.9776551237845051,
+          "identity_pct": 92.41336516620318,
+          "precision": 0.9913017832101765,
+          "recall": 0.9644695999482967
+        },
+        "same-genus": {
+          "f1": 0.9999430762883011,
+          "identity_pct": 99.98545682004776,
+          "precision": 0.9999177851771069,
+          "recall": 0.9999683750024475
+        },
+        "same-order": {
+          "f1": 0.9317987261070968,
+          "identity_pct": 85.28955099277258,
+          "precision": 0.8969069537032345,
+          "recall": 0.9709386312238955
+        }
+      },
+      "hybrid_boundary": {
+        "same-family": {
+          "f1": 0.9776484447122098,
+          "identity_pct": 92.50430497861088,
+          "precision": 0.9912886669560094,
+          "recall": 0.9644691971083793
+        },
+        "same-genus": {
+          "f1": 0.9999430762883011,
+          "identity_pct": 99.98545682004776,
+          "precision": 0.9999177851771069,
+          "recall": 0.9999683750024475
+        },
+        "same-order": {
+          "f1": 0.9640455975617236,
+          "identity_pct": 91.3067330249762,
+          "precision": 0.9530166518816067,
+          "recall": 0.9767971529749996
+        }
+      }
+    },
+    "hybrid_vs_baseline1": {
+      "jobs_f1_improved": 619,
+      "jobs_f1_regressed": 0,
+      "jobs_f1_unchanged": 101,
+      "max_f1_delta": 0.07649319909146723,
+      "mean_f1_delta": 0.027943970120236285,
+      "min_f1_delta": 0.0
+    }
+  }
+}

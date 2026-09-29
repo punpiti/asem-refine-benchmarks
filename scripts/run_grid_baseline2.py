@@ -44,7 +44,9 @@ from phase1_species import SPECIES, divergence_level, fasta_path, ordered_pairs 
 
 RESULTS_DIR = os.path.join(os.path.dirname(__file__), "results", "baseline2_ojemb")
 INITIAL_STATE_CSV = os.path.join(RESULTS_DIR, "initial_state.csv")
-GRID_RESULTS_CSV = os.path.join(RESULTS_DIR, "grid_results.csv")
+GRID_RESULTS_CSV = os.environ.get(
+    "ASEM_GRID_RESULTS_CSV", os.path.join(RESULTS_DIR, "grid_results.csv")
+)
 DEPTHS = [1, 2, 3, 4, 5, 6, 7, 8]
 N_REPLICATES = 3
 MAX_ITERATIONS = 6

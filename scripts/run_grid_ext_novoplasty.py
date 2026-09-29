@@ -31,8 +31,7 @@ from concurrent.futures import ProcessPoolExecutor, as_completed  # noqa: E402
 
 sys.path.insert(0, os.path.dirname(__file__))
 
-import grid_run_guard as guard  # noqa: E402
-from common import evaluate_theta_vs_target, read_fasta, simulate_shotgun_reads, stable_seed  # noqa: E402
+from common import evaluate_theta_vs_target, read_fasta, simulate_shotgun_reads, stable_seed, write_fasta  # noqa: E402
 from ext_novoplasty import NovoplastyFailure, run_novoplasty  # noqa: E402
 from phase1_species import divergence_level, fasta_path, ordered_pairs  # noqa: E402
 
@@ -87,7 +86,16 @@ def _run_one(args: tuple[str, str, int, int]) -> dict:
             "identity_pct": float("nan"), "recall": float("nan"), "precision": float("nan"),
             "f1": float("nan"), "c_theta": 0, "w_theta": 0, "u_t": 0,
         }
-    scores = evaluate_theta_vs_target(theta, t)
+    assemblies_dir = os.path.join(RESULTS_DIR, "assemblies")
+    os.makedirs(assemblies_dir, exist_ok=True)
+    write_fasta(
+        os.path.join(assemblies_dir, f"{ref_name}__{target_name}__d{depth}__r{replicate}.fasta"),
+        f"NOVOPlasty {ref_name}->{target_name} depth={depth} replicate={replicate}",
+        theta,
+    )
+    scores = evaluate_theta_vs_target(
+        theta, t, normalize_strand=True, normalize_circular_origin=True
+    )
     return {
         **base, "theta_len": len(theta), "runtime_s": time.time() - t0, "error": "",
         **scores,
@@ -112,6 +120,8 @@ def _load_completed_jobs() -> set[tuple[str, str, int, int]]:
 
 
 def main() -> None:
+    import grid_run_guard as guard
+
     os.makedirs(RESULTS_DIR, exist_ok=True)
     guard.acquire_lock(RESULTS_DIR, "run_grid_ext_novoplasty.py")
     guard.snapshot_csv(GRID_RESULTS_CSV)
