@@ -1,0 +1,72 @@
+{
+  "getorganelle": {
+    "completed_successful_reruns": 198,
+    "delta_f1_max": 1.0,
+    "delta_f1_mean": 0.3192721829506204,
+    "delta_f1_min": 0.0,
+    "expected_successful_reruns": 198,
+    "groups": {
+      "1--8X": {
+        "attempted": 720,
+        "mean_f1": 0.7280945190603448,
+        "successful": 3
+      },
+      "10X": {
+        "attempted": 90,
+        "mean_f1": 0.8870713690784804,
+        "successful": 10
+      },
+      "15X": {
+        "attempted": 90,
+        "mean_f1": 0.8933705349330631,
+        "successful": 41
+      },
+      "20X": {
+        "attempted": 90,
+        "mean_f1": 0.8907527465208472,
+        "successful": 63
+      },
+      "30X": {
+        "attempted": 90,
+        "mean_f1": 0.9718124718397371,
+        "successful": 81
+      }
+    },
+    "rerun_failures": 0
+  },
+  "novoplasty": {
+    "completed_successful_reruns": 36,
+    "delta_f1_max": 0.0003477450319240849,
+    "delta_f1_mean": -0.001268995730067053,
+    "delta_f1_min": -0.046031591314338,
+    "expected_successful_reruns": 55,
+    "groups": {
+      "1--8X": {
+        "attempted": 48,
+        "mean_f1": 0.08989636846994924,
+        "successful": 30
+      },
+      "10X": {
+        "attempted": 6,
+        "mean_f1": 0.12902351865024117,
+        "successful": 5
+      },
+      "15X": {
+        "attempted": 6,
+        "mean_f1": null,
+        "successful": 0
+      },
+      "20X": {
+        "attempted": 6,
+        "mean_f1": null,
+        "successful": 0
+      },
+      "30X": {
+        "attempted": 6,
+        "mean_f1": 0.9992709156084817,
+        "successful": 1
+      }
+    },
+    "rerun_failures": 19
+  }
+}

@@ -39,6 +39,11 @@ def main() -> None:
     parser.add_argument("tool", choices=("novoplasty", "getorganelle"))
     parser.add_argument("--workers", type=int, default=8)
     parser.add_argument("--limit", type=int)
+    parser.add_argument(
+        "--all-divergences", action="store_true",
+        help="NOVOPlasty: rerun successful rows at every divergence level, "
+             "not only the same-genus subset.",
+    )
     args = parser.parse_args()
 
     module = _module(args.tool)
@@ -48,7 +53,7 @@ def main() -> None:
         source_rows = list(csv.DictReader(handle))
 
     selected = [row for row in source_rows if not row.get("error")]
-    if args.tool == "novoplasty":
+    if args.tool == "novoplasty" and not args.all_divergences:
         selected = [row for row in selected if row["divergence"] == "same-genus"]
     original = {_key(row): row for row in selected}
 

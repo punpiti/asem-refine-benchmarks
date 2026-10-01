@@ -99,6 +99,34 @@ External-tool comparators (`run_grid_ext_novoplasty.py`,
 `run_grid_ext_getorganelle.py`) additionally need NOVOPlasty/GetOrganelle
 installed -- see `setup_env.sh`'s optional section.
 
+MIA and Pilon default to the historical 12-job representative panel. Their
+shared full-grid runs use the same 30 ordered pairs, depths 1--8X, three
+replicates, and deterministic read seeds as the internal methods:
+
+```bash
+MIA_SCOPE=full MIA_TIMEOUT_S=300 python3 scripts/run_grid_ext_mia.py
+PILON_SCOPE=full PILON_TIMEOUT_S=300 python3 scripts/run_grid_ext_pilon.py
+```
+
+Both runners append one row after each completed job and skip keys already in
+their result CSV, so interrupted runs can be resumed with the same command.
+
+NOVOPlasty and GetOrganelle outputs are scored after strand and
+circular-origin normalization. The original wrappers did not retain
+assemblies, so every originally successful job was rerun and rescored
+(`normalized_successful_rerun.csv`, assemblies retained under `assemblies/`);
+success/failure status still comes from the original `grid_results.csv`.
+Some NOVOPlasty successes need more than the first-pass 300-s limit:
+
+```bash
+NOVOPLASTY_TIMEOUT_S=3600 python3 scripts/rerun_external_successes_normalized.py novoplasty --all-divergences
+python3 scripts/rerun_external_successes_normalized.py getorganelle
+python3 scripts/summarize_normalized_external.py
+```
+
+Acceptance records for the run used in the paper are in
+`scripts/results/think_rerun_20261001/`.
+
 The `make_*.py` scripts regenerate the paper's figures/tables from the
 CSVs in `scripts/results/`.
 

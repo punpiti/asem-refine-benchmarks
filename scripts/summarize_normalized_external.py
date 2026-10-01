@@ -55,7 +55,9 @@ def summarize(tool_dir: str, same_genus_only: bool) -> dict:
 
 def main() -> None:
     summary = {
-        "novoplasty": summarize("ext_novoplasty", same_genus_only=True),
+        # The accepted think rerun (2026-10-01) normalized every successful
+        # NOVOPlasty job, not only the same-genus subset.
+        "novoplasty": summarize("ext_novoplasty", same_genus_only=False),
         "getorganelle": summarize("ext_getorganelle", same_genus_only=False),
     }
     output = os.path.join(RESULTS_DIR, "external_normalized_summary.json")

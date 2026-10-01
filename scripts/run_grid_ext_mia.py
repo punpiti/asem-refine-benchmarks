@@ -15,6 +15,7 @@ for _var in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "NUME
     os.environ.setdefault(_var, "1")
 
 import csv  # noqa: E402
+import fcntl  # noqa: E402
 import sys  # noqa: E402
 import time  # noqa: E402
 from concurrent.futures import ProcessPoolExecutor, as_completed  # noqa: E402
@@ -42,6 +43,7 @@ N_PARALLEL_RUNS = int(os.environ.get("MIA_PARALLEL_RUNS", "6"))
 MIA_TIMEOUT_S = int(os.environ.get("MIA_TIMEOUT_S", "180"))
 
 _SEQ_CACHE: dict[str, str] = {}
+_LOCK_HANDLE = None
 
 
 def _get_seq(name: str) -> str:
@@ -113,7 +115,15 @@ def _completed_jobs() -> set[tuple[str, str, int, int]]:
 
 
 def main() -> None:
+    global _LOCK_HANDLE
     os.makedirs(RESULTS_DIR, exist_ok=True)
+    lock_path = os.path.join(RESULTS_DIR, ".grid.lock")
+    _LOCK_HANDLE = open(lock_path, "w")
+    try:
+        fcntl.flock(_LOCK_HANDLE, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError:
+        print(f"another MIA {MIA_SCOPE} grid runner holds {lock_path}; exiting", flush=True)
+        return
     pairs = REPRESENTATIVE_PAIRS if MIA_SCOPE == "representative" else ordered_pairs()
     all_jobs = [
         (reference, target, depth, replicate)

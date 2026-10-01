@@ -1,4 +1,10 @@
-"""Pilon v1.24 on one matched representative pair per divergence level."""
+"""Pilon v1.24 on the Phase-1 benchmark grid.
+
+The default remains the historical representative subset. Set
+``PILON_SCOPE=full`` to run all 30 ordered pairs, depths 1--8X, and three
+replicates with the same deterministic read seeds as the internal methods.
+Both scopes are resumable and write to separate result directories.
+"""
 
 from __future__ import annotations
 
@@ -15,12 +21,17 @@ sys.path.insert(0, os.path.dirname(__file__))
 
 from common import evaluate_theta_vs_target, read_fasta, simulate_shotgun_reads, stable_seed
 from ext_pilon import PilonFailure, run_pilon
-from phase1_species import divergence_level, fasta_path
+from phase1_species import divergence_level, fasta_path, ordered_pairs
 
-RESULTS_DIR = os.path.join(os.path.dirname(__file__), "results", "ext_pilon_representative")
+PILON_SCOPE = os.environ.get("PILON_SCOPE", "representative").strip().lower()
+if PILON_SCOPE not in {"representative", "full"}:
+    raise ValueError("PILON_SCOPE must be 'representative' or 'full'")
+RESULTS_NAME = "ext_pilon_representative" if PILON_SCOPE == "representative" else "ext_pilon"
+RESULTS_DIR = os.path.join(os.path.dirname(__file__), "results", RESULTS_NAME)
 RESULTS_CSV = os.path.join(RESULTS_DIR, "grid_results.csv")
-DEPTHS = [1, 2, 4, 8]
-PAIRS = [
+DEPTHS = [1, 2, 4, 8] if PILON_SCOPE == "representative" else list(range(1, 9))
+N_REPLICATES = 1 if PILON_SCOPE == "representative" else 3
+REPRESENTATIVE_PAIRS = [
     ("Saimiri_boliviensis", "Saimiri_sciureus"),
     ("Homo_sapiens", "Gorilla_gorilla"),
     ("Homo_sapiens", "Varecia_variegata"),
@@ -69,7 +80,13 @@ def _run_one(job: tuple[str, str, int, int]) -> dict:
 
 def main() -> None:
     os.makedirs(RESULTS_DIR, exist_ok=True)
-    jobs = [(reference, target, depth, 0) for reference, target in PAIRS for depth in DEPTHS]
+    pairs = REPRESENTATIVE_PAIRS if PILON_SCOPE == "representative" else ordered_pairs()
+    jobs = [
+        (reference, target, depth, replicate)
+        for reference, target in pairs
+        for depth in DEPTHS
+        for replicate in range(N_REPLICATES)
+    ]
     completed = set()
     if os.path.exists(RESULTS_CSV):
         with open(RESULTS_CSV, newline="") as handle:
@@ -78,7 +95,11 @@ def main() -> None:
                 for row in csv.DictReader(handle)
             }
     pending = [job for job in jobs if job not in completed]
-    print(f"=== Pilon representative grid: {len(jobs)} total, {len(pending)} remaining ===", flush=True)
+    print(
+        f"=== Pilon {PILON_SCOPE} grid: {len(jobs)} total, "
+        f"{len(completed)} completed, {len(pending)} remaining, {WORKERS} parallel ===",
+        flush=True,
+    )
     if not pending:
         return
     new_file = not os.path.exists(RESULTS_CSV)

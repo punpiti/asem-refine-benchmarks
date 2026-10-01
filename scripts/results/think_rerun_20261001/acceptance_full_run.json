@@ -1,0 +1,18 @@
+{
+  "ext_novoplasty": {
+    "original_successes": 591,
+    "normalized_rows": 591,
+    "unique_keys": 591,
+    "rerun_failures": 0,
+    "successes_covered": 591,
+    "accepted": true
+  },
+  "ext_getorganelle": {
+    "original_successes": 198,
+    "normalized_rows": 198,
+    "unique_keys": 198,
+    "rerun_failures": 0,
+    "successes_covered": 198,
+    "accepted": true
+  }
+}

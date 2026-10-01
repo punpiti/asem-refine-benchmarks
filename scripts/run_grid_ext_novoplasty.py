@@ -46,7 +46,7 @@ GRID_RESULTS_CSV = os.path.join(RESULTS_DIR, "grid_results.csv")
 DEPTHS = [1, 2, 3, 4, 5, 6, 7, 8, 10, 15, 20, 30]
 N_REPLICATES = 3
 N_PARALLEL_RUNS = 14
-NOVOPLASTY_TIMEOUT_S = 300  # every observed successful job finishes well under this (max ~700s only rarely; most under 300s); a run past this is treated as a hang and skipped as an error row rather than blocking the grid for up to 900s
+NOVOPLASTY_TIMEOUT_S = int(os.environ.get("NOVOPLASTY_TIMEOUT_S", "300"))  # override for normalized reruns of successes that originally needed the longer retry-pass timeout; every observed successful job finishes well under this (max ~700s only rarely; most under 300s); a run past this is treated as a hang and skipped as an error row rather than blocking the grid for up to 900s
 SNAPSHOT_EVERY = 50  # take a timestamped backups/ copy of grid_results.csv every N completions, so there's something stable to check from another machine mid-run without relying on the live file
 
 _SEQ_CACHE: dict[str, str] = {}

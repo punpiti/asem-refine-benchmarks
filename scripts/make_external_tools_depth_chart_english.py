@@ -1,11 +1,9 @@
 """Two-panel external-tool figure for the English submission.
 
 Panel A reports success rates over all attempted jobs; panel B reports F1
-conditional on producing a scaffold.  Keeping these quantities separate avoids
-making a success-only mean look like unconditional performance.  NOVOPlasty is
-restricted to the same-genus pair in both panels, whereas GetOrganelle pools all
-pair difficulties, matching the manuscript table and stating that population
-difference explicitly.
+conditional on producing a scaffold. Keeping these quantities separate avoids
+making a success-only mean look like unconditional performance. Both tools use
+the same 30 ordered pairs and three replicates at every displayed depth.
 """
 
 from __future__ import annotations
@@ -25,18 +23,35 @@ import matplotlib.pyplot as plt
 
 SCRIPT_DIR = os.path.dirname(__file__)
 OUT_PATH = os.path.join(
-    SCRIPT_DIR, "..", "..", "bmc", "assets", "fig_external_tools_depth_english.png"
+    SCRIPT_DIR, "..", "..", "bmc-genomics", "assets", "fig_external_tools_depth_english.png"
 )
 NOVO_CSV = os.path.join(SCRIPT_DIR, "results", "ext_novoplasty", "grid_results.csv")
 GET_CSV = os.path.join(SCRIPT_DIR, "results", "ext_getorganelle", "grid_results.csv")
+GET_NORMALIZED_CSV = os.path.join(
+    SCRIPT_DIR, "results", "ext_getorganelle", "normalized_successful_rerun.csv"
+)
 LABELS = ["1--8X", "10X", "15X", "20X", "30X"]
 KEYS = ["1-8X", 10, 15, 20, 30]
 
 
-def summarize(path: str, same_genus_only: bool) -> tuple[list[float], list[float], list[str]]:
+def summarize(
+    path: str, normalized_path: str | None = None
+) -> tuple[list[float], list[float], list[str]]:
     df = pd.read_csv(path)
-    if same_genus_only:
-        df = df[df["divergence"] == "same-genus"]
+    if normalized_path is not None:
+        keys = ["reference", "target", "depth", "replicate"]
+        normalized = pd.read_csv(normalized_path)
+        normalized = normalized[normalized["error"].fillna("") == ""]
+        expected = df["f1"].notna().sum()
+        if len(normalized) != expected or normalized.duplicated(keys).any():
+            raise ValueError(
+                f"{normalized_path}: expected {expected} unique normalized successes, "
+                f"found {len(normalized)}"
+            )
+        replacement = normalized.set_index(keys)["f1"]
+        indexed = df.set_index(keys)
+        indexed.loc[replacement.index, "f1"] = replacement
+        df = indexed.reset_index()
     df = df.copy()
     df["bucket"] = df["depth"].map(lambda value: value if value > 8 else "1-8X")
     grouped = df.groupby("bucket")["f1"]
@@ -50,8 +65,8 @@ def summarize(path: str, same_genus_only: bool) -> tuple[list[float], list[float
 
 
 def main() -> None:
-    novo_rate, novo_f1, novo_counts = summarize(NOVO_CSV, same_genus_only=True)
-    get_rate, get_f1, get_counts = summarize(GET_CSV, same_genus_only=False)
+    novo_rate, novo_f1, novo_counts = summarize(NOVO_CSV)
+    get_rate, get_f1, get_counts = summarize(GET_CSV, GET_NORMALIZED_CSV)
     x = range(len(LABELS))
 
     fig, axes = plt.subplots(1, 2, figsize=(10, 4.4), sharex=True)
