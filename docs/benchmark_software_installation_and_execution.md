@@ -844,7 +844,25 @@ with probability 0.5. Output:
 scripts/results/orientation_experiment/results.csv
 ```
 
-### 11.6 Other supplementary experiments
+### 11.6 Secondary-placement check
+
+```bash
+cd asem-refine-benchmarks
+python3 scripts/run_secondary_placement_check.py
+```
+
+For the Homo_sapiens -> Varecia_variegata pair at 8X (three replicates, 905
+reads each), each read's best local alignment is found, that reference
+interval (extended by one read length on each side) is masked, and the best
+alternative alignment is recomputed against both the initial reference and
+the final non-recursive ASEM estimate. Outputs:
+
+```text
+scripts/results/secondary_placement/results.csv
+scripts/results/secondary_placement/summary.json
+```
+
+### 11.7 Other supplementary experiments
 
 ```bash
 cd asem-refine-benchmarks
@@ -918,7 +936,7 @@ Snapshot `v1.3.0` adds, relative to `v1.2.0`: the full 720-job MIA and Pilon
 grids; strand- and origin-normalized rescoring of every successful NOVOPlasty
 and GetOrganelle job, with retained assemblies and acceptance records; the
 supplementary *Macaca* same-genus pair for all eight methods; the
-mixed-orientation test; the scripts that draw the manuscript figures; the
+mixed-orientation test; the scripts that draw the manuscript figures; the secondary-placement check; the
 `grid_run_guard.py` helper required by `run_grid_ext_novoplasty.py`; and the
 `NOVOPLASTY_TIMEOUT_S` and `ASEM_PAIR_SET` options. Earlier contents (tie-safe
 consensus, post-tie-rule grids, parameter sensitivity, circular-boundary
