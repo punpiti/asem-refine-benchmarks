@@ -206,7 +206,21 @@ def fig_read_length() -> None:
         def savefig(*aa, **kk):
             for ax, letter in zip(np.atleast_1d(axes), "abc"):
                 panel_label(ax, letter)
-            print_fit(fig, (6.6, 4.3), 8.0)
+            print_fit(fig, (6.6, 4.5), 8.0)
+            for ax in np.atleast_1d(axes):
+                plt.setp(ax.get_xticklabels(), rotation=45, ha="right", rotation_mode="anchor")
+            for ax in np.atleast_1d(axes):
+                for t in ax.texts:
+                    if t.get_text().startswith("Variable"):
+                        # Vertical label fits inside the narrow shaded column.
+                        t.set_text("Variable length")
+                        t.set_rotation(90)
+                        t.set_va("center")
+                        t.set_position((t.get_position()[0], 0.725))
+            for legend in fig.legends:
+                legend.set_loc("lower center")
+                legend.set_bbox_to_anchor((0.5, 0.0))
+            fig.tight_layout(rect=(0, 0.10, 1, 1))
             save(*aa, **kk)
         fig.savefig = savefig
         return fig, axes
@@ -455,7 +469,8 @@ def fig_all_methods_depth(data: dict[str, pd.DataFrame],
     _vector_rc()
     plt.rcParams["font.family"] = "DejaVu Sans"
     plt.rcParams["font.size"] = 11
-    pos = {d: i + (0.6 if d > 8 else 0) for i, d in enumerate(DEPTH_AXIS)}
+    # Wider spacing after the break keeps the 10/15/20/30 labels apart.
+    pos = {d: (i if d <= 8 else 8 + 0.9 + 1.5 * (i - 8)) for i, d in enumerate(DEPTH_AXIS)}
     series = [(n, data[n], c, m, ls) for n, _p, _it, c, m, ls in METHODS]
     series += [(n, denovo[n], c, m, ls) for n, _d, c, m, ls in DENOVO]
     fig, axes = plt.subplots(1, 2, figsize=(7.0, 4.3))
@@ -472,7 +487,7 @@ def fig_all_methods_depth(data: dict[str, pd.DataFrame],
         axes[0].plot(x, rate.values, label=name, **style)
         axes[1].plot(x, cond.values, label=name, **style)
     for ax in axes:
-        ax.set_xticks([pos[d] for d in DEPTH_AXIS], [str(d) for d in DEPTH_AXIS])
+        ax.set_xticks([pos[d] for d in DEPTH_AXIS], [str(d) for d in DEPTH_AXIS], fontsize=10)
         ax.axvline((pos[8] + pos[10]) / 2, color="0.6", linewidth=0.8, linestyle=(0, (2, 2)))
         ax.set_xlabel("Sequencing depth (X)")
         ax.grid(axis="y", color="0.9", linewidth=0.6)
