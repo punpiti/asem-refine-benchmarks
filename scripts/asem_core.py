@@ -1,6 +1,6 @@
-"""Shared EM loop for the ASEM family of baselines (IEEE Access and OJEMB --
-see ``.ai/ECTI_CON_TRANSLOCATION_TECHNIQUE.md`` for why these two are called
-"ASEM" as a pair, distinct from ECTI-CON's unrelated LCS/splitting method).
+"""Shared EM loop for the ASEM family of baselines (IEEE Access and OJEMB;
+the two are called "ASEM" as a pair, distinct from ECTI-CON's unrelated
+LCS/splitting method).
 
 The two baselines differ only in how a single read is turned into zero or
 more accepted local alignments (IEEE Access: one alignment or none; OJEMB:

@@ -1,118 +1,122 @@
-# การติดตั้งและรันซอฟต์แวร์สำหรับ benchmark
+# Benchmark software: installation and execution
 
-เอกสารนี้สรุปชุด benchmark ของ manuscript ASEM/ASEM-Hybrid ว่าโปรแกรมมาจากไหน
-ติดตั้งไว้ที่ใด wrapper เรียกอย่างไร ตั้ง parameter อะไร และเก็บผลลัพธ์ที่ไหน
-ข้อมูลตรวจจาก source code, environment history และ package metadata ที่อยู่ในเครื่อง
-ณ วันที่ 29 กันยายน 2026
+This document describes the ASEM/ASEM-Hybrid benchmark suite: where each
+program comes from, how it is installed, how the wrappers call it, which
+parameters are used, and where results are written. The information is taken
+from the source code, environment history, and package metadata of the
+environments used to produce the reported results.
 
-## 1. ภาพรวม
+Throughout this document, commands are run from the repository root
+(`asem-refine-benchmarks/`) unless stated otherwise, and
+`$MAMBA_ROOT_PREFIX/envs/<env>` denotes the location of a micromamba
+environment.
 
-repository ของ benchmark อยู่ที่:
+## 1. Overview
 
-```text
-/home/punpiti/OneDrive/genome/asem-refine-benchmarks
-```
-
-| วิธี | รุ่นที่ใช้จริง | environment/ตำแหน่ง |
+| Method | Version used | Environment / location |
 |---|---:|---|
 | ASEM non-recursive | project source | `scripts/baseline_ieee_access.py` |
 | ASEM recursive | project source | `scripts/baseline_ojemb.py` |
 | SRSC | project source | `scripts/baseline_ecticon.py` |
-| ASEM-Hybrid | project source | `scripts/asem_hybrid.py` และ boundary variant |
-| NOVOPlasty | 4.3.5 | `~/.local/share/mamba/envs/genome/` |
-| GetOrganelle | 1.7.7.0 | `~/.local/share/mamba/envs/getorganelle/` |
-| MIA | 1.0 | `~/.local/share/mamba/envs/mia-assembler/` |
-| Pilon | 1.24 | `~/.local/share/mamba/envs/pilon-benchmark/` |
-| MITObim | 1.9.1 | `~/.local/share/mamba/envs/mitobim/`; ติดตั้งได้แต่ไม่รวมในผล |
+| ASEM-Hybrid | project source | `scripts/asem_hybrid.py` and the boundary variant |
+| NOVOPlasty | 4.3.5 | `$MAMBA_ROOT_PREFIX/envs/genome/` |
+| GetOrganelle | 1.7.7.0 | `$MAMBA_ROOT_PREFIX/envs/getorganelle/` |
+| MIA | 1.0 | `$MAMBA_ROOT_PREFIX/envs/mia-assembler/` |
+| Pilon | 1.24 | `$MAMBA_ROOT_PREFIX/envs/pilon-benchmark/` |
+| MITObim | 1.9.1 | `$MAMBA_ROOT_PREFIX/envs/mitobim/`; installable but not included in the results |
 
-วิธีภายในโครงการเป็น Python source code ไม่ต้องติดตั้งเป็นโปรแกรมแยก ส่วน
-NOVOPlasty, GetOrganelle, MIA, Pilon และ MITObim ดาวน์โหลดเป็นแพ็กเกจจาก
-[Bioconda](https://bioconda.github.io/) โดยใช้ dependencies จาก Bioconda และ
-conda-forge ผ่าน `micromamba`
+The project's own methods are Python source code and need no separate
+installation. NOVOPlasty, GetOrganelle, MIA, Pilon, and MITObim are installed
+as packages from [Bioconda](https://bioconda.github.io/), with dependencies from
+Bioconda and conda-forge, using `micromamba`.
 
-## 2. ข้อมูลที่ใช้: แหล่งที่มา การดาวน์โหลด และตำแหน่งจัดเก็บ
+## 2. Data: sources, download, and storage
 
-ข้อมูลไม่ใช่ software จึงไม่ได้ “ติดตั้ง” ลงใน micromamba environment แต่ดาวน์โหลด
-มาเก็บใต้ `asem-refine-benchmarks/data/` ซึ่งถูกแยกออกจาก source code และไม่ควร
-สมมติว่าจะมีอยู่หลัง clone repository ใหม่ ต้องรันสคริปต์เตรียมข้อมูลก่อน
+Data are not software and are therefore not installed into a micromamba
+environment. They are downloaded into `data/`, which is kept separate from the
+source code. Do not assume the data are present after a fresh clone; run the
+data-preparation scripts first.
 
-### 2.1 Reference genomes จาก NCBI
+### 2.1 Reference genomes from NCBI
 
-`scripts/fetch_data.py` ดาวน์โหลด nucleotide FASTA จากฐานข้อมูล NCBI
-Nucleotide ผ่าน NCBI E-utilities โดยใช้ accession ที่กำหนดไว้ในสคริปต์:
+`scripts/fetch_data.py` downloads nucleotide FASTA records from NCBI Nucleotide
+through the NCBI E-utilities, using the accessions defined in the script:
 
 ```bash
-cd /home/punpiti/OneDrive/genome/asem-refine-benchmarks/scripts
+cd asem-refine-benchmarks/scripts
 micromamba run -n genome python fetch_data.py
 ```
 
-endpoint ที่ใช้คือ:
+Endpoint:
 
 ```text
 https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi
 ```
 
-request ใช้ `db=nuccore`, `rettype=fasta` และ `retmode=text` สคริปต์พัก 0.34
-วินาทีระหว่าง request เพื่อไม่เกินอัตรา unauthenticated NCBI E-utilities ประมาณ
-3 requests ต่อวินาที ถ้าไฟล์ปลายทางมีอยู่และไม่ว่าง สคริปต์จะข้ามไฟล์นั้น จึงรัน
-ซ้ำได้โดยไม่ดาวน์โหลดใหม่ทั้งหมด
+Requests use `db=nuccore`, `rettype=fasta`, and `retmode=text`. The script
+pauses 0.34 seconds between requests to stay below the unauthenticated NCBI
+E-utilities limit of about 3 requests per second. If a destination file already
+exists and is non-empty, it is skipped, so the script can be rerun without
+downloading everything again.
 
-ตำแหน่งจัดเก็บ default:
+Default storage locations:
 
 ```text
-data/phase1_reproduction/       mtDNA 6 species สำหรับ main simulation grid
-data/ieee2021_mtdna_panel/      mtDNA 30 species สำหรับ divergence panel
-data/refs/                      references สำหรับ real-WGS validation
+data/phase1_reproduction/       6 mtDNA species for the main simulation grid
+data/ieee2021_mtdna_panel/      30 mtDNA species for the divergence panel
+data/refs/                      references for the real-WGS validation
 ```
 
-ชุดหลัก 6 species ได้แก่:
+The main six-species set:
 
-| Species | NCBI accession | บทบาท |
+| Species | NCBI accession | Role |
 |---|---|---|
-| *Homo sapiens* | NC_012920 | Phase-1 และ human rCRS evaluation target |
-| *Gorilla gorilla* | NC_001645 | Phase-1 same-family comparison |
-| *Saimiri boliviensis* | NC_021966 | Phase-1 same-genus comparison |
-| *Saimiri sciureus* | NC_012775 | Phase-1 same-genus comparison |
-| *Aotus azarai* | NC_021939 | Phase-1 primate reference/target |
-| *Varecia variegata* | NC_012773 | Phase-1 และ divergent real-read starting reference |
+| *Homo sapiens* | NC_012920 | Phase 1 and human rCRS evaluation target |
+| *Gorilla gorilla* | NC_001645 | Phase 1 same-family comparison |
+| *Saimiri boliviensis* | NC_021966 | Phase 1 same-genus comparison |
+| *Saimiri sciureus* | NC_012775 | Phase 1 same-genus comparison |
+| *Aotus azarai* | NC_021939 | Phase 1 primate reference/target |
+| *Varecia variegata* | NC_012773 | Phase 1 and divergent real-read starting reference |
 
-ชุด 30 species ใช้ accessions ที่แสดงใน
-`docs/ieee2021_mtdna_panel_manifest.md` และใน `MANIFESTS` ของ
-`scripts/fetch_data.py` ไฟล์ที่ใช้อยู่จริงมีขนาดประมาณ 16.6–17.3 kb ต่อ genome
+The 30-species set uses the accessions listed in
+`docs/ieee2021_mtdna_panel_manifest.md` and in `MANIFESTS` in
+`scripts/fetch_data.py`. The genomes are approximately 16.6–17.3 kb each.
 
-reference เพิ่มเติมสำหรับ real-WGS ได้แก่:
+Additional references for the real-WGS validation:
 
-| ไฟล์ | Accession/ที่มา | ใช้เป็น |
+| File | Accession / source | Used as |
 |---|---|---|
 | `data/refs/chrM_rCRS.fasta` | Human NC_012920 | evaluation truth/target |
 | `data/refs/chimp_NC_001643.fasta` | Chimpanzee NC_001643 | same-family starting reference |
-| `data/refs/chrM_for_cram.fasta` | สำเนา NC_012920 ที่เปลี่ยน header เป็น `chrM` | reference สำหรับอ่าน remote CRAM |
+| `data/refs/chrM_for_cram.fasta` | Copy of NC_012920 with the header renamed to `chrM` | reference for reading the remote CRAM |
 
-### 2.2 การจำลอง reads สำหรับ benchmark หลัก
+### 2.2 Read simulation for the main benchmark
 
-simulation ไม่ได้ดาวน์โหลด read files สำเร็จรูป แต่สร้าง reads ใหม่จาก target
-mtDNA ในแต่ละ job ด้วย `simulate_shotgun_reads()`:
+The simulation does not download prebuilt read files. Reads are generated from
+the target mtDNA in each job by `simulate_shotgun_reads()`:
 
-- single-end read length 150 bp
-- coverage 1–8X สำหรับ main ASEM/SRSC/Hybrid grid
-- NOVOPlasty/GetOrganelle มี depth เพิ่มเป็น 10, 15, 20 และ 30X
-- 3 replicates ใน full grid
-- ใช้ `stable_seed(target_name, depth, replicate)`
-- methods ที่มี species/depth/replicate เดียวกันจึงได้ reads เหมือนกันแบบ
-  read-for-read
+- single-end reads, length 150 bp
+- coverage 1–8X for the main ASEM/SRSC/Hybrid grid
+- NOVOPlasty/GetOrganelle additionally use 10, 15, 20, and 30X
+- 3 replicates in the full grid
+- seeded with `stable_seed(target_name, depth, replicate)`
+- methods with the same species/depth/replicate therefore receive identical
+  reads, read for read
 
-main grid สร้างทุก ordered pair ที่ reference ไม่เท่ากับ target จาก 6 species:
-30 pairs × 8 depths × 3 replicates = 720 jobs ต่อวิธี
+The main grid uses every ordered pair of the six species in which the reference
+differs from the target: 30 pairs × 8 depths × 3 replicates = 720 jobs per
+method.
 
-reads ถูกสร้างใน memory สำหรับวิธีภายใน ส่วน external wrappers เขียนเป็น FASTA
-หรือ FASTQ ชั่วคราวใน `/tmp` แยกต่อ job และลบเมื่อ job จบ จึงไม่มี simulated-read
-dataset ขนาดใหญ่ติดตั้งค้างไว้ใน `data/`
+For the internal methods, reads are generated in memory. External-tool wrappers
+write them as temporary FASTA or FASTQ files under `/tmp`, one directory per
+job, deleted when the job finishes. No large simulated-read dataset is stored in
+`data/`.
 
-### 2.3 Whole-genome sequencing source สำหรับ real-WGS validation
+### 2.3 Whole-genome sequencing source for the real-WGS validation
 
-real-read validation เริ่มจากข้อมูล whole-genome sequencing ของมนุษย์ แต่
-benchmark **ไม่ได้ประกอบหรือปรับปรุง nuclear whole genome** ข้อมูลต้นทางคือ
-ตัวอย่าง NA07000 จาก 1000 Genomes Project 30× resequencing collection:
+The real-read validation starts from human whole-genome sequencing data, but the
+benchmark **does not assemble or refine the nuclear whole genome**. The source
+is sample NA07000 from the 1000 Genomes Project 30× resequencing collection:
 
 ```text
 ENA project:  PRJEB31736
@@ -120,27 +124,27 @@ ENA run:      ERR3239279
 Sample:       NA07000
 Source file:  NA07000.final.cram
 Remote URL:   https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239279/NA07000.final.cram
-Full size:    ประมาณ 18 GB
+Full size:    approximately 18 GB
 ```
 
-เพื่อหลีกเลี่ยงการดาวน์โหลด CRAM ทั้ง genome สคริปต์ใช้ remote indexed range
-query ของ samtools ดึงเฉพาะ records ที่ map กับ `chrM`:
+To avoid downloading the whole-genome CRAM, the script uses a samtools remote
+indexed range query to fetch only records mapped to `chrM`:
 
 ```bash
-cd /home/punpiti/OneDrive/genome/asem-refine-benchmarks
+cd asem-refine-benchmarks
 
-# สร้าง reference ที่ header ตรงกับ @SQ SN:chrM ใน CRAM
+# Build a reference whose header matches @SQ SN:chrM in the CRAM
 awk 'NR==1 {print ">chrM"; next} {print}' \
   data/refs/chrM_rCRS.fasta > data/refs/chrM_for_cram.fasta
 micromamba run -n genome samtools faidx data/refs/chrM_for_cram.fasta
 
-# ดาวน์โหลด CRAI และดึงเฉพาะ chrM slice เป็น BAM
+# Download the CRAI and extract only the chrM slice as BAM
 cd scripts
-SAMTOOLS_BIN=/home/punpiti/.local/share/mamba/envs/genome/bin/samtools \
+SAMTOOLS_BIN=$MAMBA_ROOT_PREFIX/envs/genome/bin/samtools \
 ./extract_real_wgs_reads.sh
 ```
 
-คำสั่งหลักภายในสคริปต์คือ:
+The core commands inside the script are:
 
 ```bash
 curl -sf "${CRAM_URL}.crai" -o data/NA07000.final.cram.crai
@@ -151,7 +155,7 @@ samtools view -b \
   chrM -o data/NA07000_chrM.bam
 ```
 
-ไฟล์ที่ได้และตำแหน่งจริงในโครงการ:
+Resulting files and their locations in the repository:
 
 ```text
 data/NA07000.final.cram.crai       1,526,808 bytes
@@ -160,27 +164,28 @@ data/refs/chrM_for_cram.fasta
 data/refs/chrM_for_cram.fasta.fai
 ```
 
-การรันที่รายงานได้ 2,254,405 records ใน chrM BAM ก่อน filtering จากนั้น
-`run_real_wgs*.py` เรียก:
+The reported extraction yielded 2,254,405 records in the chrM BAM before
+filtering. The `run_real_wgs*.py` runners then call:
 
 ```bash
 samtools view -F 3332 data/NA07000_chrM.bam
 ```
 
-flag mask 3332 ตัด unmapped (`0x4`), secondary (`0x100`), duplicate (`0x400`)
-และ supplementary (`0x800`) records แล้วเก็บเฉพาะ sequence ที่ยาว exactly
-150 bp เหลือ usable pool 1,860,886 reads
+Flag mask 3332 removes unmapped (`0x4`), secondary (`0x100`), duplicate
+(`0x400`), and supplementary (`0x800`) records. Only sequences of exactly
+150 bp are kept, giving a usable pool of 1,860,886 reads.
 
-หมายเหตุเรื่อง strand: SEQ ของ mapped reverse-strand records ใน BAM อยู่ใน
-reference orientation อยู่แล้ว runner จึงไม่ reverse-complement ซ้ำ
+Strand note: the SEQ field of mapped reverse-strand records in a BAM is already
+in reference orientation, so the runner does not reverse-complement it again.
 
-### 2.4 การเก็บข้อมูลไว้นอก repository
+### 2.4 Storing data outside the repository
 
-default คือ `asem-refine-benchmarks/data/` แต่หากต้องเก็บ BAM บน disk อื่น ให้ส่ง
-output directory ให้ extraction script และชี้ runner ด้วย `GENOME_WGS_DATA_DIR`:
+The default is `data/` inside the repository. To keep the BAM on another disk,
+pass an output directory to the extraction script and point the runner to it
+with `GENOME_WGS_DATA_DIR`:
 
 ```bash
-cd /home/punpiti/OneDrive/genome/asem-refine-benchmarks/scripts
+cd asem-refine-benchmarks/scripts
 
 CHRM_REF_FASTA=/path/to/data/refs/chrM_for_cram.fasta \
 SAMTOOLS_BIN=/path/to/samtools \
@@ -191,7 +196,7 @@ SAMTOOLS_BIN=/path/to/samtools \
 micromamba run -n genome python run_real_wgs_benchmark.py
 ```
 
-directory ภายนอกต้องรักษา layout นี้:
+The external directory must keep this layout:
 
 ```text
 /path/to/data/NA07000_chrM.bam
@@ -199,19 +204,21 @@ directory ภายนอกต้องรักษา layout นี้:
 /path/to/data/refs/chimp_NC_001643.fasta
 ```
 
-สำหรับ hybrid runner ไฟล์ Varecia ยังอ่านจาก
-`data/phase1_reproduction/Varecia_variegata_NC_012773.fasta` ภายใน repository
+The hybrid runner still reads the Varecia file from
+`data/phase1_reproduction/Varecia_variegata_NC_012773.fasta` inside the
+repository.
 
-## 3. Environment หลัก
+## 3. Main environment
 
-repository มี `setup_env.sh` สำหรับสร้าง environment หลักชื่อ `asem-bench`:
+The repository provides `setup_env.sh` to create the main environment,
+`asem-bench`:
 
 ```bash
-cd /home/punpiti/OneDrive/genome/asem-refine-benchmarks
+cd asem-refine-benchmarks
 bash setup_env.sh
 ```
 
-คำสั่งหลักภายในคือ:
+Its core commands are:
 
 ```bash
 micromamba create -n asem-bench -y \
@@ -222,17 +229,18 @@ micromamba create -n asem-bench -y \
 micromamba run -n asem-bench pip install parasail
 ```
 
-การทดลองล่าสุดในเครื่องนี้เรียก Python จาก environment `genome` ซึ่งมี Python
-3.14.6, samtools 1.21, scikit-bio 0.7.3, parasail 1.3.4 และ NOVOPlasty 4.3.5
-คำสั่งต่อไปจึงใช้ `micromamba run -n genome` เพื่อแสดงการรันจริง หากสร้างเครื่อง
-ใหม่ด้วย `setup_env.sh` ให้เปลี่ยนเป็น `-n asem-bench` และติดตั้ง NOVOPlasty เพิ่ม
+The reported results were produced with Python from an environment named
+`genome`, containing Python 3.14.6, samtools 1.21, scikit-bio 0.7.3,
+parasail 1.3.4, and NOVOPlasty 4.3.5. The commands below therefore use
+`micromamba run -n genome`. If you create the environment with `setup_env.sh`,
+replace this with `-n asem-bench` and install NOVOPlasty into it as well.
 
-## 4. วิธีภายในโครงการ
+## 4. Internal methods
 
 ### ASEM non-recursive
 
 ```bash
-cd /home/punpiti/OneDrive/genome/asem-refine-benchmarks
+cd asem-refine-benchmarks
 ASEM_GRID_WORKERS=14 \
 micromamba run -n genome python scripts/run_grid_baseline1.py
 ```
@@ -240,7 +248,7 @@ micromamba run -n genome python scripts/run_grid_baseline1.py
 ### ASEM recursive
 
 ```bash
-cd /home/punpiti/OneDrive/genome/asem-refine-benchmarks
+cd asem-refine-benchmarks
 ASEM_GRID_WORKERS=14 \
 micromamba run -n genome python scripts/run_grid_baseline2.py
 ```
@@ -248,74 +256,80 @@ micromamba run -n genome python scripts/run_grid_baseline2.py
 ### SRSC
 
 ```bash
-cd /home/punpiti/OneDrive/genome/asem-refine-benchmarks
+cd asem-refine-benchmarks
 micromamba run -n genome python scripts/run_grid_baseline3.py
 ```
 
-สามวิธีนี้ใช้ coverage 1–8X, 3 replicates และ 30 ordered pairs รวม 720 jobs
-ต่อวิธี `ASEM_GRID_WORKERS` กำหนดจำนวน jobs ที่ทำพร้อมกัน; default 14 สำหรับ
-ASEM runners ส่วน ASEM recursive วน refinement ได้ไม่เกิน 6 iterations
+These three methods use coverage 1–8X, 3 replicates, and 30 ordered pairs, for
+720 jobs per method. `ASEM_GRID_WORKERS` sets the number of concurrent jobs
+(default 14 for the ASEM runners). ASEM recursive performs at most 6 refinement
+iterations.
 
 ### ASEM-Hybrid
 
-runner รองรับทั้ง `legacy` และ `boundary` แต่ default ใน source ปัจจุบันยังเป็น
-`legacy` ขณะที่ manuscript ล่าสุดใช้ boundary-recruited variant จึงต้องระบุ:
+The runner supports both `legacy` and `boundary` variants. The source default is
+still `legacy`, while the reported results use the boundary-recruited variant,
+so it must be selected explicitly:
 
 ```bash
-cd /home/punpiti/OneDrive/genome/asem-refine-benchmarks
+cd asem-refine-benchmarks
 ASEM_HYBRID_VARIANT=boundary \
 ASEM_HYBRID_WORKERS=14 \
 micromamba run -n genome python scripts/run_grid_baseline_hybrid.py
 ```
 
-หากไม่กำหนด `ASEM_HYBRID_VARIANT=boundary` ผลจะไม่ตรงกับ manuscript ล่าสุด
+Without `ASEM_HYBRID_VARIANT=boundary`, the results will not match the reported
+results.
 
-### Full rerun หลังแก้ tie-breaking (revision 2026-09-30)
+### Rerun after the tie-handling change
 
-การยืนยันผลหลังเปลี่ยนกฎจาก alphabetic `argmax()` เป็นการคงฐานเดิมเมื่อ
-nucleotide เสมอกัน และไม่รับ tied candidate insertion ใช้ shell script เดียว:
+The consensus rule was changed from an alphabetic `argmax()` to keeping the
+existing base when nucleotide counts are tied, and tied candidate insertions are
+no longer accepted. The full rerun under this rule is driven by a single shell
+script:
 
 ```bash
-cd /home/punpiti/OneDrive/genome/asem-refine-benchmarks
+cd asem-refine-benchmarks
 bash scripts/run_post_tie_rule_grids.sh
 ```
 
-สคริปต์ทำงานตามลำดับนี้โดยอัตโนมัติ:
+The script performs these steps automatically, in order:
 
-1. รัน unit tests ทั้งหมด
-2. รัน ASEM non-recursive 720 jobs
-3. รัน ASEM recursive 720 jobs
-4. รัน boundary ASEM-Hybrid 720 jobs
-5. ตรวจความครบ 720 jobs ต่อวิธีและสร้างผลเปรียบเทียบก่อน/หลังแก้กฎ
+1. Runs all unit tests.
+2. Runs ASEM non-recursive (720 jobs).
+3. Runs ASEM recursive (720 jobs).
+4. Runs boundary ASEM-Hybrid (720 jobs).
+5. Checks that each method has all 720 jobs and builds a before/after comparison.
 
-default ใช้ 14 workers หากต้องการเปลี่ยนจำนวน core:
+The default is 14 workers. To change the number of cores:
 
 ```bash
 ASEM_GRID_WORKERS=10 bash scripts/run_post_tie_rule_grids.sh
 ```
 
-runner เขียนผลเมื่อแต่ละ job จบและอ่าน job keys เดิมก่อนเริ่ม จึง **resume ได้**:
-หาก process ถูกหยุด ให้เรียกคำสั่งเดิมซ้ำโดยไม่ต้องลบ CSV และจะข้าม jobs ที่เสร็จแล้ว
-ห้ามลบหรือเปลี่ยนชื่อไฟล์ `grid_results.post_tie_rule_partial_20260929.csv`
-ระหว่างการ resume
+The runners write each result as soon as its job finishes and read existing job
+keys before starting, so the run **can be resumed**: if the process is stopped,
+rerun the same command without deleting the CSV, and completed jobs are skipped.
+Do not delete or rename `grid_results.post_tie_rule_partial_20260929.csv` while
+resuming.
 
-หากต้องการปล่อยให้รันโดยไม่เปิด terminal ค้าง:
+To run without keeping a terminal open:
 
 ```bash
-cd /home/punpiti/OneDrive/genome/asem-refine-benchmarks
+cd asem-refine-benchmarks
 mkdir -p scripts/results/post_tie_rule_logs
 nohup bash scripts/run_post_tie_rule_grids.sh \
   > scripts/results/post_tie_rule_logs/controller.log 2>&1 &
 echo $! > scripts/results/post_tie_rule_logs/controller.pid
 ```
 
-ตรวจสถานะได้โดยไม่ต้องให้ AI อ่าน log:
+Check progress with:
 
 ```bash
 bash scripts/check_post_tie_rule_status.sh
 ```
 
-logs แยกตามวิธีอยู่ใน:
+Per-method logs:
 
 ```text
 scripts/results/post_tie_rule_logs/baseline1.log
@@ -323,7 +337,7 @@ scripts/results/post_tie_rule_logs/baseline2.log
 scripts/results/post_tie_rule_logs/hybrid_boundary.log
 ```
 
-ผล post-tie ที่กำลังสร้างอยู่ใน:
+Post-tie-rule results are written to:
 
 ```text
 scripts/results/baseline1_ieee_access/grid_results.post_tie_rule_partial_20260929.csv
@@ -331,22 +345,21 @@ scripts/results/baseline2_ojemb/grid_results.post_tie_rule_partial_20260929.csv
 scripts/results/baseline_hybrid_boundary/grid_results.post_tie_rule_partial_20260929.csv
 ```
 
-เมื่อครบ สคริปต์ `summarize_post_tie_rule.py` จะสร้าง:
+When all jobs are complete, `summarize_post_tie_rule.py` creates:
 
 ```text
 scripts/results/post_tie_rule_summary.json
 ```
 
-ไฟล์นี้รายงานจำนวน jobs/rows, งานที่ผลสุดท้ายเปลี่ยน, delta ของ F1/identity/
-recall/precision และค่าที่ต้องใช้ตรวจตัวเลขใน manuscript การรัน grid ทั้งหมดเป็น
-งานของ shell/Python scripts; AI จำเป็นเฉพาะตอนอ่าน summary แล้วแก้ข้อความและตาราง
-ใน manuscript เท่านั้น
+This file reports job/row counts, the jobs whose final result changed, the
+deltas in F1/identity/recall/precision, and the summary values used in the
+reported tables.
 
 ## 5. NOVOPlasty
 
-### ดาวน์โหลดและติดตั้ง
+### Download and installation
 
-ติดตั้งแพ็กเกจ `novoplasty` จาก Bioconda:
+Install the `novoplasty` package from Bioconda:
 
 ```bash
 micromamba install -n genome -y \
@@ -354,25 +367,25 @@ micromamba install -n genome -y \
   novoplasty=4.3.5
 ```
 
-แหล่งแพ็กเกจ: <https://anaconda.org/bioconda/novoplasty>
+Package source: <https://anaconda.org/bioconda/novoplasty>
 
-executable ที่ใช้จริง:
+Executable:
 
 ```text
-/home/punpiti/.local/share/mamba/envs/genome/bin/NOVOPlasty4.3.5.pl
+$MAMBA_ROOT_PREFIX/envs/genome/bin/NOVOPlasty4.3.5.pl
 ```
 
-### การเรียกและ parameter
+### Invocation and parameters
 
-`scripts/ext_novoplasty.py` สร้าง scratch directory ต่อ job เขียน reads เป็น
-FASTQ และเรียก:
+`scripts/ext_novoplasty.py` creates a scratch directory per job, writes the
+reads as FASTQ, and calls:
 
 ```bash
-perl /home/punpiti/.local/share/mamba/envs/genome/bin/NOVOPlasty4.3.5.pl \
+perl $MAMBA_ROOT_PREFIX/envs/genome/bin/NOVOPlasty4.3.5.pl \
   -c config.txt
 ```
 
-config ที่ใช้:
+Configuration:
 
 ```text
 Type                    = mito
@@ -390,28 +403,31 @@ Insert size auto        = yes
 Use Quality Scores      = no
 ```
 
-wrapper เลือก sequence ที่ยาวที่สุดจาก Contigs, Circularized, Merged หรือ Option
-FASTA เป็น output assembly
+The wrapper takes the longest sequence among the Contigs, Circularized, Merged,
+or Option FASTA files as the output assembly.
 
-### การรัน grid
+### Running the grid
 
 ```bash
-cd /home/punpiti/OneDrive/genome/asem-refine-benchmarks
+cd asem-refine-benchmarks
 micromamba run -n genome python scripts/run_grid_ext_novoplasty.py
 ```
 
-- coverage 1–8, 10, 15, 20 และ 30X
-- 3 replicates ต่อ ordered pair/depth
-- timeout 300 วินาทีต่อ job
-- รันพร้อมกันสูงสุด 14 jobs ตามค่าที่กำหนดใน runner
+- coverage 1–8, 10, 15, 20, and 30X
+- 3 replicates per ordered pair/depth
+- per-job timeout read from `NOVOPLASTY_TIMEOUT_S` (default 300 seconds)
+- up to 14 concurrent jobs, as set in the runner
 
-NOVOPlasty เป็น de novo organelle assembler ผลล้มเหลวที่ 1–8X จึงต้องอธิบายว่า
-เป็นผลภายใต้ ultra-low coverage และ configuration นี้ ไม่ใช่ข้อสรุปทั่วไปว่า
-NOVOPlasty ใช้งานไม่ได้
+NOVOPlasty is a de novo organelle assembler. Its failures at 1–8X should be
+interpreted as results under ultra-low coverage and this configuration, not as
+a general conclusion that NOVOPlasty does not work.
+
+Scoring after strand and circular-origin normalization is described in
+Section 9.
 
 ## 6. GetOrganelle
 
-### ดาวน์โหลดและติดตั้ง
+### Download and installation
 
 ```bash
 micromamba create -n getorganelle -y \
@@ -419,23 +435,23 @@ micromamba create -n getorganelle -y \
   getorganelle=1.7.7.0
 ```
 
-แหล่งแพ็กเกจ: <https://anaconda.org/bioconda/getorganelle>
+Package source: <https://anaconda.org/bioconda/getorganelle>
 
-environment ที่ใช้จริงมี GetOrganelle 1.7.7.0, SPAdes 3.15.5 และ Bowtie2 2.5.4
-ตัวโปรแกรมอยู่ที่:
+The environment contains GetOrganelle 1.7.7.0, SPAdes 3.15.5, and
+Bowtie2 2.5.4. The program is located at:
 
 ```text
-/home/punpiti/.local/share/mamba/envs/getorganelle/bin/get_organelle_from_reads.py
+$MAMBA_ROOT_PREFIX/envs/getorganelle/bin/get_organelle_from_reads.py
 ```
 
-### การเรียกและ parameter
+### Invocation and parameters
 
-`scripts/ext_getorganelle.py` เพิ่ม environment นี้เข้า `PATH` เพื่อให้หา Bowtie2
-และ SPAdes ที่ตรงกัน แล้วเรียก:
+`scripts/ext_getorganelle.py` prepends this environment to `PATH` so that the
+matching Bowtie2 and SPAdes are found, and then calls:
 
 ```bash
-/home/punpiti/.local/share/mamba/envs/getorganelle/bin/python \
-  /home/punpiti/.local/share/mamba/envs/getorganelle/bin/get_organelle_from_reads.py \
+$MAMBA_ROOT_PREFIX/envs/getorganelle/bin/python \
+  $MAMBA_ROOT_PREFIX/envs/getorganelle/bin/get_organelle_from_reads.py \
   -u reads.fastq \
   -s seed_ref.fasta \
   -F animal_mt \
@@ -449,25 +465,28 @@ environment ที่ใช้จริงมี GetOrganelle 1.7.7.0, SPAdes 3.
 - `-s`: starting seed
 - `-F animal_mt`: animal mitochondrial genome
 - `-R 10`: 10 extension rounds
-- `-k 21,45,65,85,105`: ชุด k-mer
-- `-t 1`: หนึ่ง thread ต่อ job เพราะ grid รันหลาย jobs พร้อมกัน
+- `-k 21,45,65,85,105`: k-mer set
+- `-t 1`: one thread per job, because the grid runs many jobs concurrently
 
-wrapper เลือก sequence ที่ยาวที่สุดจาก `*path_sequence.fasta`
+The wrapper takes the longest sequence from `*path_sequence.fasta`.
 
-### การรัน grid
+### Running the grid
 
 ```bash
-cd /home/punpiti/OneDrive/genome/asem-refine-benchmarks
-GETORGANELLE_ENV_BIN=/home/punpiti/.local/share/mamba/envs/getorganelle/bin \
+cd asem-refine-benchmarks
+GETORGANELLE_ENV_BIN=$MAMBA_ROOT_PREFIX/envs/getorganelle/bin \
 micromamba run -n genome python scripts/run_grid_ext_getorganelle.py
 ```
 
-ใช้ coverage 1–8, 10, 15, 20 และ 30X, 3 replicates, timeout 600 วินาทีต่อ job
-และอนุญาตสูงสุด 14 jobs พร้อมกัน
+Coverage 1–8, 10, 15, 20, and 30X; 3 replicates; timeout 600 seconds per job;
+up to 14 concurrent jobs.
+
+Scoring after strand and circular-origin normalization is described in
+Section 9.
 
 ## 7. MIA (Mapping Iterative Assembler)
 
-### ดาวน์โหลดและติดตั้ง
+### Download and installation
 
 ```bash
 micromamba create -n mia-assembler -y \
@@ -476,21 +495,21 @@ micromamba create -n mia-assembler -y \
   mapping-iterative-assembler=1.0
 ```
 
-แหล่งแพ็กเกจ: <https://anaconda.org/bioconda/mapping-iterative-assembler>
+Package source: <https://anaconda.org/bioconda/mapping-iterative-assembler>
 
-ไฟล์แพ็กเกจจริงมาจาก `conda.anaconda.org/bioconda/linux-64/` ชื่อ
-`mapping-iterative-assembler-1.0-h503566f_7.conda`
+The package file comes from `conda.anaconda.org/bioconda/linux-64/` as
+`mapping-iterative-assembler-1.0-h503566f_7.conda`.
 
-executables:
+Executables:
 
 ```text
-/home/punpiti/.local/share/mamba/envs/mia-assembler/bin/mia
-/home/punpiti/.local/share/mamba/envs/mia-assembler/bin/ma
+$MAMBA_ROOT_PREFIX/envs/mia-assembler/bin/mia
+$MAMBA_ROOT_PREFIX/envs/mia-assembler/bin/ma
 ```
 
-### การเรียกและ parameter
+### Invocation and parameters
 
-`scripts/ext_mia.py` เขียน reference และ reads เป็น FASTA แล้วเรียก:
+`scripts/ext_mia.py` writes the reference and reads as FASTA and calls:
 
 ```bash
 mia \
@@ -504,57 +523,69 @@ mia \
 - `-f`: input reads
 - `-m`: output root
 - `-c`: circular-reference mode
-- `-D`: distant-reference mode; คง low-scoring reads ระหว่าง iterative assembly
-- `-F`: เขียนเฉพาะ final MALN assembly
+- `-D`: distant-reference mode; keeps low-scoring reads during iterative assembly
+- `-F`: write only the final MALN assembly
 
-จากนั้นเลือก `assembly.<iteration>` หมายเลขสูงสุดและแปลง MALN เป็น FASTA:
+The wrapper then selects the highest-numbered `assembly.<iteration>` and
+converts the MALN file to FASTA:
 
 ```bash
 ma -M assembly.<final_iteration> -f 5 -I MIA_consensus
 ```
 
-ข้อควรระวัง: `ma -f 5` หมายถึง output format 5 หรือ FASTA ไม่ใช่ minimum
-mapping quality 5 ถ้า manuscript ใช้คำอธิบายหลังต้องแก้ให้ตรงกับคำสั่งจริง
+Note: `ma -f 5` means output format 5 (FASTA); it is not a minimum mapping
+quality of 5.
 
-### การรัน representative benchmark
+### Running the full grid
+
+MIA was run on the full grid: 30 ordered pairs, depths 1–8X, 3 replicates
+(720 jobs):
 
 ```bash
-cd /home/punpiti/OneDrive/genome/asem-refine-benchmarks
-MIA_ENV_BIN=/home/punpiti/.local/share/mamba/envs/mia-assembler/bin \
+cd asem-refine-benchmarks
+MIA_ENV_BIN=$MAMBA_ROOT_PREFIX/envs/mia-assembler/bin \
+MIA_SCOPE=full \
+MIA_TIMEOUT_S=300 \
+MIA_PARALLEL_RUNS=6 \
+micromamba run -n genome python3 scripts/run_grid_ext_mia.py
+```
+
+Results:
+
+```text
+scripts/results/ext_mia/grid_results.csv
+```
+
+`MIA_TIMEOUT_S=300` must be set, because the reported results use a 300-second
+cutoff, while the runner's default is 180 seconds.
+
+### Representative panel (default scope, kept for reference)
+
+The script's default scope is a 12-job representative panel; its results are
+kept for reference in `scripts/results/ext_mia_representative/`:
+
+```bash
+cd asem-refine-benchmarks
+MIA_ENV_BIN=$MAMBA_ROOT_PREFIX/envs/mia-assembler/bin \
 MIA_SCOPE=representative \
 MIA_TIMEOUT_S=300 \
 MIA_PARALLEL_RUNS=6 \
 micromamba run -n genome python scripts/run_grid_ext_mia.py
 ```
 
-representative subset มี 12 jobs:
+The representative panel:
 
 ```text
 Saimiri_boliviensis -> Saimiri_sciureus    same genus
 Homo_sapiens        -> Gorilla_gorilla      same family
 Homo_sapiens        -> Varecia_variegata    same order
-coverage: 1, 2, 4 และ 8X
+coverage: 1, 2, 4, and 8X
 replicate: 0
 ```
 
-ต้องกำหนด `MIA_TIMEOUT_S=300` เพราะผลที่เก็บไว้และ manuscript ใช้ cutoff 300
-วินาที แม้ default ใน runner ปัจจุบันยังเป็น 180 วินาที
-
-full 720-job grid เรียกได้ด้วย:
-
-```bash
-MIA_SCOPE=full \
-MIA_TIMEOUT_S=300 \
-MIA_PARALLEL_RUNS=6 \
-micromamba run -n genome python scripts/run_grid_ext_mia.py
-```
-
-แต่ MIA ใช้เวลามากหรือ timeout ได้แม้กับ mitochondrial genome จึงใช้ matched
-representative subset ในการตอบ reviewer
-
 ## 8. Pilon
 
-### ดาวน์โหลดและติดตั้ง
+### Download and installation
 
 ```bash
 micromamba create -n pilon-benchmark -y \
@@ -562,24 +593,25 @@ micromamba create -n pilon-benchmark -y \
   pilon=1.24 bwa=0.7.19 samtools=1.24
 ```
 
-แหล่งแพ็กเกจ:
+Package sources:
 
 - <https://anaconda.org/bioconda/pilon>
 - <https://anaconda.org/bioconda/bwa>
 - <https://anaconda.org/bioconda/samtools>
 
-ตำแหน่งที่ wrapper ใช้:
+Paths used by the wrapper:
 
 ```text
-/home/punpiti/.local/share/mamba/envs/pilon-benchmark/bin/bwa
-/home/punpiti/.local/share/mamba/envs/pilon-benchmark/bin/samtools
-/home/punpiti/.local/share/mamba/envs/pilon-benchmark/bin/java
-/home/punpiti/.local/share/mamba/envs/pilon-benchmark/share/pilon-1.24-0/pilon.jar
+$MAMBA_ROOT_PREFIX/envs/pilon-benchmark/bin/bwa
+$MAMBA_ROOT_PREFIX/envs/pilon-benchmark/bin/samtools
+$MAMBA_ROOT_PREFIX/envs/pilon-benchmark/bin/java
+$MAMBA_ROOT_PREFIX/envs/pilon-benchmark/share/pilon-1.24-0/pilon.jar
 ```
 
-### การเรียกและ parameter
+### Invocation and parameters
 
-Pilon รับ BAM ที่ map กับ starting reference ดังนั้น `scripts/ext_pilon.py` รัน:
+Pilon takes a BAM mapped to the starting reference, so `scripts/ext_pilon.py`
+runs:
 
 ```bash
 bwa index reference.fasta
@@ -596,24 +628,74 @@ java -Xms512m -Xmx1g \
   --fix all
 ```
 
-- `bwa mem -t 1`: หนึ่ง mapping thread ต่อ job
-- `--unpaired`: reads จำลองเป็น single-end
-- `--fix all`: เปิด correction categories ที่ Pilon รองรับทั้งหมด
-- `-Xms512m -Xmx1g`: Java heap 512 MB–1 GB ต่อ job
+- `bwa mem -t 1`: one mapping thread per job
+- `--unpaired`: the simulated reads are single-end
+- `--fix all`: enables all correction categories supported by Pilon
+- `-Xms512m -Xmx1g`: Java heap of 512 MB–1 GB per job
 
-### การรัน representative benchmark
+### Running the full grid
+
+Pilon was run on the full grid: 30 ordered pairs, depths 1–8X, 3 replicates
+(720 jobs):
 
 ```bash
-cd /home/punpiti/OneDrive/genome/asem-refine-benchmarks
+cd asem-refine-benchmarks
+PILON_SCOPE=full \
+PILON_TIMEOUT_S=300 \
+micromamba run -n genome python3 scripts/run_grid_ext_pilon.py
+```
+
+Results:
+
+```text
+scripts/results/ext_pilon/grid_results.csv
+```
+
+### Representative panel (default scope, kept for reference)
+
+The script's default scope is the same 12-job representative panel as MIA
+(three representative pairs, coverage 1, 2, 4, and 8X, replicate 0); its
+results are kept for reference in `scripts/results/ext_pilon_representative/`:
+
+```bash
+cd asem-refine-benchmarks
 PILON_PARALLEL_RUNS=6 \
 PILON_TIMEOUT_S=180 \
 micromamba run -n genome python scripts/run_grid_ext_pilon.py
 ```
 
-ใช้สาม representative pairs, coverage 1, 2, 4 และ 8X, replicate 0 เช่นเดียวกับ
-MIA รวม 12 jobs
+## 9. Strand- and origin-normalized scoring of NOVOPlasty and GetOrganelle
 
-## 9. MITObim: ติดตั้งแล้วแต่ไม่รวมใน benchmark
+De novo assemblies from NOVOPlasty and GetOrganelle may be reverse-complemented
+or start at a different position on the circular genome. Their outputs are
+therefore scored after strand and circular-origin normalization.
+
+Because the original wrappers did not keep the assemblies, every originally
+successful job was rerun and rescored:
+
+```bash
+cd asem-refine-benchmarks
+NOVOPLASTY_TIMEOUT_S=3600 \
+python3 scripts/rerun_external_successes_normalized.py novoplasty --all-divergences
+python3 scripts/rerun_external_successes_normalized.py getorganelle
+python3 scripts/summarize_normalized_external.py
+```
+
+Outputs:
+
+```text
+scripts/results/ext_novoplasty/normalized_successful_rerun.csv
+scripts/results/ext_getorganelle/normalized_successful_rerun.csv
+scripts/results/ext_novoplasty/assemblies/          retained assemblies
+scripts/results/ext_getorganelle/assemblies/        retained assemblies
+scripts/results/external_normalized_summary.json    summary
+scripts/results/normalized_rerun_20261001/          acceptance records
+```
+
+Success/failure status is still taken from each tool's original
+`grid_results.csv`; the rerun only rescores the jobs that originally succeeded.
+
+## 10. MITObim: installable but not included in the benchmark
 
 ```bash
 micromamba create -n mitobim -y \
@@ -621,109 +703,151 @@ micromamba create -n mitobim -y \
   mitobim=1.9.1
 ```
 
-แหล่งแพ็กเกจ: <https://anaconda.org/bioconda/mitobim>
+Package source: <https://anaconda.org/bioconda/mitobim>
 
-environment มี MITObim 1.9.1, MIRA 4.0.2, Perl 5.22 และ Python 2.7
-executable อยู่ที่:
+The environment contains MITObim 1.9.1, MIRA 4.0.2, Perl 5.22, and Python 2.7.
+Executable:
 
 ```text
-/home/punpiti/.local/share/mamba/envs/mitobim/bin/MITObim.pl
+$MAMBA_ROOT_PREFIX/envs/mitobim/bin/MITObim.pl
 ```
 
-แต่ `mirabait` ที่ bundle มากับ MIRA ใช้ legacy `vsyscall` และเกิด segmentation
-fault บน WSL2 kernel 6.6 ที่ใช้ ปัญหาเกิดแม้กับ one-read smoke test และทดสอบ
-MIRA 4.9.6 แยกแล้ว จึงไม่มี MITObim grid result นี่เป็น technical exclusion
-ไม่ใช่ผลว่า MITObim ล้มเหลวเพราะ coverage ต่ำ
+However, the `mirabait` binary bundled with MIRA uses legacy `vsyscall` and
+crashes with a segmentation fault on the WSL2 kernel 6.6 used for the
+benchmark. The crash occurs even with a one-read smoke test, and MIRA 4.9.6 was
+also tested separately. There is therefore no MITObim grid result. This is a
+technical exclusion, not a finding that MITObim fails at low coverage.
 
-## 10. Real-WGS benchmark และการทดลองประกอบอื่น
+## 11. Real-WGS benchmark and supplementary experiments
 
-### 10.1 Original real-WGS benchmark
+### 11.1 Original real-WGS benchmark
 
-การทดลองนี้ใช้ chimpanzee mtDNA `NC_001643` เป็น starting reference, human rCRS
-`NC_012920` เป็น evaluation target และ subsample reads จาก filtered NA07000 pool
-โดยไม่คืน reads ที่สุ่มไปแล้ว:
+This experiment uses chimpanzee mtDNA `NC_001643` as the starting reference,
+human rCRS `NC_012920` as the evaluation target, and subsamples reads without
+replacement from the filtered NA07000 pool:
 
 ```bash
-cd /home/punpiti/OneDrive/genome/asem-refine-benchmarks
-GENOME_WGS_DATA_DIR=/home/punpiti/OneDrive/genome/asem-refine-benchmarks/data \
-SAMTOOLS_BIN=/home/punpiti/.local/share/mamba/envs/genome/bin/samtools \
+cd asem-refine-benchmarks
+GENOME_WGS_DATA_DIR=<repo>/data \
+SAMTOOLS_BIN=$MAMBA_ROOT_PREFIX/envs/genome/bin/samtools \
 micromamba run -n genome python scripts/run_real_wgs_benchmark.py
 ```
 
-parameter:
+Parameters:
 
-- methods: ASEM non-recursive และ ASEM recursive
+- methods: ASEM non-recursive and ASEM recursive
 - starting reference: chimpanzee mtDNA NC_001643
 - truth: human rCRS NC_012920
 - depths: 1–8X
 - 3 replicates
 - read length: exactly 150 bp
 - maximum iterations: 6
-- จำนวน reads ต่อ job: `round(depth × 16,569 / 150)` ได้แก่ประมาณ 110 reads
-  ที่ 1X ถึง 884 reads ที่ 8X
+- reads per job: `round(depth × 16,569 / 150)`, i.e. about 110 reads at 1X up
+  to 884 reads at 8X
 
-ผลเก็บที่:
+Results:
 
 ```text
 scripts/results/real_wgs_benchmark/grid_results.csv
 ```
 
-### 10.2 Boundary-Hybrid real-WGS benchmark
+### 11.2 Boundary-Hybrid real-WGS benchmark
 
-การทดลองล่าสุดใช้ read subsets เดียวกันเปรียบเทียบ starting references สองระดับ:
+This experiment uses the same read subsets to compare two starting references:
 
-1. chimpanzee NC_001643 → human: same-family, ใช้ตรวจว่า Hybrid ไม่ทำลายกรณีที่
-   ordinary mapping ทำงานได้ดีอยู่แล้ว
-2. *Varecia variegata* NC_012773 → human: same-order, ใช้ทดสอบประโยชน์ของ
-   boundary recruitment เมื่อ reference ห่างกว่า
+1. Chimpanzee NC_001643 → human (same family): checks that Hybrid does not
+   degrade cases where ordinary mapping already works well.
+2. *Varecia variegata* NC_012773 → human (same order): tests the benefit of
+   boundary recruitment when the reference is more distant.
 
-คำสั่งที่ตรงกับ manuscript ล่าสุด:
+Command matching the reported results:
 
 ```bash
-cd /home/punpiti/OneDrive/genome/asem-refine-benchmarks
-GENOME_WGS_DATA_DIR=/home/punpiti/OneDrive/genome/asem-refine-benchmarks/data \
-SAMTOOLS_BIN=/home/punpiti/.local/share/mamba/envs/genome/bin/samtools \
+cd asem-refine-benchmarks
+GENOME_WGS_DATA_DIR=<repo>/data \
+SAMTOOLS_BIN=$MAMBA_ROOT_PREFIX/envs/genome/bin/samtools \
 ASEM_HYBRID_VARIANT=boundary \
 ASEM_REAL_WGS_WORKERS=2 \
 micromamba run -n genome python scripts/run_real_wgs_hybrid_benchmark.py
 ```
 
-parameter เพิ่มเติม:
+Additional parameters:
 
 - ASEM mapping threshold `tau = 0.5`
-- `boundary_flank = 150` สำหรับ boundary variant
-- maximum iterations 6
-- 1 worker ภายในแต่ละ algorithm job
-- `ASEM_REAL_WGS_WORKERS=2` ควบคุมจำนวน jobs พร้อมกัน
-- Pan reference รัน ASEM non-recursive, ASEM recursive และ ASEM-Hybrid
-- Varecia reference รัน ASEM non-recursive และ ASEM-Hybrid
+- `boundary_flank = 150` for the boundary variant
+- maximum iterations: 6
+- 1 worker inside each algorithm job
+- `ASEM_REAL_WGS_WORKERS=2` controls the number of concurrent jobs
+- the Pan reference runs ASEM non-recursive, ASEM recursive, and ASEM-Hybrid
+- the Varecia reference runs ASEM non-recursive and ASEM-Hybrid
 
-ผลเก็บที่:
+Results:
 
 ```text
 scripts/results/real_wgs_hybrid_boundary/final_results.csv
 ```
 
-ห้ามละ `ASEM_HYBRID_VARIANT=boundary` เพราะ default ของ runner ยังเป็น `legacy`
-และจะเขียนไปคนละ results directory
+Do not omit `ASEM_HYBRID_VARIANT=boundary`: the runner default is still
+`legacy`, which writes to a different results directory.
 
-### 10.3 ขอบเขตของคำว่า whole/full genome
+### 11.3 Scope of "whole/full genome"
 
-ข้อมูล NA07000 ต้นทางเป็น whole-genome sequencing จริง แต่ benchmark นี้ใช้เพียง
-mitochondrial-mapped read slice และประเมิน mitochondrial reference ยาวประมาณ
-16.6 kb เท่านั้น ไม่ได้ทดสอบการ reconstruct หรือ refine nuclear genome ขนาด
-ประมาณ 3 Gb ดังนั้นใน manuscript ควรเรียกการทดลองนี้ว่า “real-WGS-derived
-mitochondrial-read validation” หรือ “real-read mtDNA validation” และไม่ควรเรียก
-ว่า “full-genome benchmark”
+The NA07000 source data are genuine whole-genome sequencing data, but this
+benchmark uses only the mitochondrial-mapped read slice and evaluates a
+mitochondrial reference of about 16.6 kb. It does not test reconstruction or
+refinement of the roughly 3 Gb nuclear genome. The experiment is therefore a
+"real-WGS-derived mitochondrial-read validation" (a real-read mtDNA validation),
+not a "full-genome benchmark".
 
-ถ้าต้องการอ้างความสามารถระดับ whole nuclear genome จะต้องออกแบบ benchmark ใหม่
-แยกต่างหาก รวมถึง chromosome/region selection, memory scaling, repeat handling,
-structural variation และ evaluation truth ซึ่งยังไม่มีใน repository นี้
+Supporting claims at the whole-nuclear-genome level would require a separate
+benchmark design, including chromosome/region selection, memory scaling, repeat
+handling, structural variation, and an evaluation truth, none of which are in
+this repository.
 
-### 10.4 การทดลองประกอบอื่น
+### 11.4 Supplementary same-genus pair (Macaca)
+
+Setting `ASEM_PAIR_SET=macaca_same_genus` makes every grid runner use the
+verified same-genus pair *Macaca silenus* (NC_025221) and *Macaca tonkeana*
+(NC_025222) from `data/ieee2021_mtdna_panel/`, in both directions. The runners
+write to their usual result directories; the published results for this pair
+were then moved to:
+
+```text
+scripts/results/same_genus_macaca/<method>/
+```
+
+For example:
 
 ```bash
-cd /home/punpiti/OneDrive/genome/asem-refine-benchmarks
+cd asem-refine-benchmarks
+ASEM_PAIR_SET=macaca_same_genus \
+micromamba run -n genome python scripts/run_grid_baseline1.py
+```
+
+Run this in a separate copy of the repository or with empty result
+directories, because the runners append to and resume from existing
+`grid_results.csv` files.
+
+### 11.5 Mixed-orientation test
+
+```bash
+cd asem-refine-benchmarks
+python3 scripts/run_orientation_experiment.py
+```
+
+This requires the `asem-refine` package v0.4.1 to be installed. It reruns
+Homo_sapiens -> Varecia_variegata at 1, 2, 4, and 8X × 3 replicates for ASEM and
+ASEM-Hybrid, both with the grid reads and with each read reverse-complemented
+with probability 0.5. Output:
+
+```text
+scripts/results/orientation_experiment/results.csv
+```
+
+### 11.6 Other supplementary experiments
+
+```bash
+cd asem-refine-benchmarks
 
 # Read-length experiment
 micromamba run -n genome python scripts/run_read_length_experiment.py
@@ -731,36 +855,40 @@ micromamba run -n genome python scripts/run_read_length_experiment.py
 # Computational-cost profiling
 micromamba run -n genome python scripts/profile_computational_cost.py
 
-# Reviewer-requested diagnostics
+# Supplementary diagnostics
 micromamba run -n genome python scripts/run_parameter_sensitivity.py
 micromamba run -n genome python scripts/run_circular_boundary_diagnostic.py
 micromamba run -n genome python scripts/run_evaluator_endgap_sanity.py
 ```
 
-## 11. ผลลัพธ์และการ resume
+## 12. Results and resuming
 
-runner เขียน CSV ใต้:
+Runners write CSV files under:
 
 ```text
 scripts/results/<benchmark-name>/grid_results.csv
 ```
 
-ตัวอย่าง:
+Examples:
 
 ```text
 scripts/results/baseline1_ieee_access/grid_results.csv
 scripts/results/baseline2_ojemb/grid_results.csv
 scripts/results/baseline_hybrid_boundary/grid_results.csv
+scripts/results/ext_mia/grid_results.csv
+scripts/results/ext_pilon/grid_results.csv
 scripts/results/ext_mia_representative/grid_results.csv
 scripts/results/ext_pilon_representative/grid_results.csv
 ```
 
-หลาย runner รองรับการ resume โดยอ่าน CSV เดิมและข้าม `(reference, target,
-depth, replicate)` ที่มีอยู่แล้ว การเรียกซ้ำจึงอาจไม่มี pending jobs และไม่ใช่
-fresh rerun หากต้องการรันใหม่ทั้งหมดควรทำในสำเนา repository หรือย้าย results เดิม
-ไปเก็บก่อน ไม่ควรเขียนทับ raw results ของ manuscript โดยไม่มีสำเนา
+Many runners support resuming: they read the existing CSV and skip
+`(reference, target, depth, replicate)` combinations already present. A repeated
+call may therefore find no pending jobs and is not a fresh rerun. For a full
+fresh rerun, work in a copy of the repository or move the existing results
+elsewhere first. Do not overwrite the raw results without keeping a copy.
 
-สคริปต์ `make_*.py` อ่าน raw CSV เพื่อสร้าง figures/tables เช่น:
+The `make_*.py` scripts read the raw CSVs to build figures and tables, for
+example:
 
 ```bash
 micromamba run -n genome python scripts/make_external_tools_depth_chart_english.py
@@ -769,33 +897,49 @@ micromamba run -n genome python scripts/make_computational_cost_table.py
 micromamba run -n genome python scripts/make_report.py
 ```
 
-## 12. สถานะ reproducibility ของ revision snapshot
+### Manuscript figures
 
-revision snapshot `v1.2.0` รวม tie-safe consensus, full post-tie grids,
-MIA/Pilon wrappers และ raw results, parameter sensitivity, circular-boundary
-diagnostic, evaluator sanity check และ strand/origin-normalized external-tool
-evaluator แล้ว คำสั่ง Hybrid ระบุ `ASEM_HYBRID_VARIANT=boundary` และเอกสาร MIA
-อธิบาย `ma -f 5` ว่าเป็น FASTA output format พร้อมระบุ timeout 300 วินาที
+```bash
+cd asem-refine-benchmarks
+MANUSCRIPT_FIGURE_DIR=<out dir> \
+python3 scripts/manuscript_figures/make_vector_figures.py
+python3 scripts/manuscript_figures/make_worked_example.py
+```
 
-ขั้น release ภายนอกที่ต้องทำหลัง commit คือสร้าง tag/GitHub release และ Zenodo
-version ใหม่ จากนั้นจึงแทน version, commit hash และ archived DOI ใน Code
-availability ของ revised manuscript ห้ามอ้าง v1.1.0/commit เดิมว่าเป็น snapshot
-ของผล revision
+- `make_vector_figures.py` draws every data figure as vector PDF from the
+  result CSVs, writing to `MANUSCRIPT_FIGURE_DIR`.
+- `make_worked_example.py` draws the worked-example figure.
+- `scripts/manuscript_figures/fig1_overview.svg` is the hand-drawn overview
+  schematic.
 
-## 13. ตรวจสอบการติดตั้ง
+## 13. Snapshot contents
+
+Snapshot `v1.3.0` adds, relative to `v1.2.0`: the full 720-job MIA and Pilon
+grids; strand- and origin-normalized rescoring of every successful NOVOPlasty
+and GetOrganelle job, with retained assemblies and acceptance records; the
+supplementary *Macaca* same-genus pair for all eight methods; the
+mixed-orientation test; the scripts that draw the manuscript figures; the
+`grid_run_guard.py` helper required by `run_grid_ext_novoplasty.py`; and the
+`NOVOPLASTY_TIMEOUT_S` and `ASEM_PAIR_SET` options. Earlier contents (tie-safe
+consensus, post-tie-rule grids, parameter sensitivity, circular-boundary
+diagnostic, evaluator sanity check) are unchanged. The Hybrid commands specify
+`ASEM_HYBRID_VARIANT=boundary`, `ma -f 5` is documented as the FASTA output
+format, and the MIA timeout is 300 seconds.
+
+## 14. Verifying the installation
 
 ```bash
 micromamba env list
 
-/home/punpiti/.local/share/mamba/envs/genome/bin/NOVOPlasty4.3.5.pl --help
-/home/punpiti/.local/share/mamba/envs/getorganelle/bin/get_organelle_from_reads.py --version
-/home/punpiti/.local/share/mamba/envs/mia-assembler/bin/mia
-/home/punpiti/.local/share/mamba/envs/mia-assembler/bin/ma
-/home/punpiti/.local/share/mamba/envs/pilon-benchmark/bin/java \
-  -jar /home/punpiti/.local/share/mamba/envs/pilon-benchmark/share/pilon-1.24-0/pilon.jar \
+$MAMBA_ROOT_PREFIX/envs/genome/bin/NOVOPlasty4.3.5.pl --help
+$MAMBA_ROOT_PREFIX/envs/getorganelle/bin/get_organelle_from_reads.py --version
+$MAMBA_ROOT_PREFIX/envs/mia-assembler/bin/mia
+$MAMBA_ROOT_PREFIX/envs/mia-assembler/bin/ma
+$MAMBA_ROOT_PREFIX/envs/pilon-benchmark/bin/java \
+  -jar $MAMBA_ROOT_PREFIX/envs/pilon-benchmark/share/pilon-1.24-0/pilon.jar \
   --version
 ```
 
-โปรแกรมรุ่นเก่าบางตัวอาจไม่มี `--version` หรือคืน exit status ไม่เป็นศูนย์เมื่อ
-เรียก help จึงควรตรวจทั้ง executable output และ package metadata ใต้
-`<environment>/conda-meta/`
+Some older programs may lack `--version` or return a non-zero exit status when
+asked for help, so check both the executable output and the package metadata
+under `<environment>/conda-meta/`.

@@ -1,6 +1,6 @@
-=== ASEM-Hybrid variant: boundary; results: /mnt/c/Users/punpi/OneDrive/genome/asem-refine-benchmarks/scripts/results/baseline_hybrid_boundary ===
+=== ASEM-Hybrid variant: boundary; results: scripts/results/baseline_hybrid_boundary ===
 === STAGE 1/2: initial-state (no refinement) metrics for all pairs ===
-  /mnt/c/Users/punpi/OneDrive/genome/asem-refine-benchmarks/scripts/results/baseline_hybrid_boundary/initial_state.csv already exists, skipping (delete it to recompute)
+  scripts/results/baseline_hybrid_boundary/initial_state.csv already exists, skipping (delete it to recompute)
 === STAGE 2/2: grid -- 720 total combinations, 22 already done (resumed), 698 remaining, 14 in parallel ===
   [1/698   0.1%] finished Homo_sapiens vs Saimiri_boliviensis depth=1X rep=1  |     40s elapsed, ~ 27556s remaining, 0.025 runs/s
   [2/698   0.3%] finished Homo_sapiens vs Saimiri_boliviensis depth=4X rep=0  |     47s elapsed, ~ 16314s remaining, 0.043 runs/s

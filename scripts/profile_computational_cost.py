@@ -1,7 +1,6 @@
 """Characterize wall-clock runtime and peak memory of ASEM (both variants)
-and SRSC, broken down by sequencing depth/read count and EM iteration --
-addressing the reviewer objection "computational cost not characterized"
-(report runtime/peak memory by reference length, read count, coverage, and
+and SRSC, broken down by sequencing depth/read count and EM iteration
+(runtime/peak memory by reference length, read count, coverage, and
 iteration).
 
 Reference length is not a variable in this study's scope (every experiment

@@ -1,0 +1,5 @@
+reference,target,divergence,identity_pct,recall,precision,f1,c_theta,w_theta,u_t
+Macaca_silenus,Macaca_silenus,self,100.0,1.0,1.0,1.0,16541,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,91.75519072911636,0.9982270667804846,0.9194943446440452,0.9572445060134752,15202,1331,27
+Macaca_tonkeana,Macaca_silenus,same-genus,91.75519072911636,0.999474030243261,0.9194943446440452,0.9578174715685348,15202,1331,8
+Macaca_tonkeana,Macaca_tonkeana,self,100.0,1.0,1.0,1.0,16560,0,0

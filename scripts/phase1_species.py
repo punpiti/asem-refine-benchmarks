@@ -17,6 +17,22 @@ SPECIES = {
 }
 
 
+# Supplementary verified same-genus pair (added in revision): the only
+# Phase-1 same-genus pair, Saimiri boliviensis NC_021966 vs "S. sciureus"
+# NC_012775, is 99.87% identical and NC_012775 has been argued to carry an
+# S. b. boliviensis haplotype (Chiou et al. 2011). Select with
+# ASEM_PAIR_SET=macaca_same_genus and run in a separate results tree.
+PAIR_SET = os.environ.get("ASEM_PAIR_SET", "phase1").strip().lower()
+if PAIR_SET == "macaca_same_genus":
+    DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "ieee2021_mtdna_panel")
+    SPECIES = {
+        "Macaca_silenus": ("17_Macaca_silenus_NC_025221.fasta", "Macaca", "Cercopithecidae", "Primates"),
+        "Macaca_tonkeana": ("19_Macaca_tonkeana_NC_025222.fasta", "Macaca", "Cercopithecidae", "Primates"),
+    }
+elif PAIR_SET != "phase1":
+    raise ValueError(f"unknown ASEM_PAIR_SET: {PAIR_SET}")
+
+
 def fasta_path(name: str) -> str:
     return os.path.join(DATA_DIR, SPECIES[name][0])
 

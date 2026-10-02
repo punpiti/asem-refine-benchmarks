@@ -99,9 +99,9 @@ def main() -> None:
             # a mean-only line hides real replicate-level failures (e.g. SRSC
             # same-family at 250/300bp: one replicate near 0.73/0.80 while the
             # other two sit near 0.93, averaging out to a deceptively smooth
-            # ~0.85). Caught in review (Codex, 2026-08-20): the mean-only
-            # version made SRSC's degradation look uniformly gradual when it
-            # is actually a mix of mostly-fine and occasionally-bad runs.
+            # ~0.85). A mean-only line would make SRSC's degradation look
+            # uniformly gradual when it is actually a mix of mostly-fine and
+            # occasionally-bad runs.
             # max(0, ...): mean-of-group can round a hair below/above the
             # true min/max via float summation error when all values in a
             # group are near-identical (e.g. same-genus, all ~0.9999).

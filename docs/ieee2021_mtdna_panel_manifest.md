@@ -7,8 +7,7 @@ with the BMC rebuild.
 
 30 species, 27 genera, 13 families, 6 orders (all Mammalia). The original paper
 simulated shotgun reads directly from these sequences (sequencing depth 1X+); it
-did not use real sequencing reads. For the BMC rebuild, real raw-read datasets are
-being sourced separately (see `.ai/DATASET_SHORTLIST_2026.md`) — this panel is kept
+did not use real sequencing reads. This panel is kept
 for continuity/reproducibility comparison against the original results, and as a
 source of "divergent related reference" sequences within genera/families.
 

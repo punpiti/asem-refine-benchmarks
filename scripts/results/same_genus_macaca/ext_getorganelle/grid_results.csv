@@ -1,0 +1,307 @@
+reference,target,divergence,depth,replicate,n_reads,theta_len,runtime_s,error,identity_pct,recall,precision,f1,c_theta,w_theta,u_t
+Macaca_silenus,Macaca_tonkeana,same-genus,1,2,111,0,7.286721229553223,"no scaffold produced; stdout tail:
+inished.
+
+2026-10-02 07:12:01,338 - INFO: Extending ...
+2026-10-02 07:12:01,338 - INFO: Adding initial words ...
+2026-10-02 07:12:01,347 - INFO: AW 12426
+2026-10-02 07:12:01,348 - INFO: Round 1: 1/111 AI 1 AW 12426",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,1,1,111,0,7.326864719390869,"no scaffold produced; stdout tail:
+inished.
+
+2026-10-02 07:12:01,370 - INFO: Extending ...
+2026-10-02 07:12:01,370 - INFO: Adding initial words ...
+2026-10-02 07:12:01,380 - INFO: AW 11578
+2026-10-02 07:12:01,381 - INFO: Round 1: 1/111 AI 0 AW 11578",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,1,0,111,0,7.33778715133667,"no scaffold produced; stdout tail:
+hed.
+
+2026-10-02 07:12:01,376 - INFO: Extending ...
+2026-10-02 07:12:01,376 - INFO: Adding initial words ...
+2026-10-02 07:12:01,387 - INFO: AW 12516
+2026-10-02 07:12:01,387 - INFO: Round 1: 1/111 AI 1 AW 12516",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,2,0,221,0,7.373420000076294,"no scaffold produced; stdout tail:
+/220 AI 1 AW 185822026-10-02 07:12:01,402 - INFO: Round 1: 220/220 AI 192 AW 20356
+2026-10-02 07:12:01,403 - INFO: Round 2: 1/220 AI 192 AW 20356",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,2,2,221,0,7.40527081489563,"no scaffold produced; stdout tail:
+/220 AI 1 AW 177822026-10-02 07:12:01,403 - INFO: Round 1: 220/220 AI 185 AW 20082
+2026-10-02 07:12:01,404 - INFO: Round 2: 1/220 AI 185 AW 20082",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,2,1,221,0,7.42313289642334,"no scaffold produced; stdout tail:
+/221 AI 1 AW 162942026-10-02 07:12:01,415 - INFO: Round 1: 221/221 AI 183 AW 19308
+2026-10-02 07:12:01,416 - INFO: Round 2: 1/221 AI 183 AW 19308",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,3,0,332,0,7.539497137069702,"no scaffold produced; stdout tail:
+/327 AI 1 AW 220902026-10-02 07:12:01,451 - INFO: Round 1: 327/327 AI 299 AW 24912
+2026-10-02 07:12:01,452 - INFO: Round 2: 1/327 AI 299 AW 24912",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,3,1,332,0,7.535813570022583,"no scaffold produced; stdout tail:
+/329 AI 1 AW 214962026-10-02 07:12:01,464 - INFO: Round 1: 329/329 AI 315 AW 25624
+2026-10-02 07:12:01,464 - INFO: Round 2: 1/329 AI 315 AW 25624",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,3,2,332,0,7.585047483444214,"no scaffold produced; stdout tail:
+/327 AI 1 AW 226722026-10-02 07:12:01,514 - INFO: Round 1: 327/327 AI 303 AW 26420
+2026-10-02 07:12:01,515 - INFO: Round 2: 1/327 AI 303 AW 26420",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,4,1,442,0,7.60419774055481,"no scaffold produced; stdout tail:
+.
+
+2026-10-02 07:12:01,434 - INFO: Extending ...
+2026-10-02 07:12:01,434 - INFO: Adding initial words ...
+2026-10-02 07:12:01,489 - INFO: AW 24866
+2026-10-02 07:12:01,490 - INFO: Round 1: 1/441 AI 1 AW 24866",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,4,2,442,0,7.597133159637451,"no scaffold produced; stdout tail:
+/432 AI 1 AW 234642026-10-02 07:12:01,491 - INFO: Round 1: 432/432 AI 405 AW 27932
+2026-10-02 07:12:01,491 - INFO: Round 2: 1/432 AI 405 AW 27932",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,4,0,442,0,7.6320555210113525,"no scaffold produced; stdout tail:
+ AI 422 AW 291242026-10-02 07:12:01,513 - INFO: Round 2: 437/437 AI 429 AW 29528
+2026-10-02 07:12:01,514 - INFO: Round 3: 1/437 AI 429 AW 29528",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,5,1,552,0,8.072297811508179,"no scaffold produced; stdout tail:
+.
+
+2026-10-02 07:12:01,463 - INFO: Extending ...
+2026-10-02 07:12:01,463 - INFO: Adding initial words ...
+2026-10-02 07:12:01,499 - INFO: AW 25216
+2026-10-02 07:12:01,499 - INFO: Round 1: 1/544 AI 1 AW 25216",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,5,0,552,0,8.300036191940308,"no scaffold produced; stdout tail:
+/543 AI 1 AW 241222026-10-02 07:12:01,541 - INFO: Round 1: 543/543 AI 521 AW 29994
+2026-10-02 07:12:01,541 - INFO: Round 2: 1/543 AI 521 AW 29994",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,5,2,552,0,7.035717487335205,"no scaffold produced; stdout tail:
+.
+
+2026-10-02 07:12:07,648 - INFO: Extending ...
+2026-10-02 07:12:07,648 - INFO: Adding initial words ...
+2026-10-02 07:12:07,692 - INFO: AW 25860
+2026-10-02 07:12:07,692 - INFO: Round 1: 1/547 AI 1 AW 25860",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,6,1,663,0,8.933761596679688,"no scaffold produced; stdout tail:
+.
+
+2026-10-02 07:12:08,182 - INFO: Extending ...
+2026-10-02 07:12:08,183 - INFO: Adding initial words ...
+2026-10-02 07:12:08,226 - INFO: AW 27254
+2026-10-02 07:12:08,226 - INFO: Round 1: 1/658 AI 1 AW 27254",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,6,2,663,0,8.949570417404175,"no scaffold produced; stdout tail:
+ AI 621 AW 305442026-10-02 07:12:08,714 - INFO: Round 2: 652/652 AI 648 AW 31434
+2026-10-02 07:12:08,714 - INFO: Round 3: 1/652 AI 648 AW 31434",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,6,0,663,0,11.004470109939575,"no scaffold produced; stdout tail:
+- INFO: Setting '--pre-w 41'
+2026-10-02 07:12:10,208 - INFO: 12/12 used/duplicated
+2026-10-02 07:12:10,210 - INFO: 0 groups made.
+2026-10-02 07:12:10,211 - INFO: Making read index finished.
+
+2026-10-02 07:12:10,211 - INFO: Extending ...
+2026-10-02 07:12:10,211 - IN",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,8,0,884,0,10.834513187408447,"no scaffold produced; stdout tail:
+
+
+2026-10-02 07:12:10,294 - INFO: Extending ...
+2026-10-02 07:12:10,294 - INFO: Adding initial words ...
+2026-10-02 07:12:10,354 - INFO: AW 27920
+2026-10-02 07:12:10,355 - INFO: Round 1: 1/852 AI 1 AW 27964",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,8,1,884,0,10.970250129699707,"no scaffold produced; stdout tail:
+
+2026-10-02 07:12:10,461 - INFO: Extending ...
+2026-10-02 07:12:10,461 - INFO: Adding initial words ...
+2026-10-02 07:12:10,511 - INFO: AW 27698
+2026-10-02 07:12:10,512 - INFO: Round 1: 1/864 AI 1 AW 27698",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,7,2,773,0,11.04001235961914,"no scaffold produced; stdout tail:
+
+2026-10-02 07:12:10,406 - INFO: Extending ...
+2026-10-02 07:12:10,406 - INFO: Adding initial words ...
+2026-10-02 07:12:10,453 - INFO: AW 28642
+2026-10-02 07:12:10,453 - INFO: Round 1: 1/755 AI 1 AW 28642",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,7,0,773,0,11.65474009513855,"no scaffold produced; stdout tail:
+
+2026-10-02 07:12:10,298 - INFO: Extending ...
+2026-10-02 07:12:10,298 - INFO: Adding initial words ...
+2026-10-02 07:12:10,349 - INFO: AW 28562
+2026-10-02 07:12:10,349 - INFO: Round 1: 1/756 AI 1 AW 28562",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,10,2,1104,0,11.083811521530151,"no scaffold produced; stdout tail:
+1,402 - INFO: Extending ...
+2026-10-02 07:12:11,403 - INFO: Adding initial words ...
+2026-10-02 07:12:11,470 - INFO: AW 29338
+2026-10-02 07:12:11,471 - INFO: Round 1: 1/1080 AI 1 AW 293382026-10-02 07:12:",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,10,0,1104,0,12.5151948928833,"no scaffold produced; stdout tail:
+ng '--pre-w 41'
+2026-10-02 07:12:10,436 - INFO: 39/39 used/duplicated
+2026-10-02 07:12:10,443 - INFO: 7 groups made.
+2026-10-02 07:12:10,443 - INFO: Making read index finished.
+
+2026-10-02 07:12:10,443 - INFO: Extending ...
+2026-10-02 07:12:10,443 - INFO: Adding in",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,7,1,773,0,13.82216215133667,"no scaffold produced; stdout tail:
+
+2026-10-02 07:12:11,210 - INFO: Extending ...
+2026-10-02 07:12:11,210 - INFO: Adding initial words ...
+2026-10-02 07:12:11,258 - INFO: AW 27458
+2026-10-02 07:12:11,258 - INFO: Round 1: 1/760 AI 1 AW 27458",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,8,2,884,0,14.629538536071777,"no scaffold produced; stdout tail:
+
+2026-10-02 07:12:11,773 - INFO: Extending ...
+2026-10-02 07:12:11,773 - INFO: Adding initial words ...
+2026-10-02 07:12:11,832 - INFO: AW 27552
+2026-10-02 07:12:11,833 - INFO: Round 1: 1/851 AI 1 AW 27552",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,1,0,111,0,7.110127210617065,"no scaffold produced; stdout tail:
+20,024 - INFO: Setting '--pre-w 41'
+2026-10-02 07:12:20,025 - INFO: 1/1 used/duplicated
+2026-10-02 07:12:20,025 - INFO: 0 groups made.
+2026-10-02 07:12:20,025 - INFO: Making read index finished.
+
+2026-10-02 07:12:20,025 - INFO: Extending ...
+2026-10-02 07:12:20,025",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,1,1,111,0,7.545698404312134,"no scaffold produced; stdout tail:
+inished.
+
+2026-10-02 07:12:21,218 - INFO: Extending ...
+2026-10-02 07:12:21,219 - INFO: Adding initial words ...
+2026-10-02 07:12:21,235 - INFO: AW 10682
+2026-10-02 07:12:21,235 - INFO: Round 1: 1/111 AI 1 AW 10682",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,1,2,111,0,7.82588791847229,"no scaffold produced; stdout tail:
+22,765 - INFO: Setting '--pre-w 41'
+2026-10-02 07:12:22,765 - INFO: 0/0 used/duplicated
+2026-10-02 07:12:22,765 - INFO: 0 groups made.
+2026-10-02 07:12:22,766 - INFO: Making read index finished.
+
+2026-10-02 07:12:22,766 - INFO: Extending ...
+2026-10-02 07:12:22,766",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,2,0,221,0,8.503861427307129,"no scaffold produced; stdout tail:
+.
+
+2026-10-02 07:12:24,198 - INFO: Extending ...
+2026-10-02 07:12:24,198 - INFO: Adding initial words ...
+2026-10-02 07:12:24,226 - INFO: AW 18546
+2026-10-02 07:12:24,227 - INFO: Round 1: 1/219 AI 1 AW 18592",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,2,1,221,0,8.63544249534607,"no scaffold produced; stdout tail:
+.
+
+2026-10-02 07:12:28,309 - INFO: Extending ...
+2026-10-02 07:12:28,309 - INFO: Adding initial words ...
+2026-10-02 07:12:28,328 - INFO: AW 17100
+2026-10-02 07:12:28,328 - INFO: Round 1: 1/220 AI 1 AW 17100",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,2,2,221,0,8.712163925170898,"no scaffold produced; stdout tail:
+/217 AI 1 AW 168842026-10-02 07:12:29,810 - INFO: Round 1: 217/217 AI 178 AW 19092
+2026-10-02 07:12:29,811 - INFO: Round 2: 1/217 AI 178 AW 19092",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,3,0,331,0,9.467695236206055,"no scaffold produced; stdout tail:
+.
+
+2026-10-02 07:12:31,256 - INFO: Extending ...
+2026-10-02 07:12:31,256 - INFO: Adding initial words ...
+2026-10-02 07:12:31,307 - INFO: AW 21074
+2026-10-02 07:12:31,307 - INFO: Round 1: 1/328 AI 1 AW 21074",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,3,1,331,0,10.021561861038208,"no scaffold produced; stdout tail:
+/326 AI 0 AW 216322026-10-02 07:12:33,824 - INFO: Round 1: 326/326 AI 298 AW 26142
+2026-10-02 07:12:33,824 - INFO: Round 2: 1/326 AI 299 AW 26142",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,10,1,1104,16538,35.73418140411377,,99.8671497584541,0.9986714975845411,1.0,0.9993353072693215,16538,0,22
+Macaca_tonkeana,Macaca_silenus,same-genus,3,2,331,0,10.98363208770752,"no scaffold produced; stdout tail:
+329 AI 1 AW 216382026-10-02 07:12:38,614 - INFO: Round 1: 329/329 AI 304 AW 25610
+2026-10-02 07:12:38,616 - INFO: Round 2: 1/329 AI 304 AW 25610",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,15,0,1656,16531,38.19416689872742,,99.82487922705315,0.9982487922705314,1.0,0.9991236287812396,16531,0,29
+Macaca_tonkeana,Macaca_silenus,same-genus,4,0,442,0,11.50881576538086,"no scaffold produced; stdout tail:
+432 AI 1 AW 232542026-10-02 07:12:40,139 - INFO: Round 1: 432/432 AI 398 AW 27306
+2026-10-02 07:12:40,140 - INFO: Round 2: 1/432 AI 398 AW 27306",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,4,1,442,0,15.343738555908203,"no scaffold produced; stdout tail:
+
+
+2026-10-02 07:12:42,951 - INFO: Extending ...
+2026-10-02 07:12:42,951 - INFO: Adding initial words ...
+2026-10-02 07:12:43,021 - INFO: AW 24276
+2026-10-02 07:12:43,023 - INFO: Round 1: 1/436 AI 1 AW 24332",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,20,0,2208,16527,38.133615016937256,,99.80072463768116,0.9980072463768116,1.0,0.9990026294314988,16527,0,33
+Macaca_tonkeana,Macaca_silenus,same-genus,4,2,442,0,14.273513078689575,"no scaffold produced; stdout tail:
+432 AI 1 AW 240702026-10-02 07:12:45,907 - INFO: Round 1: 432/432 AI 420 AW 28326
+2026-10-02 07:12:45,907 - INFO: Round 2: 1/432 AI 420 AW 28326",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,15,1,1656,16555,41.00304937362671,,99.96980676328502,0.9996980676328503,1.0,0.9998490110221954,16555,0,5
+Macaca_tonkeana,Macaca_silenus,same-genus,5,0,552,0,13.37598729133606,"no scaffold produced; stdout tail:
+
+
+2026-10-02 07:12:48,696 - INFO: Extending ...
+2026-10-02 07:12:48,696 - INFO: Adding initial words ...
+2026-10-02 07:12:48,762 - INFO: AW 25142
+2026-10-02 07:12:48,763 - INFO: Round 1: 1/545 AI 1 AW 25142",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,20,2,2208,16518,38.93380808830261,,99.7463768115942,0.9974637681159421,1.0,0.9987302738980591,16518,0,42
+Macaca_tonkeana,Macaca_silenus,same-genus,5,2,552,0,12.034033298492432,"no scaffold produced; stdout tail:
+
+
+2026-10-02 07:12:50,906 - INFO: Extending ...
+2026-10-02 07:12:50,906 - INFO: Adding initial words ...
+2026-10-02 07:12:50,955 - INFO: AW 25722
+2026-10-02 07:12:50,956 - INFO: Round 1: 1/538 AI 1 AW 25722",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,5,1,552,0,13.223203420639038,"no scaffold produced; stdout tail:
+
+
+2026-10-02 07:12:50,933 - INFO: Extending ...
+2026-10-02 07:12:50,933 - INFO: Adding initial words ...
+2026-10-02 07:12:50,974 - INFO: AW 25152
+2026-10-02 07:12:50,974 - INFO: Round 1: 1/543 AI 1 AW 25152",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,15,2,1656,16519,43.35805678367615,,99.7524154589372,0.9975241545893719,1.0,0.9987605429426525,16519,0,41
+Macaca_silenus,Macaca_tonkeana,same-genus,20,1,2208,16542,42.672529220581055,,99.8913043478261,0.9989130434782608,1.0,0.9994562262098966,16542,0,18
+Macaca_silenus,Macaca_tonkeana,same-genus,30,1,3312,16542,42.57515263557434,,99.8913043478261,0.9989130434782608,1.0,0.9994562262098966,16542,0,18
+Macaca_silenus,Macaca_tonkeana,same-genus,30,0,3312,16557,42.76044726371765,,99.98188405797102,0.9998188405797102,1.0,0.999909412084428,16557,0,3
+Macaca_tonkeana,Macaca_silenus,same-genus,6,0,662,0,13.56646180152893,"no scaffold produced; stdout tail:
+
+
+2026-10-02 07:12:52,571 - INFO: Extending ...
+2026-10-02 07:12:52,572 - INFO: Adding initial words ...
+2026-10-02 07:12:52,674 - INFO: AW 27200
+2026-10-02 07:12:52,675 - INFO: Round 1: 1/655 AI 1 AW 27200",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,30,2,3312,16548,42.43457269668579,,99.92753623188406,0.9992753623188406,1.0,0.9996375498368975,16548,0,12
+Macaca_tonkeana,Macaca_silenus,same-genus,6,1,662,0,14.143739700317383,"no scaffold produced; stdout tail:
+
+
+2026-10-02 07:12:59,867 - INFO: Extending ...
+2026-10-02 07:12:59,867 - INFO: Adding initial words ...
+2026-10-02 07:12:59,920 - INFO: AW 26206
+2026-10-02 07:12:59,921 - INFO: Round 1: 1/652 AI 1 AW 26206",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,6,2,662,0,14.502185106277466,"no scaffold produced; stdout tail:
+
+
+2026-10-02 07:13:00,093 - INFO: Extending ...
+2026-10-02 07:13:00,093 - INFO: Adding initial words ...
+2026-10-02 07:13:00,143 - INFO: AW 26596
+2026-10-02 07:13:00,144 - INFO: Round 1: 1/651 AI 1 AW 26596",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,7,0,772,0,16.373247385025024,"no scaffold produced; stdout tail:
+
+
+2026-10-02 07:13:02,824 - INFO: Extending ...
+2026-10-02 07:13:02,824 - INFO: Adding initial words ...
+2026-10-02 07:13:02,924 - INFO: AW 28630
+2026-10-02 07:13:02,925 - INFO: Round 1: 1/756 AI 1 AW 28630",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,7,1,772,0,16.157923698425293,"no scaffold produced; stdout tail:
+
+2026-10-02 07:13:01,036 - INFO: Extending ...
+2026-10-02 07:13:01,036 - INFO: Adding initial words ...
+2026-10-02 07:13:01,097 - INFO: AW 26946
+2026-10-02 07:13:01,097 - INFO: Round 1: 1/751 AI 1 AW 26946",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,7,2,772,0,15.033316612243652,"no scaffold produced; stdout tail:
+
+
+2026-10-02 07:13:02,781 - INFO: Extending ...
+2026-10-02 07:13:02,782 - INFO: Adding initial words ...
+2026-10-02 07:13:02,904 - INFO: AW 27530
+2026-10-02 07:13:02,904 - INFO: Round 1: 1/756 AI 1 AW 27530",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,8,1,883,0,14.387071371078491,"no scaffold produced; stdout tail:
+ INFO: Setting '--pre-w 41'
+2026-10-02 07:13:04,039 - INFO: 19/19 used/duplicated
+2026-10-02 07:13:04,043 - INFO: 1 groups made.
+2026-10-02 07:13:04,044 - INFO: Making read index finished.
+
+2026-10-02 07:13:04,044 - INFO: Extending ...
+2026-10-02 07:13:04,044 - INF",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,8,0,883,0,15.75648832321167,"no scaffold produced; stdout tail:
+
+2026-10-02 07:13:02,977 - INFO: Extending ...
+2026-10-02 07:13:02,977 - INFO: Adding initial words ...
+2026-10-02 07:13:03,059 - INFO: AW 28444
+2026-10-02 07:13:03,066 - INFO: Round 1: 1/858 AI 1 AW 28444",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,10,1,1103,0,14.28004765510559,"no scaffold produced; stdout tail:
+6,227 - INFO: Extending ...
+2026-10-02 07:13:06,228 - INFO: Adding initial words ...
+2026-10-02 07:13:06,296 - INFO: AW 28844
+2026-10-02 07:13:06,297 - INFO: Round 1: 1/1070 AI 1 AW 288442026-10-02 07:13:",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,10,0,1103,16509,37.9030385017395,,99.8065413215646,0.998065413215646,1.0,0.9990317700453858,16509,0,32
+Macaca_tonkeana,Macaca_silenus,same-genus,8,2,883,16467,39.21216106414795,,99.55262680611813,0.9955262680611813,1.0,0.9977581192438197,16467,0,74
+Macaca_tonkeana,Macaca_silenus,same-genus,15,1,1655,16534,39.793187379837036,,99.95768091409225,0.9995768091409225,1.0,0.9997883597883598,16534,0,7
+Macaca_tonkeana,Macaca_silenus,same-genus,10,2,1103,16526,40.482341051101685,,99.9093162444834,0.999093162444834,1.0,0.9995463755405691,16526,0,15
+Macaca_tonkeana,Macaca_silenus,same-genus,15,0,1655,16535,40.633044719696045,,99.96372649779336,0.9996372649779336,1.0,0.9998185995888257,16535,0,6
+Macaca_tonkeana,Macaca_silenus,same-genus,15,2,1655,16537,40.64426898956299,,99.97581766519558,0.9997581766519558,1.0,0.9998790737045771,16537,0,4
+Macaca_tonkeana,Macaca_silenus,same-genus,20,1,2206,16516,37.78668689727783,,99.84886040747234,0.9984886040747234,1.0,0.9992437305260611,16516,0,25
+Macaca_tonkeana,Macaca_silenus,same-genus,20,0,2206,16538,39.03407621383667,,99.98186324889669,0.9998186324889669,1.0,0.9999093080201941,16538,0,3
+Macaca_tonkeana,Macaca_silenus,same-genus,20,2,2206,16539,37.383577823638916,,99.98790883259778,0.9998790883259778,1.0,0.9999395405078597,16539,0,2
+Macaca_tonkeana,Macaca_silenus,same-genus,30,2,3309,16522,36.954328298568726,,99.88513390967898,0.9988513390967898,1.0,0.9994253395033723,16522,0,19
+Macaca_tonkeana,Macaca_silenus,same-genus,30,0,3309,16534,40.550944566726685,,99.95768091409225,0.9995768091409225,1.0,0.9997883597883598,16534,0,7
+Macaca_tonkeana,Macaca_silenus,same-genus,30,1,3309,16538,42.452041149139404,,99.98186324889669,0.9998186324889669,1.0,0.9999093080201941,16538,0,3

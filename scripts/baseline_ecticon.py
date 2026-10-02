@@ -5,9 +5,7 @@ Structurally unrelated to the ASEM family (baseline_ieee_access.py /
 baseline_ojemb.py / asem_core.py): a single-pass, non-iterative,
 LCS-based split-align-assemble-merge pipeline, not an EM/Profile-HMM
 consensus loop. Read directly from the paper's page images (pdftotext could
-not extract this PDF's body text -- it appears to be scan/image-based) since
-the project's own .ai/ECTI_CON_TRANSLOCATION_TECHNIQUE.md summary predates
-that discovery and does not carry every implementation-relevant detail.
+not extract this PDF's body text -- it appears to be scan/image-based).
 
 Confirmed from the paper (Section II, Fig. 1):
 1. Split the reference into M overlapping sub-references, each longer than

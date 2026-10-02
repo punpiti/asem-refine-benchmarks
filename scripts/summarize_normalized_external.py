@@ -55,7 +55,7 @@ def summarize(tool_dir: str, same_genus_only: bool) -> dict:
 
 def main() -> None:
     summary = {
-        # The accepted think rerun (2026-10-01) normalized every successful
+        # The accepted normalized rerun (2026-10-01) rescored every successful
         # NOVOPlasty job, not only the same-genus subset.
         "novoplasty": summarize("ext_novoplasty", same_genus_only=False),
         "getorganelle": summarize("ext_getorganelle", same_genus_only=False),

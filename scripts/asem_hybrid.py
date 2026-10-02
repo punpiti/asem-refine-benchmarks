@@ -2,9 +2,9 @@
 
 Reference-guided placement (asem_core.py) leaves a genome's most divergent
 regions untouched -- no read ever clears the alignment threshold there, so
-those positions keep whatever base theta started with, forever (see the
-untouched-island analysis in .ai/PROJECT_STATE.md: at the hardest tested
-pair, 65.2% of the reference is never touched by a single placed read).
+those positions keep whatever base theta started with, forever (at the
+hardest tested pair, 65.2% of the reference is never touched by a single
+placed read).
 But the reads that *originate* from those regions still overlap each other
 exactly even when none of them overlaps theta, because they all come from
 the same real target sequence.

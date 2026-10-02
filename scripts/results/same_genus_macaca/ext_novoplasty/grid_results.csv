@@ -1,0 +1,323 @@
+reference,target,divergence,depth,replicate,n_reads,theta_len,runtime_s,error,identity_pct,recall,precision,f1,c_theta,w_theta,u_t
+Macaca_silenus,Macaca_tonkeana,same-genus,1,2,111,0,0.8783369064331055,"no contig produced for gea8ca5bb; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,1,0,111,0,0.923001766204834,"no contig produced for g0482c497; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,2,0,221,0,0.9120965003967285,"no contig produced for g06c47ace; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,2,1,221,0,0.9268546104431152,"no contig produced for g71c34a58; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,3,0,332,0,0.913144588470459,"no contig produced for g070610f9; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,1,1,111,0,0.9521212577819824,"no contig produced for g7385f401; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,2,2,221,0,0.9316298961639404,"no contig produced for ge8ca1be2; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,3,2,332,0,0.9270758628845215,"no contig produced for ge90871d5; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,3,1,332,0,0.9344117641448975,"no contig produced for g7001206f; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,4,0,442,0,0.9455850124359131,"no contig produced for g0249067c; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,5,1,552,0,0.9342260360717773,"no contig produced for g748c5cdd; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,4,2,442,0,1.0087857246398926,"no contig produced for gec476750; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,5,2,552,0,0.8981149196624756,"no contig produced for ged850d67; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,5,0,552,287,23.391891479492188,,1.7330917874396135,0.017330917874396137,1.0,0.03407134801448329,287,0,16273
+Macaca_silenus,Macaca_tonkeana,same-genus,4,1,442,307,45.31813883781433,,1.853864734299517,0.01853864734299517,1.0,0.03640244263947353,307,0,16253
+Macaca_silenus,Macaca_tonkeana,same-genus,10,0,1104,461,50.98554968833923,,2.783816425120773,0.02783816425120773,1.0,0.054168380236178836,461,0,16099
+Macaca_silenus,Macaca_tonkeana,same-genus,6,1,663,252,53.137505769729614,,1.5217391304347827,0.015217391304347827,1.0,0.029978586723768737,252,0,16308
+Macaca_silenus,Macaca_tonkeana,same-genus,8,2,884,595,74.74988317489624,,3.592995169082126,0.035929951690821256,1.0,0.06936753133197318,595,0,15965
+Macaca_silenus,Macaca_tonkeana,same-genus,8,0,884,754,102.09673571586609,,4.553140096618358,0.04553140096618358,1.0,0.08709714681760425,754,0,15806
+Macaca_silenus,Macaca_tonkeana,same-genus,7,0,773,572,111.83190989494324,,3.4541062801932365,0.034541062801932365,1.0,0.06677562456222273,572,0,15988
+Macaca_silenus,Macaca_tonkeana,same-genus,10,1,1104,869,140.25259256362915,,5.247584541062802,0.05247584541062802,1.0,0.09971885937231052,869,0,15691
+Macaca_silenus,Macaca_tonkeana,same-genus,7,2,773,825,154.35083317756653,,4.981884057971015,0.049818840579710144,1.0,0.09490940465918896,825,0,15735
+Macaca_silenus,Macaca_tonkeana,same-genus,8,1,884,1726,224.0345058441162,,10.422705314009661,0.10422705314009661,1.0,0.1887783003390572,1726,0,14834
+Macaca_tonkeana,Macaca_silenus,same-genus,1,0,111,0,1.024660587310791,"no contig produced for gab6d4786; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,1,1,111,0,1.0477275848388672,"no contig produced for gdc6a7710; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,1,2,111,0,1.470914363861084,"no contig produced for g456326aa; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,2,0,221,0,1.0825951099395752,"no contig produced for ga92bf9df; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,2,1,221,0,0.9465579986572266,"no contig produced for gde2cc949; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,2,2,221,0,0.9333822727203369,"no contig produced for g472598f3; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,3,0,331,0,0.9016234874725342,"no contig produced for ga8e993e8; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,3,1,331,0,0.9058499336242676,"no contig produced for gdfeea37e; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,3,2,331,0,0.9537994861602783,"no contig produced for g46e7f2c4; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,6,2,663,1273,289.98642349243164,,7.68719806763285,0.0768719806763285,1.0,0.14276902372006953,1273,0,15287
+Macaca_tonkeana,Macaca_silenus,same-genus,4,1,442,0,0.8213372230529785,"no contig produced for gdaa1b5fb; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_silenus,Macaca_tonkeana,same-genus,7,1,773,1772,291.4041509628296,,10.70048309178744,0.1070048309178744,1.0,0.1933231507746018,1772,0,14788
+Macaca_tonkeana,Macaca_silenus,same-genus,4,2,442,0,0.8437802791595459,"no contig produced for g43a8e441; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,4,0,442,270,58.922417402267456,,1.6323075992987124,0.016323075992987122,1.0,0.03212182499553864,270,0,16271
+Macaca_tonkeana,Macaca_silenus,same-genus,5,1,552,0,0.8140828609466553,"no contig produced for gdb63dfcc; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify i",nan,nan,nan,nan,0,0,0
+Macaca_tonkeana,Macaca_silenus,same-genus,6,0,662,253,18.835889101028442,,1.5295326763799044,0.015295326763799045,1.0,0.0301298082648565,253,0,16288
+Macaca_silenus,Macaca_tonkeana,same-genus,6,0,663,1476,322.38041734695435,,8.91304347826087,0.0891304347826087,1.0,0.16367265469061876,1476,0,15084
+Macaca_silenus,Macaca_tonkeana,same-genus,10,2,1104,3909,327.8441882133484,,23.605072463768117,0.23605072463768115,1.0,0.3819434266451708,3909,0,12651
+Macaca_tonkeana,Macaca_silenus,same-genus,5,0,552,328,55.606590032577515,,1.98295145396288,0.0198295145396288,1.0,0.03888790088327702,328,0,16213
+Macaca_tonkeana,Macaca_silenus,same-genus,5,2,552,603,171.61654496192932,,3.645486971767124,0.03645486971767124,1.0,0.07034531031264583,603,0,15938
+Macaca_tonkeana,Macaca_silenus,same-genus,6,1,662,1151,157.61084079742432,,6.9584668399734,0.069584668399734,1.0,0.13011530635315396,1151,0,15390
+Macaca_tonkeana,Macaca_silenus,same-genus,6,2,662,1449,219.84398102760315,,8.76005078290309,0.0876005078290309,1.0,0.1610894941634241,1449,0,15092
+Macaca_tonkeana,Macaca_silenus,same-genus,7,0,772,2133,238.4265055656433,,12.895230034459827,0.12895230034459826,1.0,0.22844596765556385,2133,0,14408
+Macaca_tonkeana,Macaca_silenus,same-genus,8,1,883,256,27.71404218673706,,1.5476694274832234,0.015476694274832234,1.0,0.030481633625052088,256,0,16285
+Macaca_tonkeana,Macaca_silenus,same-genus,7,2,772,1865,266.1072266101837,,11.275013602563327,0.11275013602563327,1.0,0.20265130935564488,1865,0,14676
+Macaca_tonkeana,Macaca_silenus,same-genus,8,0,883,3746,398.48466420173645,,22.646756544344356,0.22646756544344357,1.0,0.3693005372898901,3746,0,12795
+Macaca_tonkeana,Macaca_silenus,same-genus,10,0,1103,1943,376.83407950401306,,11.728432380146304,0.11730559922602492,0.9984559958826557,0.2099453492776365,1940,3,14598
+Macaca_tonkeana,Macaca_silenus,same-genus,8,2,883,1982,410.75753712654114,,11.98234689559277,0.1198234689559277,1.0,0.21400421098094263,1982,0,14559
+Macaca_tonkeana,Macaca_silenus,same-genus,7,1,772,3887,692.1418881416321,,23.49918384620035,0.2349918384620035,1.0,0.38055609947131386,3887,0,12654
+Macaca_silenus,Macaca_tonkeana,same-genus,15,0,1656,16520,1043.0367164611816,,99.7584541062802,0.9975845410628019,1.0,0.9987908101571946,16520,0,40
+Macaca_silenus,Macaca_tonkeana,same-genus,30,2,3312,16544,953.6307971477509,,99.90338164251207,0.9990338164251208,1.0,0.999516674722088,16544,0,16
+Macaca_silenus,Macaca_tonkeana,same-genus,30,0,3312,16538,998.7795903682709,,99.8671497584541,0.9986714975845411,1.0,0.9993353072693215,16538,0,22
+Macaca_silenus,Macaca_tonkeana,same-genus,20,1,2208,16504,1039.1382730007172,,99.66183574879227,0.9966183574879227,1.0,0.9983063150254053,16504,0,56
+Macaca_silenus,Macaca_tonkeana,same-genus,20,2,2208,16499,1014.868968963623,,99.63164251207729,0.9963164251207729,1.0,0.9981548141202092,16499,0,61
+Macaca_silenus,Macaca_tonkeana,same-genus,20,0,2208,16516,1064.1041495800018,,99.73429951690821,0.9973429951690821,1.0,0.9986697303180554,16516,0,44
+Macaca_tonkeana,Macaca_silenus,same-genus,10,1,1103,4717,410.02069664001465,,28.517018318118616,0.28517018318118614,1.0,0.4437858688493744,4717,0,11824
+Macaca_silenus,Macaca_tonkeana,same-genus,30,1,3312,16532,1003.8185923099518,,99.83091787439614,0.9983091787439613,1.0,0.9991538740481083,16532,0,28
+Macaca_silenus,Macaca_tonkeana,same-genus,15,1,1656,16551,1106.918497800827,,99.94565217391305,0.9994565217391305,1.0,0.999728187007339,16551,0,9
+Macaca_silenus,Macaca_tonkeana,same-genus,15,2,1656,16487,1111.0347647666931,,99.55917874396135,0.9955917874396135,1.0,0.9977910249039247,16487,0,73
+Macaca_tonkeana,Macaca_silenus,same-genus,10,2,1103,4469,377.2995374202728,,27.017713560244243,0.27017713560244244,1.0,0.4254164683484055,4469,0,12072
+Macaca_tonkeana,Macaca_silenus,same-genus,15,1,1655,16497,697.2920625209808,,99.73399431715131,0.9973399431715132,1.0,0.9986682002542527,16497,0,44
+Macaca_tonkeana,Macaca_silenus,same-genus,15,0,1655,16481,731.112446308136,,99.63726497793363,0.9963726497793362,1.0,0.9981830294954879,16481,0,60
+Macaca_tonkeana,Macaca_silenus,same-genus,20,1,2206,16507,597.5995860099792,,99.79445015416239,0.9979445015416238,1.0,0.9989711934156379,16507,0,34
+Macaca_tonkeana,Macaca_silenus,same-genus,20,0,2206,16515,644.4828414916992,,99.84281482377123,0.9984281482377123,1.0,0.9992134559535333,16515,0,26
+Macaca_tonkeana,Macaca_silenus,same-genus,30,1,3309,16521,597.7834696769714,,99.87908832597788,0.9987908832597787,1.0,0.9993950759179723,16521,0,20
+Macaca_tonkeana,Macaca_silenus,same-genus,30,2,3309,16513,598.2848944664001,,99.83072365636902,0.9983072365636902,1.0,0.9991529013130029,16513,0,28
+Macaca_tonkeana,Macaca_silenus,same-genus,30,0,3309,16523,606.742995262146,,99.89117949338008,0.9989117949338009,1.0,0.999455601258166,16523,0,18
+Macaca_tonkeana,Macaca_silenus,same-genus,20,2,2206,16531,610.181116104126,,99.93954416298894,0.9993954416298894,1.0,0.9996976294146105,16531,0,10
+Macaca_tonkeana,Macaca_silenus,same-genus,15,2,1655,16506,684.9107422828674,,99.78840457046128,0.9978840457046128,1.0,0.9989409023511968,16506,0,35

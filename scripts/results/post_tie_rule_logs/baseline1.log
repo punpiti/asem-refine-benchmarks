@@ -1,5 +1,5 @@
 === STAGE 1/2: initial-state (no refinement) metrics for all pairs ===
-  /mnt/c/Users/punpi/OneDrive/genome/asem-refine-benchmarks/scripts/results/baseline1_ieee_access/initial_state.csv already exists, skipping (delete it to recompute)
+  scripts/results/baseline1_ieee_access/initial_state.csv already exists, skipping (delete it to recompute)
 === STAGE 2/2: grid -- 720 total combinations, 23 already done (resumed), 697 remaining, 14 in parallel ===
   [1/697   0.1%] finished Homo_sapiens vs Saimiri_boliviensis depth=1X rep=1  |     77s elapsed, ~ 53631s remaining, 0.013 runs/s
   [2/697   0.3%] finished Homo_sapiens vs Saimiri_boliviensis depth=1X rep=2  |     84s elapsed, ~ 29160s remaining, 0.024 runs/s

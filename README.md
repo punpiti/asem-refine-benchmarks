@@ -125,7 +125,7 @@ python3 scripts/summarize_normalized_external.py
 ```
 
 Acceptance records for the run used in the paper are in
-`scripts/results/think_rerun_20261001/`.
+`scripts/results/normalized_rerun_20261001/`.
 
 The `make_*.py` scripts regenerate the paper's figures/tables from the
 CSVs in `scripts/results/`.
