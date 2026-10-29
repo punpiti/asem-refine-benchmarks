@@ -1,0 +1,6 @@
+Gorilla_gorilla->Homo_sapiens: theta 16382 target 16569 extra-in-theta 493; missing runs >=10 bp (target coords): [(1, 576, 576), (16173, 16276, 104)]
+Homo_sapiens->Gorilla_gorilla: theta 16468 target 16364 extra-in-theta 583; missing runs >=10 bp (target coords): [(15886, 16364, 479)]
+
+NCBI feature tables (efetch, 2026-10-28): NC_012920.1 D-loop 16024..16569 + 1..576;
+NC_001645.1 D-loop 15447..16364. Every missing run >=10 bp lies inside the D-loop,
+which in both genomes also borders the linear sequence origin.

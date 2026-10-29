@@ -7,3 +7,9 @@ scripts/results/ext_mia_representative/grid_results.concurrent_invalid.csv
 scripts/results/ext_pilon_representative/grid_results.launcher_invalid.csv
 scripts/results/**/.grid.lock
 scripts/results/**/backups/
+
+# plos-one/: generated outputs (recreate with the commands in plos-one/README.md)
+plos-one/assets/
+plos-one/generated/
+plos-one/supporting/*.xlsx
+plos-one/**/*.log

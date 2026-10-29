@@ -1,0 +1,103 @@
+{
+  "original_rows": 720,
+  "original_unique_keys": 720,
+  "original_status_counts": {
+    "completed": 633,
+    "timeout": 69,
+    "process_error": 18
+  },
+  "expected_followup_keys": 87,
+  "followup_attempts": 87,
+  "followup_duplicate_attempts": 0,
+  "followup_keys_covered": 87,
+  "missing_followup_keys": [],
+  "unexpected_followup_keys": [],
+  "input_mismatches": 0,
+  "followup_status_by_original_status": {
+    "timeout": {
+      "completed": 68,
+      "process_error": 1
+    },
+    "process_error": {
+      "process_error": 18
+    }
+  },
+  "final_status_counts": {
+    "completed": 701,
+    "process_error": 19
+  },
+  "runtime_s": {
+    "original_completed": {
+      "n": 633,
+      "min": 23.25,
+      "q1": 79.27,
+      "median": 138.16,
+      "q3": 200.43,
+      "max": 296.55
+    },
+    "followup_completed": {
+      "n": 68,
+      "min": 50.05,
+      "q1": 76.92,
+      "median": 92.05,
+      "q3": 120.47,
+      "max": 314.46
+    },
+    "followup_peak_rss_kb": {
+      "n": 87,
+      "min": 127616.0,
+      "q1": 128000.0,
+      "median": 128256.0,
+      "q3": 128512.0,
+      "max": 129792.0
+    }
+  },
+  "manifests": [
+    {
+      "selection": "crashes",
+      "timeout_s": 3600,
+      "parallel": 6,
+      "n_jobs": 18,
+      "host": "think",
+      "created_utc": "2026-10-28T12:10:08+00:00",
+      "mia_sha256": "d8a7169fd769815c3b1da6e4ef6dd49d24299fc872b5ac7925fd7d79c7f77fa9",
+      "ma_sha256": "cb2035cba13c722c3a7b9e1f8f6ca80e4b56bde1361cc590e49d23a3af20a40b",
+      "mia_package": "bioconda mapping-iterative-assembler 1.0 h503566f_7",
+      "benchmark_repo_commit": "284b3472044f3e564d8e67bfe7d099ac3ed405cb",
+      "benchmark_repo_dirty_scripts": "",
+      "original_csv_sha256": "7ed4d176aeb2e77f41249be75e3fb8d41041cd831bcf26c4ad1303491cd2d5d6",
+      "file": "results/manifests/manifest_crashes_t3600_20261028T121008Z.json"
+    },
+    {
+      "selection": "pilot",
+      "timeout_s": 3600,
+      "parallel": 6,
+      "n_jobs": 15,
+      "host": "think",
+      "created_utc": "2026-10-28T11:42:08+00:00",
+      "mia_sha256": "d8a7169fd769815c3b1da6e4ef6dd49d24299fc872b5ac7925fd7d79c7f77fa9",
+      "ma_sha256": "cb2035cba13c722c3a7b9e1f8f6ca80e4b56bde1361cc590e49d23a3af20a40b",
+      "mia_package": "bioconda mapping-iterative-assembler 1.0 h503566f_7",
+      "benchmark_repo_commit": "284b3472044f3e564d8e67bfe7d099ac3ed405cb",
+      "benchmark_repo_dirty_scripts": "",
+      "original_csv_sha256": "7ed4d176aeb2e77f41249be75e3fb8d41041cd831bcf26c4ad1303491cd2d5d6",
+      "file": "results/manifests/manifest_pilot_t3600_20261028T114209Z.json"
+    },
+    {
+      "selection": "timeouts",
+      "timeout_s": 3600,
+      "parallel": 6,
+      "n_jobs": 54,
+      "host": "think",
+      "created_utc": "2026-10-28T11:49:44+00:00",
+      "mia_sha256": "d8a7169fd769815c3b1da6e4ef6dd49d24299fc872b5ac7925fd7d79c7f77fa9",
+      "ma_sha256": "cb2035cba13c722c3a7b9e1f8f6ca80e4b56bde1361cc590e49d23a3af20a40b",
+      "mia_package": "bioconda mapping-iterative-assembler 1.0 h503566f_7",
+      "benchmark_repo_commit": "284b3472044f3e564d8e67bfe7d099ac3ed405cb",
+      "benchmark_repo_dirty_scripts": "",
+      "original_csv_sha256": "7ed4d176aeb2e77f41249be75e3fb8d41041cd831bcf26c4ad1303491cd2d5d6",
+      "file": "results/manifests/manifest_timeouts_t3600_20261028T114945Z.json"
+    }
+  ],
+  "accepted": true
+}

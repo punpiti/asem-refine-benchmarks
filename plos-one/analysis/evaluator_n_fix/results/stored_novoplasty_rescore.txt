@@ -1,0 +1,5 @@
+('Gorilla_gorilla', 'Varecia_variegata', 15, 2) len=16709 ambiguous=32 recorded=0.9884022539578426 old=0.988402 fixed=0.988493
+('Homo_sapiens', 'Varecia_variegata', 15, 2) len=16709 ambiguous=32 recorded=0.9884022539578426 old=0.988402 fixed=0.988493
+('Saimiri_boliviensis', 'Saimiri_sciureus', 15, 0) len=10588 ambiguous=2 recorded=0.7824094604582409 old=0.782409 fixed=0.782409
+('Saimiri_boliviensis', 'Saimiri_sciureus', 7, 2) len=2499 ambiguous=3 recorded=0.2631523458091724 old=0.263152 fixed=0.263152
+('Saimiri_boliviensis', 'Varecia_variegata', 15, 2) len=16709 ambiguous=32 recorded=0.9884022539578426 old=0.988402 fixed=0.988493

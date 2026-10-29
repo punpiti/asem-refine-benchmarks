@@ -1,0 +1,6 @@
+read_length_experiment: released 189 rows, rerun 189, matched 189 (keys: baseline,reference,target,divergence,length_condition,replicate,depth,n_reads,mean_read_len); F1 changed in 3; max |dF1| 7.1e-05; max |dIdentity| 0.011 points
+parameter_sensitivity: released 396 rows, rerun 396, matched 396 (keys: parameter,tested_value,tau,w,t_max,reference,target,divergence,depth,replicate,n_reads); F1 changed in 0; max |dF1| 0; max |dIdentity| 0 points
+circular_boundary: released 240 rows, rerun 240, matched 240 (keys: divergence,depth,replicate,sampling,n_reads,terminal_correct,terminal_total,interior_correct,interior_total,terminal_accuracy,interior_accuracy); F1 changed in 0; max |dF1| 0; max |dIdentity| 0 points
+real_wgs_benchmark: released 178 rows, rerun 175, matched 172 (keys: reference,target,divergence,depth,replicate,iteration,method,n_reads); F1 changed in 171; max |dF1| 0.0011; max |dIdentity| 0.19 points
+real_wgs_hybrid: released 120 rows, rerun 120, matched 120 (keys: reference,target,divergence,method,depth,replicate,n_reads); F1 changed in 120; max |dF1| 0.015; max |dIdentity| 2.6 points
+real_wgs_hybrid_boundary: released 120 rows, rerun 120, matched 120 (keys: reference,target,divergence,method,depth,replicate,n_reads); F1 changed in 101; max |dF1| 0.00055; max |dIdentity| 0.099 points

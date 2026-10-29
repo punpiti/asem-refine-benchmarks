@@ -1,0 +1,220 @@
+experiment,method,reference,target,divergence,condition,length_condition,depth,replicate,n_reads,status,error,runtime_s,theta_len,n_ambiguous,f1,identity_pct,recall,precision,c_theta,w_theta,u_t,theta_fasta,theta_sha256,host
+grid,MIA,Homo_sapiens,Varecia_variegata,,8,,,1,905,no_output_or_error,"MIA exited -11; stdout tail:
+
+stderr tail:
+Starting assembly of /tmp/mia_kaf8th_z/reads.fasta
+using /tmp/mia_kaf8th_z/reference.fasta
+as reference at Thu Oct 29 03:35:37 2026
+
+Starting to align sequences to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assemb",228.51,,,,,,,,,,,,think
+grid,MIA,Gorilla_gorilla,Varecia_variegata,,4,,,0,453,no_output_or_error,"MIA exited -6; stdout tail:
+
+stderr tail:
+Starting assembly of /tmp/mia_38n3byzq/reads.fasta
+using /tmp/mia_38n3byzq/reference.fasta
+as reference at Thu Oct 29 03:39:26 2026
+
+Starting to align sequences to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assembl",116.14,,,,,,,,,,,,think
+grid,MIA,Saimiri_boliviensis,Homo_sapiens,,1,,,0,111,no_output_or_error,"MIA exited -6; stdout tail:
+
+stderr tail:
+Starting assembly of /tmp/mia_8zia5elm/reads.fasta
+using /tmp/mia_8zia5elm/reference.fasta
+as reference at Thu Oct 29 03:41:22 2026
+
+Starting to align sequences to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assembl",31.6,,,,,,,,,,,,think
+grid,MIA,Gorilla_gorilla,Varecia_variegata,,8,,,0,905,no_output_or_error,"MIA exited -6; stdout tail:
+
+stderr tail:
+Starting assembly of /tmp/mia_mc_5n34e/reads.fasta
+using /tmp/mia_mc_5n34e/reference.fasta
+as reference at Thu Oct 29 03:41:54 2026
+
+Starting to align sequences to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assembl",220.65,,,,,,,,,,,,think
+grid,MIA,Saimiri_boliviensis,Varecia_variegata,,2,,,0,227,no_output_or_error,"MIA exited -11; stdout tail:
+
+stderr tail:
+Starting assembly of /tmp/mia_vdpdi84n/reads.fasta
+using /tmp/mia_vdpdi84n/reference.fasta
+as reference at Thu Oct 29 03:45:34 2026
+
+Starting to align sequences to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assemb",60.02,,,,,,,,,,,,think
+grid,MIA,Saimiri_boliviensis,Varecia_variegata,,3,,,2,340,no_output_or_error,"MIA exited -6; stdout tail:
+
+stderr tail:
+Starting assembly of /tmp/mia_fu5mg99g/reads.fasta
+using /tmp/mia_fu5mg99g/reference.fasta
+as reference at Thu Oct 29 03:46:34 2026
+
+Starting to align sequences to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assembl",85.9,,,,,,,,,,,,think
+grid,MIA,Saimiri_boliviensis,Varecia_variegata,,4,,,0,453,no_output_or_error,"MIA exited -11; stdout tail:
+
+stderr tail:
+Starting assembly of /tmp/mia_xs_1f_ch/reads.fasta
+using /tmp/mia_xs_1f_ch/reference.fasta
+as reference at Thu Oct 29 03:48:00 2026
+
+Starting to align sequences to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assemb",114.28,,,,,,,,,,,,think
+grid,MIA,Saimiri_sciureus,Homo_sapiens,,1,,,0,111,no_output_or_error,"MIA exited -6; stdout tail:
+
+stderr tail:
+Starting assembly of /tmp/mia_fai_y8o4/reads.fasta
+using /tmp/mia_fai_y8o4/reference.fasta
+as reference at Thu Oct 29 03:49:54 2026
+
+Starting to align sequences to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assembl",33.19,,,,,,,,,,,,think
+grid,MIA,Saimiri_boliviensis,Varecia_variegata,,4,,,2,453,no_output_or_error,"MIA exited -11; stdout tail:
+
+stderr tail:
+Starting assembly of /tmp/mia__88li4vf/reads.fasta
+using /tmp/mia__88li4vf/reference.fasta
+as reference at Thu Oct 29 03:50:28 2026
+
+Starting to align sequences to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assemb",112.73,,,,,,,,,,,,think
+grid,MIA,Saimiri_boliviensis,Varecia_variegata,,5,,,2,566,no_output_or_error,"MIA exited -6; stdout tail:
+
+stderr tail:
+Starting assembly of /tmp/mia_k7d_630a/reads.fasta
+using /tmp/mia_k7d_630a/reference.fasta
+as reference at Thu Oct 29 03:52:20 2026
+
+Starting to align sequences to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assembl",139.63,,,,,,,,,,,,think
+grid,MIA,Saimiri_boliviensis,Varecia_variegata,,6,,,1,679,completed,,167.55,17788,7710,0.7215042013640303,53.623837795452,0.9931535269709544,0.5665423989585182,9574,7325,66,results/thetas/grid/MIA/Saimiri_boliviensis__Varecia_variegata__6X__r1.fa.gz,47bcdac0acf78841bb350006b8e32bf692affbdb692dddc14c9e6f2751a84bdb,think
+grid,MIA,Saimiri_sciureus,Varecia_variegata,,2,,,1,227,no_output_or_error,"MIA exited -11; stdout tail:
+
+stderr tail:
+Starting assembly of /tmp/mia_qr33uix7/reads.fasta
+using /tmp/mia_qr33uix7/reference.fasta
+as reference at Thu Oct 29 03:57:58 2026
+
+Starting to align sequences to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assemb",59.67,,,,,,,,,,,,think
+grid,MIA,Saimiri_sciureus,Varecia_variegata,,3,,,2,340,no_output_or_error,"MIA exited -6; stdout tail:
+
+stderr tail:
+Starting assembly of /tmp/mia_q_hczn46/reads.fasta
+using /tmp/mia_q_hczn46/reference.fasta
+as reference at Thu Oct 29 03:58:57 2026
+
+Starting to align sequences to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assembl",85.97,,,,,,,,,,,,think
+grid,MIA,Saimiri_sciureus,Varecia_variegata,,4,,,0,453,completed,,113.53,18920,8901,0.7102782423597385,48.50986500519211,0.9648869152122276,0.561984962406015,9343,7282,340,results/thetas/grid/MIA/Saimiri_sciureus__Varecia_variegata__4X__r0.fa.gz,12140c7d8439573a1da7fe2dac54dddc40721de639d44ccdc49532a77a4aeecc,think
+grid,MIA,Saimiri_sciureus,Varecia_variegata,,4,,,2,453,completed,,111.36,18863,9401,0.6939953810623557,47.16684978810234,0.9730167296276309,0.5393359258151361,9015,7700,250,results/thetas/grid/MIA/Saimiri_sciureus__Varecia_variegata__4X__r2.fa.gz,f71199ff728bb9624eada65bc42bdcb27fe970d1309aa7fc8dde42b85fd3536d,think
+grid,MIA,Saimiri_sciureus,Varecia_variegata,,5,,,2,566,no_output_or_error,"MIA exited -6; stdout tail:
+
+stderr tail:
+Starting assembly of /tmp/mia_adrpy4b4/reads.fasta
+using /tmp/mia_adrpy4b4/reference.fasta
+as reference at Thu Oct 29 04:05:10 2026
+
+Starting to align sequences to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assembl",142.31,,,,,,,,,,,,think
+grid,MIA,Saimiri_sciureus,Varecia_variegata,,8,,,1,905,no_output_or_error,"MIA exited -6; stdout tail:
+
+stderr tail:
+Starting assembly of /tmp/mia_vkt6zyso/reads.fasta
+using /tmp/mia_vkt6zyso/reference.fasta
+as reference at Thu Oct 29 04:07:33 2026
+
+Starting to align sequences to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assembl",225.82,,,,,,,,,,,,think
+grid,MIA,Varecia_variegata,Homo_sapiens,,6,,,1,663,no_output_or_error,"MIA exited -11; stdout tail:
+
+stderr tail:
+Starting assembly of /tmp/mia_mjvv8r4x/reads.fasta
+using /tmp/mia_mjvv8r4x/reference.fasta
+as reference at Thu Oct 29 04:11:18 2026
+
+Starting to align sequences to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assemb",173.97,,,,,,,,,,,,think
+grid,MIA,Varecia_variegata,Aotus_azarai,,6,,,0,663,no_output_or_error,"MIA exited -6; stdout tail:
+
+stderr tail:
+Starting assembly of /tmp/mia__6kdzpr3/reads.fasta
+using /tmp/mia__6kdzpr3/reference.fasta
+as reference at Thu Oct 29 04:14:12 2026
+
+Starting to align sequences to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assembl",172.71,,,,,,,,,,,,think
+grid,MIA,Varecia_variegata,Aotus_azarai,,6,,,2,663,no_output_or_error,"MIA exited -6; stdout tail:
+
+stderr tail:
+Starting assembly of /tmp/mia_yjs60w40/reads.fasta
+using /tmp/mia_yjs60w40/reference.fasta
+as reference at Thu Oct 29 04:17:05 2026
+
+Starting to align sequences to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assembl",170.81,,,,,,,,,,,,think
+grid,MIA,Varecia_variegata,Aotus_azarai,,8,,,1,883,no_output_or_error,"MIA exited -6; stdout tail:
+
+stderr tail:
+Starting assembly of /tmp/mia_1cawqvit/reads.fasta
+using /tmp/mia_1cawqvit/reference.fasta
+as reference at Thu Oct 29 04:19:56 2026
+
+Starting to align sequences to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assembl",226.91,,,,,,,,,,,,think

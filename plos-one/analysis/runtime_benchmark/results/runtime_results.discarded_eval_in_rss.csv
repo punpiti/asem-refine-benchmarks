@@ -1,0 +1,32 @@
+method,reference,target,depth,replicate,status,returncode,wall_s,worker_method_s,peak_rss_kb,theta_len,f1,identity_pct,error,load1_before,started_utc,host
+ASEM,Saimiri_boliviensis,Saimiri_sciureus,1,0,completed,0,5.108,0.363,3350588,16471,0.9996356570318193,99.92109256449166,,0.23779296875,2026-10-28T13:37:59+00:00,think
+ASEM_recursive,Saimiri_boliviensis,Saimiri_sciureus,1,0,completed,0,3.448,0.383,3350324,16471,0.9996356570318193,99.92109256449166,,0.29931640625,2026-10-28T13:38:05+00:00,think
+ASEM_Hybrid,Saimiri_boliviensis,Saimiri_sciureus,1,0,completed,0,3.566,0.4,3355412,16471,0.9996356570318193,99.92109256449166,,0.35546875,2026-10-28T13:38:08+00:00,think
+SRSC,Saimiri_boliviensis,Saimiri_sciureus,1,0,completed,0,14.428,10.898,3345192,16471,0.9996356570318193,99.92109256449166,,0.35546875,2026-10-28T13:38:12+00:00,think
+Pilon,Saimiri_boliviensis,Saimiri_sciureus,1,0,completed,0,9.381,0.779,3345040,16471,0.9993926141885325,99.87253414264036,,0.4990234375,2026-10-28T13:38:26+00:00,think
+MIA,Saimiri_boliviensis,Saimiri_sciureus,1,0,completed,0,15.984,7.622,3345492,16471,0.747129059244049,57.29282090161544,,0.57666015625,2026-10-28T13:38:35+00:00,think
+NOVOPlasty,Saimiri_boliviensis,Saimiri_sciureus,1,0,no_output_or_error,0,1.617,0.495,163256,,,,"no contig produced for rt_Saimiri_sciureus_1_0; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the configuration file:   *** Verify if everything is correct ***
+
+Project:
+-----------------------
+Project name          = ",0.6708984375,2026-10-28T13:38:51+00:00,think
+GetOrganelle,Saimiri_boliviensis,Saimiri_sciureus,1,0,no_output_or_error,0,5.073,3.905,163000,,,,"no scaffold produced; stdout tail:
+O: 1 reads2026-10-28 20:38:57,823 - INFO: 110 candidates in all 110 reads
+2026-10-28 20:38:57,823 - INFO: Pre-grouping reads ...
+2026-10-28 20:38:57,823 - INFO: Setting '--pre-w 41'
+2026-10-28 20:38:57,823 - INFO: 0/0 used/duplicated
+2026-10-28 20:38:57,824 - INFO: 0 groups made.
+2026-10-28 20:38:57,824 - INFO: Making read i",0.697265625,2026-10-28T13:38:53+00:00,think
+ASEM,Saimiri_boliviensis,Saimiri_sciureus,1,1,completed,0,4.091,0.406,3351276,16473,0.9997571341833636,99.9453717754173,,0.8017578125,2026-10-28T13:38:58+00:00,think
+ASEM_recursive,Saimiri_boliviensis,Saimiri_sciureus,1,1,completed,0,3.52,0.364,3351412,16473,0.9997571341833636,99.9453717754173,,0.81787109375,2026-10-28T13:39:02+00:00,think
+ASEM_Hybrid,Saimiri_boliviensis,Saimiri_sciureus,1,1,completed,0,3.424,0.394,3355596,16473,0.9997571341833636,99.9453717754173,,0.81787109375,2026-10-28T13:39:06+00:00,think

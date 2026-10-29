@@ -1,9 +1,17 @@
 # asem-refine-benchmarks
 
-Current frozen benchmark release: **v1.2.0**.
+Current frozen benchmark release: **v1.4.0**.
+
+Version 1.4.0 adds `plos-one/` (see `plos-one/README.md`): the analyses of the
+revised manuscript, including neutral scoring of ambiguous (N) bases, reruns of
+all main-grid MIA jobs with retained outputs, every method on the read-length
+and NA07000 experiments, a controlled run-time and memory benchmark, paired
+summaries with cluster-bootstrap intervals, and the scripts that draw the data
+figures and build the supporting tables. The v1.3.0 code in `scripts/` is
+unchanged.
 
 Reproduction package for the benchmarks reported in the ASEM/ASEM-Hybrid
-BMC Genomics paper: the 720-job Phase-1 simulation grid, the
+paper: the 720-job Phase-1 simulation grid, the
 external-tool comparison, the read-length experiment, the computational-cost
 profiling, parameter and circular-boundary diagnostics, MIA/Pilon comparisons,
 and the real-WGS (NA07000) validation.
@@ -32,6 +40,8 @@ retained between reference positions.
 - `scripts/results/` -- the raw result CSVs each grid run actually
   produced. These are the numbers the paper's tables and figures were
   built from; nothing here is synthetic or example data.
+- `plos-one/` -- analyses added in v1.4.0 for the revised manuscript, with
+  their result files; see `plos-one/README.md`.
 - `data/` -- not checked in. Populated by `fetch_data.py` (public NCBI
   reference sequences, downloaded by accession) and, for the real-WGS
   validation only, `extract_real_wgs_reads.sh` (a public ENA read pool).

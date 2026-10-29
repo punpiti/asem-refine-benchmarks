@@ -1,0 +1,725 @@
+experiment,method,reference,target,divergence,condition,length_condition,depth,replicate,n_reads,status,error,runtime_s,theta_len,n_ambiguous,f1,identity_pct,recall,precision,c_theta,w_theta,u_t,theta_fasta,theta_sha256,host
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,1,,,0,111,completed,,33.82,16556,6204,0.7693222354340072,62.493208572290975,0.9991313579770292,0.6254606972388376,10352,6199,9,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__1X__r0.fa.gz,d1530926594d89f0f07d20245aaa8fb2886f489f27d1bdaa70f0712a26dc9dbb,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,1,,,2,111,completed,,34.19,16555,5047,0.8200085506626763,69.47597198744265,0.9992185464964835,0.695305419612108,11508,5043,9,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__1X__r2.fa.gz,1f5a4e287a7be8c739273b052278b2e51c7f7770872e56ebe4524d9536960159,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,1,,,1,111,completed,,34.61,16561,6071,0.7756007393715343,63.33011349915479,0.9997140951110264,0.6335688832517968,10490,6067,3,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__1X__r1.fa.gz,ce724b1b1af52b197eb30fbb7d8f599a02cca6f390809bbc08c3237a3f617918,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,2,,,0,221,completed,,74.85,16556,1752,0.9440122433363092,89.36375709284076,0.999324962872958,0.8945015105740182,14804,1746,10,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__2X__r0.fa.gz,c44ad0d46efacddba557fdae6f7ec72400e534d56fcb23abd655926e5e47571e,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,2,,,2,221,completed,,76.24,16561,2243,0.9273916704449771,86.44569220551833,0.9998603351955307,0.8647179611064139,14318,2240,2,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__2X__r2.fa.gz,52409580d7694707c1b0927db8fb261a203adbf635730b17c78f1e1842e80482,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,2,,,1,221,completed,,85.5,16557,2123,0.9314060785958573,87.16183574879227,0.9997922005956916,0.8717762879748747,14434,2123,3,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__2X__r1.fa.gz,fd8fd2404e80d228ed78cb059184aafa2a3465db063ebeb1aca132917bcf9937,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,3,,,0,332,completed,,124.57,16561,1064,0.9668403156876813,93.57526719401002,1.0,0.9358091787439613,15497,1063,0,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__3X__r0.fa.gz,6b88281f0823354cdc6c658432901a04e1ab811c1597f5c62d8ab595504044bc,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,3,,,2,332,completed,,129.91,16560,486,0.985107556536128,97.06521739130434,1.0,0.9706521739130435,16074,486,0,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__3X__r2.fa.gz,86b9118d785f019d30ffe30ea3014a9928bd78ee0bed64e4e106af81d8670c96,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,3,,,1,332,completed,,135.93,16555,850,0.9735006973500698,94.83122999818852,0.9996181019667749,0.9487133019209859,15705,849,6,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__3X__r1.fa.gz,25831ee6c48c14085e70e89a1f3259dbb90bd5dfbcda7e25ca7e7bbc9667be8e,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,4,,,2,442,completed,,116.18,16558,273,0.9916273405388948,98.33937198067633,0.9998772026769817,0.9835125015098442,16285,273,2,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__4X__r2.fa.gz,62d677bc369eb59587b8b6d525b7828ee5f158ea69839a734b877b1400acc289,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,4,,,1,442,completed,,108.13,16563,157,0.9953285202936359,99.05210408742377,1.0,0.9907004830917875,16406,154,0,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__4X__r1.fa.gz,c0ba6dbf21520f9efd0fd1ffce5530f396c749e95f10a32781a9b6ee1484c717,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,4,,,0,442,completed,,144.47,16561,483,0.9852319382315093,97.08350944991244,1.0,0.9708937198067633,16078,482,0,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__4X__r0.fa.gz,8f3bfb0a1d8aca599902ded7d693c81de7df14c41017412d1e60053926b2c689,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,5,,,2,552,completed,,163.6,16551,161,0.9948406676783004,98.97342995169082,0.9994511860479297,0.9902724910881517,16390,161,9,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__5X__r2.fa.gz,5b6a3dde4d7ad1d7d07a170cc7f1d584f01e4b4d15acac12e5015cbbef4c322f,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,5,,,0,552,completed,,178.54,16546,76,0.997184122081933,99.42639777804612,0.9990293029181581,0.995345744680851,16467,77,16,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__5X__r0.fa.gz,c7a8502988d0d5ff6546aaf6b92e085dfeb5b8d4bf2cc6cdcae056be844ceff5,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,5,,,1,552,completed,,159.77,16553,192,0.9939552261474438,98.79830917874396,0.9995723362658846,0.9884008940977467,16361,192,7,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__5X__r1.fa.gz,57b46b878b46cec916b72a07e40ed262aff04e6acf24b77b1598cb854c78f46c,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,6,,,1,663,completed,,224.95,16560,26,0.999214359098326,99.84299516908213,1.0,0.9984299516908213,16534,26,0,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__6X__r1.fa.gz,710ee17ac5f4b6abfd74c6470445325d779ac49eeb3aec9bb893dd4244e22794,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,6,,,2,663,completed,,218.92,16560,62,0.9981245084397121,99.6256038647343,1.0,0.996256038647343,16498,62,0,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__6X__r2.fa.gz,2823ffc14590e7031e217f86bca9bcdff0e53639b02710cdc56ada167a28b78e,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,6,,,0,663,completed,,245.68,16554,68,0.9976697031141242,99.53502415458937,0.9996361210503972,0.9957110064032862,16483,71,6,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__6X__r0.fa.gz,10f7b4f0056aab32aaf5fef3a35767c72e6827e7110a489f5f070dfe05c8f984,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,7,,,2,773,completed,,253.58,16560,49,0.9985183393305312,99.70410628019323,1.0,0.9970410628019324,16511,49,0,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__7X__r2.fa.gz,c22995a4846e0bf15e47a8ce864533248ab8a0b7f333c9461764dd83e5c105c4,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,7,,,1,773,completed,,254.42,16560,74,0.9977606972099498,99.55314009661836,1.0,0.9955314009661835,16486,74,0,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__7X__r1.fa.gz,e110b25a036c7d9e2e310b58957f2af8889379e239aa57c159c7791c71849244,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,7,,,0,773,completed,,248.11,16571,28,0.999486451379029,99.83103011284774,1.0,0.9989734299516908,16543,17,0,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__7X__r0.fa.gz,d0ad62da140837ad9b361b054ec2fd559367922bb80b4113f94c777ebe3d6ea3,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,1,,,0,111,completed,,37.69,16551,6084,0.7749222337431491,63.1976322783281,0.9995223538402751,0.63274068698597,10463,6073,5,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__1X__r0.fa.gz,72ffb33aa5c38242527e71c50de89e0d3238ca1b76f8e56ab1eaefbd966c44ec,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,1,,,2,111,completed,,36.12,16546,6128,0.7728773322452613,62.948640483383684,0.9996161965073882,0.6299812541573442,10418,6119,4,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__1X__r2.fa.gz,2cf8786b7916d1b671dc36d2b17fd8f5b9fa6efe89f63a69a9983e5dd1be34ed,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,1,,,1,111,completed,,31.89,16557,5545,0.7993321961310927,66.43740573152338,0.9983680870353581,0.6664649276765721,11012,5511,18,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__1X__r1.fa.gz,d6ce2bbdddf7ef601e0b3a3fe424c1613695396ca7f42be6366deed82d8f288b,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,8,,,2,884,completed,,242.76,16560,22,0.9993353072693215,99.8671497584541,1.0,0.9986714975845411,16538,22,0,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__8X__r2.fa.gz,7e93ee04c5feabdf4ff3eb330aa6da2446de582871d81c1e37260f5515450178,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,8,,,1,884,completed,,253.86,16560,20,0.9993957703927493,99.8792270531401,1.0,0.998792270531401,16540,20,0,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__8X__r1.fa.gz,dd826cb02a8a0d1e4037f2496d1c2fa73249ad345b470c56fea081a552a85bbc,think
+macaca,MIA,Macaca_silenus,Macaca_tonkeana,,8,,,0,884,completed,,278.06,16558,65,0.9979729525307839,99.59541062801932,0.9998787511367081,0.9960744051213914,16493,65,2,results/thetas/macaca/MIA/Macaca_silenus__Macaca_tonkeana__8X__r0.fa.gz,35996773668e83e839e0bafdbf7907ee0045420ddda3c6ca265cfd4b99dc9147,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,2,,,1,221,completed,,62.47,16540,1922,0.9382842838345261,88.37434254277251,0.9999315958683904,0.8837968561064087,14618,1922,1,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__2X__r1.fa.gz,2599b9dfeef58f658d06a7b907c1e619712be9ef1d113db9c962a999ee6e77ad,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,2,,,2,221,completed,,66.81,16542,2466,0.9194891726818434,85.0667794766423,0.9996449115829842,0.851233671988389,14076,2460,5,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__2X__r2.fa.gz,1c719613e1fefdf2da82cffef3c28e7778f452b0cea51c1eebd3fbadb4ddf80f,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,2,,,0,221,completed,,85.6,16563,2084,0.9335267569310122,87.41246075827095,0.9999309392265193,0.8753929866989117,14479,2061,1,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__2X__r0.fa.gz,c15007af2b8caeb7db8b4887ddfb6e8dba57f2a1767ae4f1f0cfb2183923a8b2,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,3,,,2,331,completed,,108.3,16536,621,0.980712349026374,96.21546460310743,0.9996859296482412,0.9624455732946299,15915,621,5,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__3X__r2.fa.gz,5381efaff2c09431764f32118f4563eeaade8ae18c408dde72beb81a6cfcbdc7,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,3,,,0,331,completed,,126.96,16545,580,0.9822801944256444,96.49440918706559,1.0,0.9651774378816275,15965,576,0,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__3X__r0.fa.gz,ca6e37b1a070a01eb50ea6fb75de285a1990b3f754afc4a7d181247d830c7c8f,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,3,,,1,331,completed,,115.64,16541,334,0.9898009038719922,97.98077504383048,1.0,0.9798077504383048,16207,334,0,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__3X__r1.fa.gz,c4abd62eb10ecfc67ec966b3130968023d3d0c41212181b0c5061e315574631b,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,4,,,2,442,completed,,140.04,16548,289,0.9914024390243902,98.24169184290031,0.9998770063341738,0.9830703186407884,16259,280,2,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__4X__r2.fa.gz,fd2a38e1913179218003583cb7991028c055f0079b2990ca61aa2ebd4ab27817,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,4,,,0,442,completed,,117.28,16544,202,0.9938564476885645,98.76088007736944,1.0,0.9877879209237652,16339,202,0,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__4X__r0.fa.gz,a5057818a8cb9dc5f08e3be2c6cc441142ee4d4e79995f1c5054ec72d95bb7b6,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,4,,,1,442,completed,,143.39,16546,218,0.9935197298366242,98.68246101776865,1.0,0.9871229067166435,16328,213,0,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__4X__r1.fa.gz,fed92042397d219b851f4d5f05b20fa91385ea7cfc990d85330b2f33b87e744f,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,5,,,1,552,completed,,175.81,16541,161,0.99510950457155,99.02666102412188,1.0,0.9902666102412188,16380,161,0,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__5X__r1.fa.gz,748f0d9201f532802ebc46deb8e2c0fbf634932894bca5c8f0190f159a1b212b,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,5,,,2,552,completed,,169.12,16541,235,0.9928456175602034,98.57928783024,1.0,0.9857928783024001,16306,235,0,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__5X__r2.fa.gz,ceba839f82342c7d42bbb53d2d5c2915aae417a6bf2e57184cedffe5704f12cd,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,5,,,0,552,completed,,192.56,16541,177,0.9946208782859748,98.92993168490418,1.0,0.9892993168490418,16364,177,0,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__5X__r0.fa.gz,0f191b03517f02ef3cc7ed0f0db6fa93c60cae587558e121da3c04289b4382da,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,6,,,2,662,completed,,207.18,16541,163,0.9950484522616119,99.01456985671966,1.0,0.9901456985671967,16378,163,0,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__6X__r2.fa.gz,faa78c9f37ab9a365e810b2cec47eef2e5b591fa2eacad1223ef531c373712ea,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,6,,,1,662,completed,,193.92,16547,123,0.9964507811315032,99.25666283918535,1.0,0.9929266670697056,16424,117,0,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__6X__r1.fa.gz,992af226bc0a17f955a6a4a477644c12a8a8b58f05acb7ed4c1898d874b3fa32,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,6,,,0,662,completed,,239.07,16539,45,0.9985772665354926,99.715857566048,0.9998787584869059,0.9972791583529839,16494,45,2,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__6X__r0.fa.gz,b84f7b948aadf4c621b3e4fa2fcef9ff9b3533c60927ea0cf2c38218a433738d,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,7,,,0,772,completed,,240.34,16539,39,0.9987591174601254,99.75213106825464,0.9998788025693855,0.9976419372392527,16500,39,2,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__7X__r0.fa.gz,f5bfd1e4f608c65122250ba60a838d0e74c0a1cf41e8a338eda26c0531dc2918,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,7,,,2,772,completed,,214.41,16541,66,0.9980009692270414,99.60099147572699,1.0,0.9960099147572699,16475,66,0,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__7X__r2.fa.gz,035679848505e509ad7c13166311b5a2f8640676d98e2bcaced9445af0e71820,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,7,,,1,772,completed,,249.42,16545,30,0.9992134559535333,99.81867633726202,1.0,0.9984281482377123,16515,26,0,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__7X__r1.fa.gz,1f57045143b773aaa1f499d4aa5983a611cfb923e41267e5d472a504aab441aa,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,8,,,2,883,completed,,256.54,16541,74,0.9977581192438197,99.55262680611813,1.0,0.9955262680611813,16467,74,0,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__8X__r2.fa.gz,4e298e1cba093536f025fb31a7d554804567a320ef0b612a5dde79acd76a569c,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,1,,,1,111,completed,,1.87,16541,0,0.9572445060134752,91.75519072911636,0.9982270667804846,0.9194943446440452,15202,1331,27,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__1X__r1.fa.gz,0f5567f52edf745edbfdbe8abd65bbc1544718a9fb4d886db13e3e9cdd7aca63,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,2,,,1,221,completed,,1.71,16542,0,0.9578351164254247,91.86383389666828,0.9982946346582711,0.9205273980887867,15220,1314,26,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__2X__r1.fa.gz,8df5364ce7b394ec4d78beb5d491a61766e3e76e5601c5e1b128740b182448e8,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,8,,,0,883,completed,,277.86,16549,16,0.9997581181592792,99.90331742099221,1.0,0.9995163533039115,16533,8,0,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__8X__r0.fa.gz,12a9d60ac458ee37d2642345a1afb8fc4bd104fc1f7380e4fa2fc87e18d25bcd,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,2,,,2,221,completed,,1.59,16540,0,0.9584250581797595,91.97802861109435,0.9982312479528332,0.9216718078993528,15238,1295,27,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__2X__r2.fa.gz,14d4694f47dc47cbc38c4cc3f9d497e995a6bc89c7c05cec3d3d3ad5860c5569,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,1,,,2,111,completed,,1.7,16541,0,0.9572445060134752,91.75519072911636,0.9982270667804846,0.9194943446440452,15202,1331,27,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__1X__r2.fa.gz,0f5567f52edf745edbfdbe8abd65bbc1544718a9fb4d886db13e3e9cdd7aca63,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,2,,,0,221,completed,,1.79,16541,0,0.9580646176109731,91.90608401738291,0.9982299724662383,0.9210064719046755,15227,1306,27,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__2X__r0.fa.gz,463576d606dadc4e58628c372b060ce24831095532bc1f93fe89c36623b5c920,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,1,,,0,111,completed,,1.83,16541,0,0.9577367278220098,91.84572670207629,0.9982288113356075,0.9204016210004234,15217,1316,27,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__1X__r0.fa.gz,b988ea40ba80002428520116bd36fb8e89c4d2bb73ee113c2da8f110f432c3de,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,3,,,0,332,completed,,2.13,16542,0,0.9615601680566879,92.55190729116369,0.9983072916666667,0.9274222813596226,15334,1200,26,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__3X__r0.fa.gz,d3fb0453e319654b163069634c4f6e23fc5b196774838fe63ea5654212091fa8,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,3,,,1,332,completed,,1.97,16541,0,0.9614624815778746,92.53380009657171,0.9982419585883578,0.9272969213088974,15331,1202,27,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__3X__r1.fa.gz,87064604219e185e4bd44d64597a6abc9d4c6dcfa3ca4098dff619893d1a9699,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,3,,,2,332,completed,,1.82,16542,0,0.9616252821670429,92.56397875422502,0.9983075120427027,0.9275432442240232,15336,1198,26,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__3X__r2.fa.gz,c9c552b93d5af73f0131647d2c21a12593c32883c1dba7e26a2c7329c02ee85e,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,4,,,0,442,completed,,1.95,16543,0,0.9670014347202297,93.5828554180501,0.9985828394743623,0.9373563913411537,15502,1036,22,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__4X__r0.fa.gz,0fed566ef3e02eb8f8de653350cf945b3fd7c21d78d12b39edcc3315f0e7b5cd,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,4,,,1,442,completed,,1.74,16539,0,0.966969214934032,93.57116986599058,0.9982612055641422,0.9375793866811831,15501,1032,27,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__4X__r1.fa.gz,0bfe197f05065ce8216dfb66371b4adaa70670810fdde040c57ab329d5276b3b,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,4,,,2,442,completed,,1.8,16541,0,0.9680957128614157,93.77678517534858,0.9983292635907981,0.9396395306640861,15536,998,26,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__4X__r2.fa.gz,c19825c9667c063a85483de53a9a6fa488d0fa2eeb111132850675c95dbe0a44,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,5,,,0,552,completed,,2.63,16545,0,0.9731824523329716,94.7479625716873,0.9987273305758829,0.9489117291414753,15695,845,20,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__5X__r0.fa.gz,426e09b6d78c550137808a1710c708d16014a2c4e5c32b8ca61d4ff16dccc63e,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,5,,,1,552,completed,,3.22,16544,0,0.9738823310716609,94.87504527345165,0.9986021983607599,0.9503567541419761,15717,821,22,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__5X__r1.fa.gz,1178bd6b77f3203f97e2d1c257737bce6d656ece352d33ada86f8ddf88da7e45,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,5,,,2,552,completed,,2.46,16544,0,0.9731824523329715,94.72508902166697,0.9984096692111959,0.9491986694889628,15695,840,25,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__5X__r2.fa.gz,0c18e6e318bbe2d84d04e25b9579959b31570b8f09dc62ea1ce92d1dbd2426cf,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,6,,,0,663,completed,,3.47,16544,0,0.9795415331525757,95.9671576913789,0.9987434028650415,0.9610640870616687,15896,644,20,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__6X__r0.fa.gz,022d09cb3393fc01eafdbaf06cec52a79bbe3c03f96021f59ac7b3dc987eb12a,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,6,,,1,663,completed,,3.42,16543,0,0.9779039624737687,95.65322385897126,0.9986763315474314,0.9579781123405284,15844,695,21,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__6X__r1.fa.gz,8d254cbdf6ae83c3e17daa6da9d8302e066650bffb56db5e760b9be6b467a073,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,6,,,2,663,completed,,3.64,16545,0,0.9790067511328957,95.84716605299693,0.9986164392176593,0.9601523763453864,15879,659,22,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__6X__r2.fa.gz,b0df4579d292a8de74ec6ddb5247f07eb6187f64627d9baa28bbe024e983aa3d,think
+macaca,MIA,Macaca_tonkeana,Macaca_silenus,,8,,,1,883,completed,,298.08,16541,93,0.9971808784746431,99.43776071579711,1.0,0.9943776071579711,16448,93,0,results/thetas/macaca/MIA/Macaca_tonkeana__Macaca_silenus__8X__r1.fa.gz,b1294b5b6da0a18648c01396f36aad88c7a917d8bf3432c9bb5e4e761a39d6e5,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,7,,,0,773,completed,,4.78,16548,0,0.9850453542534936,97.01798865145479,0.9988812927284028,0.9715874743078226,16072,470,18,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__7X__r0.fa.gz,a04ab5abe638a946c9af5850d4bfb784ca3652998bd8db97a01809600797b914,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,7,,,1,773,completed,,5.18,16559,0,0.9876203576341128,97.53667813801847,0.999752459929451,0.9757791737134573,16155,401,4,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__7X__r1.fa.gz,43d1cfe7136a4c1308b6b821fca0922f46c6c05cfbc168ad5ede5d25a6da8afb,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,7,,,2,773,completed,,4.7,16549,0,0.9849520365319194,97.00573498339874,0.9990052844264843,0.9712886847195358,16069,475,16,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__7X__r2.fa.gz,6e3dfda55cdf6d88d3510c9500bae281fe85d82ef616150d989e6a837f6dd238,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,8,,,1,884,completed,,5.68,16551,0,0.9892578125,97.83304158870042,0.9990138067061144,0.9796905222437138,16208,336,16,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__8X__r1.fa.gz,a036f3bd0b20d5c15c08dc82e870f00d598130dc7ec6b3add11e9111f5b4e629,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,8,,,0,884,completed,,5.38,16547,0,0.9881152424307231,97.61559821320778,0.9988264360716491,0.9776313403059065,16171,370,19,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__8X__r0.fa.gz,7c9fb1d51a5ae78c5b5e61d287f5a8698caac6464dd9ef5245398c32843d9878,think
+macaca,Pilon,Macaca_silenus,Macaca_tonkeana,,8,,,2,884,completed,,4.93,16559,0,0.9894120159887714,97.88685624584919,0.9997533452549794,0.9792824353708626,16213,343,4,results/thetas/macaca/Pilon/Macaca_silenus__Macaca_tonkeana__8X__r2.fa.gz,65639783475bee98f9418a01f3bd3078096c360ebbdea5bdfe5f494ac4fef94f,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,1,,,0,111,completed,,1.85,16560,0,0.9578174715685348,91.75519072911636,0.999474030243261,0.9194943446440452,15202,1331,8,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__1X__r0.fa.gz,8f2531b35dfc251c5ad4e02f90bb91ddd685c43328ee06730cafb4da852a5cab,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,1,,,1,111,completed,,1.9,16560,0,0.9578174715685348,91.75519072911636,0.999474030243261,0.9194943446440452,15202,1331,8,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__1X__r1.fa.gz,8f2531b35dfc251c5ad4e02f90bb91ddd685c43328ee06730cafb4da852a5cab,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,2,,,0,221,completed,,2.74,16560,0,0.958899798590131,91.9543698696282,0.9994751689300007,0.9214903526280772,15235,1298,8,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__2X__r0.fa.gz,26e50257bfe66a92b8aa1292341e6c974814479d0d0a56280ab0f1756e4a819d,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,1,,,2,111,completed,,2.66,16560,0,0.9579159579159578,91.77329792370836,0.9994741339643726,0.9196757999153209,15205,1328,8,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__1X__r2.fa.gz,a14bca1688cc3f3fe21a72513d3b4948317ca42766474d9394fad42b287aa5a6,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,2,,,1,221,completed,,2.04,16561,0,0.959260074873376,92.02076291646547,0.9995410738871042,0.9220999153259949,15246,1288,7,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__2X__r1.fa.gz,9034f0fdfca5a90ba622ab440b86c47cedfb4edf80193d0294eb74481fb211e7,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,2,,,2,221,completed,,2.33,16559,0,0.958899798590131,91.95992032353473,0.9994751689300007,0.9214903526280772,15235,1298,8,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__2X__r2.fa.gz,b525f4b0ed1ff28356ba6bce99976a075a2e373b1efd947ef86d04f5bc0627d5,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,3,,,1,331,completed,,2.1,16557,0,0.9617750439367311,92.50226380923634,0.9994781814623964,0.9268130405854956,15323,1210,8,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__3X__r1.fa.gz,9ffc458100fa1c81c4a616b617c0fb8b9ab894725d35f7929866a070cd913590,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,3,,,0,331,completed,,2.32,16559,0,0.9615143144148669,92.44280799179091,0.9994779090256477,0.926329159862094,15315,1218,8,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__3X__r0.fa.gz,ef44b0a26ff9fe274ee5eb81ad082394c92bac5445bb3cfc59ffbd86bc7112dc,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,3,,,2,331,completed,,2.71,16554,0,0.9625564475664826,92.66392947711628,0.9994789970693585,0.9282646827557007,15347,1186,8,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__3X__r2.fa.gz,32b684e2d0d20eede25727f5fe67e3f35e985f1aaacac37c9630b817acaa0942,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,4,,,1,442,completed,,1.96,16558,0,0.9663813035055926,93.35949290673106,0.999547569803516,0.9353453489778638,15465,1069,7,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__4X__r1.fa.gz,a1e2a3be56aee7112f1b9afa89a1345a0fa0179f06b43382a153d8d82ec0328d,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,4,,,0,442,completed,,3.24,16561,0,0.9672525208378858,93.51119695780768,0.9996128532713898,0.9369216812821288,15492,1043,6,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__4X__r0.fa.gz,e6935ed2d697ae8a22e03106af942765b1a6ffe12b02ee36022ab5e71f72b6fe,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,4,,,2,442,completed,,1.92,16559,0,0.9663490079675051,93.34782083786068,0.9995475405597569,0.9352848675456635,15464,1070,7,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__4X__r2.fa.gz,10ed3beb82eed49e7ad29d6beb5291292850bdada319934230e2e56088f8765e,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,5,,,0,552,completed,,2.71,16560,0,0.9741379310344829,94.81468067125438,0.9996181505759563,0.9499244027819777,15707,828,6,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__5X__r0.fa.gz,4cc1c40c884835fe5f6e4154afe3d4615afd7889aec8bc190ef5135cfe310af9,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,5,,,1,552,completed,,3.63,16561,0,0.9740424872073189,94.79084927868655,0.999618077657543,0.9497429694587239,15704,831,6,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__5X__r1.fa.gz,7ee47d4451a54710a8ec2dc482633f1042f260ee265e929ceeb9a31a22a58a3a,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,5,,,2,552,completed,,3.54,16555,0,0.9730870712401055,94.63832870426278,0.9995535998979657,0.9479859683077295,15674,860,7,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__5X__r2.fa.gz,05548c6df50cf4d848d258c02e3ba141fb8e9c2b3d83af05707fc63a373db01a,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,6,,,0,662,completed,,5.29,16556,0,0.9813400665106541,96.23165650099644,0.999811770611118,0.9635385173539727,15935,603,3,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__6X__r0.fa.gz,7eefd3b7523116453eef94a85bfdd04d8c3a4e54e65f01f272ab233cbc8143dd,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,6,,,1,662,completed,,5.74,16555,0,0.9792656587473001,95.82729468599034,0.9996850195287892,0.959663763909047,15869,667,5,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__6X__r1.fa.gz,e99363fe571faae205a5b5ce4e80d51d864173a295fe9398c81ebfdc3b6863de,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,6,,,2,662,completed,,3.9,16555,0,0.9792341633496869,95.82125603864735,0.9996849996849997,0.9596032897919691,15868,668,5,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__6X__r2.fa.gz,6ebd8e2c3631f321d19c9e22a209180547ab3c8ee864db3ee660118a4e873257,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,7,,,0,772,completed,,4.32,16552,0,0.9850590581377512,96.95615412489431,0.999626400996264,0.9709101905049894,16054,481,6,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__7X__r0.fa.gz,5f103098d0d00cd456bbbb2cda654415e8e46fa7365491e0c4150dda938fa12f,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,7,,,1,772,completed,,5.53,16551,0,0.9844047399766686,96.84102440202948,0.9996882404289812,0.969581519109821,16033,503,5,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__7X__r1.fa.gz,f8fc8e58191b4a77afc2729478e751ba5c49f7a442ceac3672ba53f6f32c8c75,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,7,,,2,772,completed,,5.15,16559,0,0.9861477168250077,97.13819960152146,0.9997514447275213,0.9729092338392695,16089,448,4,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__7X__r2.fa.gz,61a9645c5f37416569f8ed35bb5eef2b02bcbfee51698ace0938cc6475d5e376,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,8,,,1,883,completed,,6.01,16555,0,0.9889364303178484,97.71107621693442,0.9998146088246199,0.9782924174628129,16179,359,3,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__8X__r1.fa.gz,794f17b57ebb07fe8647d523e634d3ee36525de8e4f457ac85ead284334b2de6,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,1,,,2,111,no_output_or_error,"no contig produced for nfix_Macaca_silenus__Macaca_tonkeana__1X__r2; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",1.22,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,1,,,0,111,no_output_or_error,"no contig produced for nfix_Macaca_silenus__Macaca_tonkeana__1X__r0; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.83,,,,,,,,,,,,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,8,,,0,883,completed,,5.54,16554,0,0.9882871035811492,97.59014314187353,0.999814367922777,0.977022614584593,16158,380,3,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__8X__r0.fa.gz,9de358ce2ae88c6e80e0e8332561c623b200023baa9e9fab1320b488afd77bb7,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,2,,,0,221,no_output_or_error,"no contig produced for nfix_Macaca_silenus__Macaca_tonkeana__2X__r0; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.85,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,2,,,1,221,no_output_or_error,"no contig produced for nfix_Macaca_silenus__Macaca_tonkeana__2X__r1; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.85,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,3,,,0,332,no_output_or_error,"no contig produced for nfix_Macaca_silenus__Macaca_tonkeana__3X__r0; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",1.1,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,1,,,1,111,no_output_or_error,"no contig produced for nfix_Macaca_silenus__Macaca_tonkeana__1X__r1; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",1.03,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,2,,,2,221,no_output_or_error,"no contig produced for nfix_Macaca_silenus__Macaca_tonkeana__2X__r2; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.9,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,3,,,2,332,no_output_or_error,"no contig produced for nfix_Macaca_silenus__Macaca_tonkeana__3X__r2; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.82,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,3,,,1,332,no_output_or_error,"no contig produced for nfix_Macaca_silenus__Macaca_tonkeana__3X__r1; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.85,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,4,,,0,442,no_output_or_error,"no contig produced for nfix_Macaca_silenus__Macaca_tonkeana__4X__r0; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.88,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,5,,,1,552,no_output_or_error,"no contig produced for nfix_Macaca_silenus__Macaca_tonkeana__5X__r1; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.92,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,4,,,2,442,no_output_or_error,"no contig produced for nfix_Macaca_silenus__Macaca_tonkeana__4X__r2; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.87,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,5,,,2,552,no_output_or_error,"no contig produced for nfix_Macaca_silenus__Macaca_tonkeana__5X__r2; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.84,,,,,,,,,,,,think
+macaca,Pilon,Macaca_tonkeana,Macaca_silenus,,8,,,2,883,completed,,4.76,16553,0,0.9908794192111765,98.09748142779489,0.9997537855472116,0.9821612142468404,16242,295,4,results/thetas/macaca/Pilon/Macaca_tonkeana__Macaca_silenus__8X__r2.fa.gz,385990a943404a086009766d2c49d159a18bb876a3a8faca8c8339cb5a7b50a5,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,5,,,0,552,completed,,20.71,287,0,0.03407134801448329,1.7330917874396135,0.017330917874396137,1.0,287,0,16273,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__5X__r0.fa.gz,b7f10c13c2dcb7a4f9d9f549eb2a9460e71e17061ad776845d3b0974341f277b,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,4,,,1,442,completed,,40.25,307,0,0.03640244263947353,1.853864734299517,0.01853864734299517,1.0,307,0,16253,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__4X__r1.fa.gz,5b87b4c3514a612ed3d3f453c8a436a49c399112f8966cc4cfefbd987df82150,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,10,,,0,1104,completed,,42.74,461,0,0.054168380236178836,2.783816425120773,0.02783816425120773,1.0,461,0,16099,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__10X__r0.fa.gz,c6509b0b52f561c96c991c79adb4662b06c93efcde00b2e336f698181c84aee2,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,6,,,1,663,completed,,51.09,252,0,0.029978586723768737,1.5217391304347827,0.015217391304347827,1.0,252,0,16308,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__6X__r1.fa.gz,356c150e89ef1a0647beac00972e68de205ae5a02154d4e2a81f04f363f6600a,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,8,,,2,884,completed,,65.75,595,0,0.06936753133197318,3.592995169082126,0.035929951690821256,1.0,595,0,15965,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__8X__r2.fa.gz,3cab54c6f02ec650f50aa8451fc9c2f21a3ba989f029dc053193556928b3be43,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,8,,,0,884,completed,,85.76,754,0,0.08709714681760425,4.553140096618358,0.04553140096618358,1.0,754,0,15806,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__8X__r0.fa.gz,74f5fa0eb65b2ceb1a78b3c15759d8344165373737dc1a24be55a5a756179521,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,7,,,0,773,completed,,84.59,572,0,0.06677562456222273,3.4541062801932365,0.034541062801932365,1.0,572,0,15988,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__7X__r0.fa.gz,a14442ab926514e4b138222ddca923d626f63a2d6698445b6285ed40f9e295ce,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,10,,,1,1104,completed,,104.3,869,0,0.09971885937231052,5.247584541062802,0.05247584541062802,1.0,869,0,15691,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__10X__r1.fa.gz,72387c7d18379cb9e919c5acbea524acab724aaddfc9de03d05017b4203cf83d,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,1,,,0,111,no_output_or_error,"no contig produced for nfix_Macaca_tonkeana__Macaca_silenus__1X__r0; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.87,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,1,,,1,111,no_output_or_error,"no contig produced for nfix_Macaca_tonkeana__Macaca_silenus__1X__r1; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.86,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,1,,,2,111,no_output_or_error,"no contig produced for nfix_Macaca_tonkeana__Macaca_silenus__1X__r2; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.84,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,2,,,0,221,no_output_or_error,"no contig produced for nfix_Macaca_tonkeana__Macaca_silenus__2X__r0; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",1.13,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,2,,,1,221,no_output_or_error,"no contig produced for nfix_Macaca_tonkeana__Macaca_silenus__2X__r1; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.86,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,2,,,2,221,no_output_or_error,"no contig produced for nfix_Macaca_tonkeana__Macaca_silenus__2X__r2; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.86,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,3,,,0,331,no_output_or_error,"no contig produced for nfix_Macaca_tonkeana__Macaca_silenus__3X__r0; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.87,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,3,,,1,331,no_output_or_error,"no contig produced for nfix_Macaca_tonkeana__Macaca_silenus__3X__r1; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.84,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,3,,,2,331,no_output_or_error,"no contig produced for nfix_Macaca_tonkeana__Macaca_silenus__3X__r2; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.83,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,7,,,2,773,completed,,123.78,825,0,0.09490940465918896,4.981884057971015,0.049818840579710144,1.0,825,0,15735,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__7X__r2.fa.gz,0a57756cf399c6319a1a44e9dc3c09b4d72d793a95f1a3edf0cd3f15a808a89b,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,4,,,1,442,no_output_or_error,"no contig produced for nfix_Macaca_tonkeana__Macaca_silenus__4X__r1; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.88,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,8,,,1,884,completed,,149.19,1726,0,0.1887783003390572,10.422705314009661,0.10422705314009661,1.0,1726,0,14834,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__8X__r1.fa.gz,2dc2a2a88b6b7c1b177cad9ee5485dd9dd8b905ef678476c1871d229984160b1,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,4,,,2,442,no_output_or_error,"no contig produced for nfix_Macaca_tonkeana__Macaca_silenus__4X__r2; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.89,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,4,,,0,442,completed,,52.97,270,0,0.03212182499553864,1.6323075992987124,0.016323075992987122,1.0,270,0,16271,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__4X__r0.fa.gz,ba2aa2993036be5faafce65ffad2c9180291bd0550045c5062156a70dd1f8465,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,5,,,1,552,no_output_or_error,"no contig produced for nfix_Macaca_tonkeana__Macaca_silenus__5X__r1; stdout tail:
+
+
+-----------------------------------------------
+NOVOPlasty: The Organelle Assembler
+Version 4.3.5
+Author: Nicolas Dierckxsens, (c) 2015-2024
+-----------------------------------------------
+
+
+Input parameters from the",0.84,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,6,,,0,662,completed,,18.05,253,0,0.0301298082648565,1.5295326763799044,0.015295326763799045,1.0,253,0,16288,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__6X__r0.fa.gz,5d1af709139dd9c35858d765dc86766c1bf8373c08f3bfbbfad04da7c082d7b8,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,6,,,2,663,completed,,187.06,1273,0,0.14276902372006953,7.68719806763285,0.0768719806763285,1.0,1273,0,15287,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__6X__r2.fa.gz,54583c13496f78c39e1114e4a387ebfbb3a18631f19375e684c18494e184755d,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,7,,,1,773,completed,,196.05,1772,0,0.1933231507746018,10.70048309178744,0.1070048309178744,1.0,1772,0,14788,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__7X__r1.fa.gz,e9d9152ef209dd4e73279d52495242202b4a3677f7cd478bf5f5a9643265c514,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,5,,,0,552,completed,,45.5,328,0,0.03888790088327702,1.98295145396288,0.0198295145396288,1.0,328,0,16213,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__5X__r0.fa.gz,b0414030b378e44e97a5a4bff1a22156efe738b63bba145e8e5ba6017279c04f,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,6,,,0,663,completed,,205.05,1476,0,0.16367265469061876,8.91304347826087,0.0891304347826087,1.0,1476,0,15084,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__6X__r0.fa.gz,f7029216c1c3ffcc1624ac0e4a1eae8edc4a4143303ef75ad21688cdb3ce6c65,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,10,,,2,1104,completed,,216.33,3909,0,0.3819434266451708,23.605072463768117,0.23605072463768115,1.0,3909,0,12651,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__10X__r2.fa.gz,b376e8b45ddec932d3c1d643c4a9e0265df737be4e24d82c633d2f0cecf23193,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,5,,,2,552,completed,,132.96,603,0,0.07034531031264583,3.645486971767124,0.03645486971767124,1.0,603,0,15938,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__5X__r2.fa.gz,6a67505c991f319a6e8297e2ca6c6536484af093e0649e57f6ba62d6709c5db9,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,6,,,1,662,completed,,121.15,1151,0,0.13011530635315396,6.9584668399734,0.069584668399734,1.0,1151,0,15390,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__6X__r1.fa.gz,283bd341bd9b132edceab3fdb9575981481791d0c4c53fdae1da519017535adf,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,8,,,1,883,completed,,20.93,256,0,0.030481633625052088,1.5476694274832234,0.015476694274832234,1.0,256,0,16285,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__8X__r1.fa.gz,6c8bef1a2665c6e53191ea86afa35bff70192e5e6ef74e17227573e33ba21268,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,6,,,2,662,completed,,177.04,1449,0,0.1610894941634241,8.76005078290309,0.0876005078290309,1.0,1449,0,15092,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__6X__r2.fa.gz,a8ea70eb14a72cf7ff9aa27d4c3c2d52cccf4931f4840a96dc3a128d01053071,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,7,,,0,772,completed,,195.03,2133,0,0.22844596765556385,12.895230034459827,0.12895230034459826,1.0,2133,0,14408,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__7X__r0.fa.gz,2570ae1c80d8eaa7c4a6d1e42dc506813793eb2ab352b9c20e0a79fe03fa2887,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,7,,,2,772,completed,,216.39,1865,0,0.20265130935564488,11.275013602563327,0.11275013602563327,1.0,1865,0,14676,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__7X__r2.fa.gz,5b9e3af02e801074d133fbd4f7456c022e391d15a00829c1487aaa11bc66a83e,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,8,,,0,883,completed,,371.09,3746,0,0.3693005372898901,22.646756544344356,0.22646756544344357,1.0,3746,0,12795,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__8X__r0.fa.gz,2c49a112baa7a7b7a8703f8a4818d84b45c7eaa2d9844bf4d71bf35bec34887a,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,10,,,0,1103,completed,,395.84,1943,3,0.2099453492776365,11.728432380146304,0.11730559922602492,0.9984559958826557,1940,3,14598,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__10X__r0.fa.gz,a7b70c0019ce2740b2495a30355fdc5a87ce3346a67242465fc0252b1567f13f,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,8,,,2,883,completed,,639.99,1982,0,0.21400421098094263,11.98234689559277,0.1198234689559277,1.0,1982,0,14559,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__8X__r2.fa.gz,06c183a878891e8346cb9565c603b795f0ff7d0c4c14b56ac844e2e088813fee,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,7,,,1,772,completed,,889.79,3887,0,0.38055609947131386,23.49918384620035,0.2349918384620035,1.0,3887,0,12654,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__7X__r1.fa.gz,0600dea5d175e12b010aa0edc7e30ae37c26c3d94f4144607ba88ca8335a9d1c,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,15,,,0,1656,completed,,1115.25,16520,0,0.9987908101571946,99.7584541062802,0.9975845410628019,1.0,16520,0,40,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__15X__r0.fa.gz,949f6d7e91d9c65b74074618e0af7adac241104dbd1ddd912d231efd4c93e39f,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,30,,,2,3312,completed,,945.15,16544,0,0.999516674722088,99.90338164251207,0.9990338164251208,1.0,16544,0,16,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__30X__r2.fa.gz,df27461643687a6c0b36eb5516c66f65ab5ea6f1bfc80b4dcd37a9c1e50eede2,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,30,,,0,3312,completed,,778.07,16538,0,0.9993353072693215,99.8671497584541,0.9986714975845411,1.0,16538,0,22,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__30X__r0.fa.gz,a3d3c0bef87ff1e43eb98b5778d9249343c3f68b38b849f7031e80f03497b316,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,20,,,1,2208,completed,,757.95,16504,0,0.9983063150254053,99.66183574879227,0.9966183574879227,1.0,16504,0,56,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__20X__r1.fa.gz,cb04de185ad9b6bf46698a1978945dad823ad7a34ac3467ec6e7b7fc5ee62bbf,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,20,,,2,2208,completed,,741.91,16499,0,0.9981548141202092,99.63164251207729,0.9963164251207729,1.0,16499,0,61,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__20X__r2.fa.gz,aa3531452c1fc9612243c5748bd51c5816a6d302e5ffffe945b5f77f3c5c2730,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,10,,,1,1103,completed,,297.95,4717,0,0.4437858688493744,28.517018318118616,0.28517018318118614,1.0,4717,0,11824,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__10X__r1.fa.gz,772ef5c02de8a34d81e0fa90bcd329fa34783d163fd501aef9074145547c3caf,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,20,,,0,2208,completed,,762.47,16516,0,0.9986697303180554,99.73429951690821,0.9973429951690821,1.0,16516,0,44,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__20X__r0.fa.gz,249892b958e876383d9e66c51bcc336792af9f17c191db8dc565a5ce99f176ed,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,30,,,1,3312,completed,,729.02,16532,0,0.9991538740481083,99.83091787439614,0.9983091787439613,1.0,16532,0,28,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__30X__r1.fa.gz,1c823bf26c23ab1b7e5e661ad4daf8ab0a6a086e7475b7a9dc724294fc4e1942,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,15,,,1,1656,completed,,765.81,16551,0,0.999728187007339,99.94565217391305,0.9994565217391305,1.0,16551,0,9,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__15X__r1.fa.gz,8756c0858ef3b502daac5232a8d22f94054d34d687085a76526b7a559f78c99f,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,10,,,2,1103,completed,,284.0,4469,0,0.4254164683484055,27.017713560244243,0.27017713560244244,1.0,4469,0,12072,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__10X__r2.fa.gz,94fa980ce6546d36568a8e1a82dc11bca6685c63fb49952d167e502964de9d04,think
+macaca,NOVOPlasty,Macaca_silenus,Macaca_tonkeana,,15,,,2,1656,completed,,736.04,16487,0,0.9977910249039247,99.55917874396135,0.9955917874396135,1.0,16487,0,73,results/thetas/macaca/NOVOPlasty/Macaca_silenus__Macaca_tonkeana__15X__r2.fa.gz,7a4ed9721f4b44670bde0a150584e1faa66935d1f2496186ebbad7ed488da267,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,15,,,1,1655,completed,,795.48,16497,0,0.9986682002542527,99.73399431715131,0.9973399431715132,1.0,16497,0,44,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__15X__r1.fa.gz,d53967e8d4949152b6affa76f451473270dd17d5bb0a5f82cf97ff57460c1798,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,15,,,0,1655,completed,,990.8,16481,0,0.9981830294954879,99.63726497793363,0.9963726497793362,1.0,16481,0,60,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__15X__r0.fa.gz,64feae93b37192e3de3ed12bff03f5091a40aa5e66488a814195b0f4060e49bb,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,20,,,1,2206,completed,,990.16,16507,0,0.9989711934156379,99.79445015416239,0.9979445015416238,1.0,16507,0,34,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__20X__r1.fa.gz,6746b519e354cbb925039431520dcd417fa1eab7e593e334002b64f4e4dcd78c,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,20,,,0,2206,completed,,1478.73,16515,0,0.9992134559535333,99.84281482377123,0.9984281482377123,1.0,16515,0,26,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__20X__r0.fa.gz,9c8bc1bf794cbc420d710728e58736c6133cad26d4c03eaa01e821412072ccf3,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,30,,,1,3309,completed,,1403.38,16521,0,0.9993950759179723,99.87908832597788,0.9987908832597787,1.0,16521,0,20,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__30X__r1.fa.gz,66459bb627f6ab217ca0412388f787173e93b7539f25dc24e3ea171ca13b02ff,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,30,,,2,3309,completed,,1420.47,16513,0,0.9991529013130029,99.83072365636902,0.9983072365636902,1.0,16513,0,28,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__30X__r2.fa.gz,4992e314612c329584c12e776d77c477a31b02f6400f02f2cd6138205e1c9e9c,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,30,,,0,3309,completed,,1361.32,16523,0,0.999455601258166,99.89117949338008,0.9989117949338009,1.0,16523,0,18,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__30X__r0.fa.gz,037712774c585f57dc2cd6797c5d8722f16fcae95d9dd886b159cbf9a805efe9,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,1,,,2,111,no_output_or_error,"no scaffold produced; stdout tail:
+nished.
+
+2026-10-29 01:02:58,510 - INFO: Extending ...
+2026-10-29 01:02:58,510 - INFO: Adding initial words ...
+2026-10-29 01:02:58,529 - INFO: AW 12426
+2026-10-29 01:02:58,530 - INFO: Round 1: 1/111 AI 1 AW 12426",11.8,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,1,,,1,111,no_output_or_error,"no scaffold produced; stdout tail:
+nished.
+
+2026-10-29 01:03:10,275 - INFO: Extending ...
+2026-10-29 01:03:10,276 - INFO: Adding initial words ...
+2026-10-29 01:03:10,294 - INFO: AW 11578
+2026-10-29 01:03:10,295 - INFO: Round 1: 1/111 AI 0 AW 11578",11.53,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,1,,,0,111,no_output_or_error,"no scaffold produced; stdout tail:
+ed.
+
+2026-10-29 01:03:22,803 - INFO: Extending ...
+2026-10-29 01:03:22,804 - INFO: Adding initial words ...
+2026-10-29 01:03:22,829 - INFO: AW 12516
+2026-10-29 01:03:22,830 - INFO: Round 1: 1/111 AI 1 AW 12516",12.89,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,2,,,0,221,no_output_or_error,"no scaffold produced; stdout tail:
+220 AI 1 AW 185822026-10-29 01:03:35,799 - INFO: Round 1: 220/220 AI 192 AW 20356
+2026-10-29 01:03:35,800 - INFO: Round 2: 1/220 AI 192 AW 20356",13.18,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,2,,,2,221,no_output_or_error,"no scaffold produced; stdout tail:
+220 AI 1 AW 177822026-10-29 01:03:48,123 - INFO: Round 1: 220/220 AI 185 AW 20082
+2026-10-29 01:03:48,124 - INFO: Round 2: 1/220 AI 185 AW 20082",12.23,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,2,,,1,221,no_output_or_error,"no scaffold produced; stdout tail:
+221 AI 1 AW 162942026-10-29 01:04:01,444 - INFO: Round 1: 221/221 AI 183 AW 19308
+2026-10-29 01:04:01,445 - INFO: Round 2: 1/221 AI 183 AW 19308",13.23,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,3,,,0,332,no_output_or_error,"no scaffold produced; stdout tail:
+327 AI 1 AW 220902026-10-29 01:04:14,274 - INFO: Round 1: 327/327 AI 299 AW 24912
+2026-10-29 01:04:14,274 - INFO: Round 2: 1/327 AI 299 AW 24912",12.82,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,3,,,1,332,no_output_or_error,"no scaffold produced; stdout tail:
+329 AI 1 AW 214962026-10-29 01:04:27,179 - INFO: Round 1: 329/329 AI 315 AW 25624
+2026-10-29 01:04:27,180 - INFO: Round 2: 1/329 AI 315 AW 25624",13.05,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,3,,,2,332,no_output_or_error,"no scaffold produced; stdout tail:
+327 AI 1 AW 226722026-10-29 01:04:39,432 - INFO: Round 1: 327/327 AI 303 AW 26420
+2026-10-29 01:04:39,433 - INFO: Round 2: 1/327 AI 303 AW 26420",12.27,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,4,,,1,442,no_output_or_error,"no scaffold produced; stdout tail:
+
+
+2026-10-29 01:04:51,172 - INFO: Extending ...
+2026-10-29 01:04:51,172 - INFO: Adding initial words ...
+2026-10-29 01:04:51,236 - INFO: AW 24866
+2026-10-29 01:04:51,236 - INFO: Round 1: 1/441 AI 1 AW 24866",11.85,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,4,,,2,442,no_output_or_error,"no scaffold produced; stdout tail:
+432 AI 1 AW 234642026-10-29 01:05:03,089 - INFO: Round 1: 432/432 AI 405 AW 27932
+2026-10-29 01:05:03,090 - INFO: Round 2: 1/432 AI 405 AW 27932",11.72,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,4,,,0,442,no_output_or_error,"no scaffold produced; stdout tail:
+AI 422 AW 291242026-10-29 01:05:14,810 - INFO: Round 2: 437/437 AI 429 AW 29528
+2026-10-29 01:05:14,811 - INFO: Round 3: 1/437 AI 429 AW 29528",11.65,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,5,,,1,552,no_output_or_error,"no scaffold produced; stdout tail:
+
+
+2026-10-29 01:05:26,655 - INFO: Extending ...
+2026-10-29 01:05:26,656 - INFO: Adding initial words ...
+2026-10-29 01:05:26,717 - INFO: AW 25216
+2026-10-29 01:05:26,718 - INFO: Round 1: 1/544 AI 1 AW 25216",12.93,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,5,,,0,552,no_output_or_error,"no scaffold produced; stdout tail:
+543 AI 1 AW 241222026-10-29 01:05:39,596 - INFO: Round 1: 543/543 AI 521 AW 29994
+2026-10-29 01:05:39,596 - INFO: Round 2: 1/543 AI 521 AW 29994",13.36,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,5,,,2,552,no_output_or_error,"no scaffold produced; stdout tail:
+
+
+2026-10-29 01:05:52,904 - INFO: Extending ...
+2026-10-29 01:05:52,904 - INFO: Adding initial words ...
+2026-10-29 01:05:52,963 - INFO: AW 25860
+2026-10-29 01:05:52,964 - INFO: Round 1: 1/547 AI 1 AW 25860",12.51,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,6,,,1,663,no_output_or_error,"no scaffold produced; stdout tail:
+
+
+2026-10-29 01:06:06,231 - INFO: Extending ...
+2026-10-29 01:06:06,231 - INFO: Adding initial words ...
+2026-10-29 01:06:06,303 - INFO: AW 27254
+2026-10-29 01:06:06,304 - INFO: Round 1: 1/658 AI 1 AW 27254",16.55,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,6,,,2,663,no_output_or_error,"no scaffold produced; stdout tail:
+AI 621 AW 305442026-10-29 01:06:24,069 - INFO: Round 2: 652/652 AI 648 AW 31434
+2026-10-29 01:06:24,070 - INFO: Round 3: 1/652 AI 648 AW 31434",17.09,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,6,,,0,663,no_output_or_error,"no scaffold produced; stdout tail:
+- INFO: Setting '--pre-w 41'
+2026-10-29 01:06:44,762 - INFO: 12/12 used/duplicated
+2026-10-29 01:06:44,767 - INFO: 0 groups made.
+2026-10-29 01:06:44,768 - INFO: Making read index finished.
+
+2026-10-29 01:06:44,768 - INFO: Extending ...
+2026-10-29 01:06:44,768 - IN",22.29,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,20,,,2,2206,completed,,1381.95,16531,0,0.9996976294146105,99.93954416298894,0.9993954416298894,1.0,16531,0,10,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__20X__r2.fa.gz,a3308622d387dc030d27f06fce71561dfc6e3947367f1e0d93ae857305884999,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,8,,,0,884,no_output_or_error,"no scaffold produced; stdout tail:
+
+
+2026-10-29 01:07:06,744 - INFO: Extending ...
+2026-10-29 01:07:06,744 - INFO: Adding initial words ...
+2026-10-29 01:07:06,842 - INFO: AW 27920
+2026-10-29 01:07:06,843 - INFO: Round 1: 1/852 AI 1 AW 27964",22.04,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,8,,,1,884,no_output_or_error,"no scaffold produced; stdout tail:
+
+2026-10-29 01:07:19,219 - INFO: Extending ...
+2026-10-29 01:07:19,219 - INFO: Adding initial words ...
+2026-10-29 01:07:19,319 - INFO: AW 27698
+2026-10-29 01:07:19,320 - INFO: Round 1: 1/864 AI 1 AW 27698",23.37,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,7,,,2,773,no_output_or_error,"no scaffold produced; stdout tail:
+
+2026-10-29 01:07:29,968 - INFO: Extending ...
+2026-10-29 01:07:29,969 - INFO: Adding initial words ...
+2026-10-29 01:07:30,070 - INFO: AW 28642
+2026-10-29 01:07:30,071 - INFO: Round 1: 1/755 AI 1 AW 28642",23.57,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,7,,,0,773,no_output_or_error,"no scaffold produced; stdout tail:
+
+2026-10-29 01:07:42,434 - INFO: Extending ...
+2026-10-29 01:07:42,434 - INFO: Adding initial words ...
+2026-10-29 01:07:42,531 - INFO: AW 28562
+2026-10-29 01:07:42,532 - INFO: Round 1: 1/756 AI 1 AW 28562",24.14,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,10,,,2,1104,no_output_or_error,"no scaffold produced; stdout tail:
+3,244 - INFO: Extending ...
+2026-10-29 01:07:53,244 - INFO: Adding initial words ...
+2026-10-29 01:07:53,365 - INFO: AW 29338
+2026-10-29 01:07:53,366 - INFO: Round 1: 1/1080 AI 1 AW 293382026-10-29 01:07:",21.68,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,10,,,0,1104,no_output_or_error,"no scaffold produced; stdout tail:
+ng '--pre-w 41'
+2026-10-29 01:08:05,390 - INFO: 39/39 used/duplicated
+2026-10-29 01:08:05,405 - INFO: 7 groups made.
+2026-10-29 01:08:05,406 - INFO: Making read index finished.
+
+2026-10-29 01:08:05,406 - INFO: Extending ...
+2026-10-29 01:08:05,407 - INFO: Adding in",24.37,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,7,,,1,773,no_output_or_error,"no scaffold produced; stdout tail:
+
+2026-10-29 01:08:15,869 - INFO: Extending ...
+2026-10-29 01:08:15,869 - INFO: Adding initial words ...
+2026-10-29 01:08:15,954 - INFO: AW 27458
+2026-10-29 01:08:15,955 - INFO: Round 1: 1/760 AI 1 AW 27458",27.45,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,1,,,0,111,no_output_or_error,"no scaffold produced; stdout tail:
+6,778 - INFO: Setting '--pre-w 41'
+2026-10-29 01:08:36,778 - INFO: 1/1 used/duplicated
+2026-10-29 01:08:36,779 - INFO: 0 groups made.
+2026-10-29 01:08:36,780 - INFO: Making read index finished.
+
+2026-10-29 01:08:36,781 - INFO: Extending ...
+2026-10-29 01:08:36,781 ",12.19,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,8,,,2,884,no_output_or_error,"no scaffold produced; stdout tail:
+
+2026-10-29 01:08:33,366 - INFO: Extending ...
+2026-10-29 01:08:33,366 - INFO: Adding initial words ...
+2026-10-29 01:08:33,466 - INFO: AW 27552
+2026-10-29 01:08:33,467 - INFO: Round 1: 1/851 AI 1 AW 27552",29.86,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,1,,,1,111,no_output_or_error,"no scaffold produced; stdout tail:
+nished.
+
+2026-10-29 01:08:48,449 - INFO: Extending ...
+2026-10-29 01:08:48,450 - INFO: Adding initial words ...
+2026-10-29 01:08:48,467 - INFO: AW 10682
+2026-10-29 01:08:48,467 - INFO: Round 1: 1/111 AI 1 AW 10682",11.75,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,1,,,2,111,no_output_or_error,"no scaffold produced; stdout tail:
+4,534 - INFO: Setting '--pre-w 41'
+2026-10-29 01:08:54,535 - INFO: 0/0 used/duplicated
+2026-10-29 01:08:54,535 - INFO: 0 groups made.
+2026-10-29 01:08:54,536 - INFO: Making read index finished.
+
+2026-10-29 01:08:54,536 - INFO: Extending ...
+2026-10-29 01:08:54,536 ",11.49,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,2,,,0,221,no_output_or_error,"no scaffold produced; stdout tail:
+
+
+2026-10-29 01:09:00,020 - INFO: Extending ...
+2026-10-29 01:09:00,020 - INFO: Adding initial words ...
+2026-10-29 01:09:00,061 - INFO: AW 18546
+2026-10-29 01:09:00,062 - INFO: Round 1: 1/219 AI 1 AW 18592",11.7,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,2,,,1,221,no_output_or_error,"no scaffold produced; stdout tail:
+
+
+2026-10-29 01:09:06,023 - INFO: Extending ...
+2026-10-29 01:09:06,024 - INFO: Adding initial words ...
+2026-10-29 01:09:06,053 - INFO: AW 17100
+2026-10-29 01:09:06,053 - INFO: Round 1: 1/220 AI 1 AW 17100",11.69,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,2,,,2,221,no_output_or_error,"no scaffold produced; stdout tail:
+217 AI 1 AW 168842026-10-29 01:09:11,875 - INFO: Round 1: 217/217 AI 178 AW 19092
+2026-10-29 01:09:11,876 - INFO: Round 2: 1/217 AI 178 AW 19092",11.76,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,3,,,0,331,no_output_or_error,"no scaffold produced; stdout tail:
+
+
+2026-10-29 01:09:18,157 - INFO: Extending ...
+2026-10-29 01:09:18,158 - INFO: Adding initial words ...
+2026-10-29 01:09:18,202 - INFO: AW 21074
+2026-10-29 01:09:18,203 - INFO: Round 1: 1/328 AI 1 AW 21074",12.22,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,3,,,1,331,no_output_or_error,"no scaffold produced; stdout tail:
+326 AI 0 AW 216322026-10-29 01:09:23,748 - INFO: Round 1: 326/326 AI 298 AW 26142
+2026-10-29 01:09:23,749 - INFO: Round 2: 1/326 AI 299 AW 26142",12.02,,,,,,,,,,,,think
+macaca,NOVOPlasty,Macaca_tonkeana,Macaca_silenus,,15,,,2,1655,completed,,1457.86,16506,0,0.9989409023511968,99.78840457046128,0.9978840457046128,1.0,16506,0,35,results/thetas/macaca/NOVOPlasty/Macaca_tonkeana__Macaca_silenus__15X__r2.fa.gz,5cfa4cf0d19cf7ee34db1195066c8eab81896e7840baf7afbdf460d2f8e1e752,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,3,,,2,331,no_output_or_error,"no scaffold produced; stdout tail:
+329 AI 1 AW 216382026-10-29 01:09:35,952 - INFO: Round 1: 329/329 AI 304 AW 25610
+2026-10-29 01:09:35,953 - INFO: Round 2: 1/329 AI 304 AW 25610",12.37,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,4,,,0,442,no_output_or_error,"no scaffold produced; stdout tail:
+432 AI 1 AW 232542026-10-29 01:09:47,850 - INFO: Round 1: 432/432 AI 398 AW 27306
+2026-10-29 01:09:47,851 - INFO: Round 2: 1/432 AI 398 AW 27306",11.87,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,4,,,1,442,no_output_or_error,"no scaffold produced; stdout tail:
+
+
+2026-10-29 01:10:00,362 - INFO: Extending ...
+2026-10-29 01:10:00,363 - INFO: Adding initial words ...
+2026-10-29 01:10:00,417 - INFO: AW 24276
+2026-10-29 01:10:00,418 - INFO: Round 1: 1/436 AI 1 AW 24332",19.23,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,10,,,1,1104,completed,,27.62,16538,0,0.9993353072693215,99.8671497584541,0.9986714975845411,1.0,16538,0,22,results/thetas/macaca/GetOrganelle/Macaca_silenus__Macaca_tonkeana__10X__r1.fa.gz,57142906526c48018547668a768b88b3882815f197282f32d5b23b0d0152c1f3,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,15,,,0,1656,completed,,33.15,16531,0,0.9991236287812396,99.82487922705315,0.9982487922705314,1.0,16531,0,29,results/thetas/macaca/GetOrganelle/Macaca_silenus__Macaca_tonkeana__15X__r0.fa.gz,a67bc180155eb1d5b4cbb6cbb26bcaad2fde5a89f7f8c21b9e18b393be053394,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,4,,,2,442,no_output_or_error,"no scaffold produced; stdout tail:
+432 AI 1 AW 240702026-10-29 01:10:29,102 - INFO: Round 1: 432/432 AI 420 AW 28326
+2026-10-29 01:10:29,103 - INFO: Round 2: 1/432 AI 420 AW 28326",17.91,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,5,,,0,552,no_output_or_error,"no scaffold produced; stdout tail:
+
+
+2026-10-29 01:10:47,678 - INFO: Extending ...
+2026-10-29 01:10:47,678 - INFO: Adding initial words ...
+2026-10-29 01:10:47,750 - INFO: AW 25142
+2026-10-29 01:10:47,751 - INFO: Round 1: 1/545 AI 1 AW 25142",16.96,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,20,,,0,2208,completed,,31.95,16527,0,0.9990026294314988,99.80072463768116,0.9980072463768116,1.0,16527,0,33,results/thetas/macaca/GetOrganelle/Macaca_silenus__Macaca_tonkeana__20X__r0.fa.gz,6d497f263512df8dffd2ed872193d3ec77b6f6daae3775fec1835a030ca1cb66,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,5,,,2,552,no_output_or_error,"no scaffold produced; stdout tail:
+
+
+2026-10-29 01:11:25,367 - INFO: Extending ...
+2026-10-29 01:11:25,367 - INFO: Adding initial words ...
+2026-10-29 01:11:25,446 - INFO: AW 25722
+2026-10-29 01:11:25,447 - INFO: Round 1: 1/538 AI 1 AW 25722",14.43,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,5,,,1,552,no_output_or_error,"no scaffold produced; stdout tail:
+
+
+2026-10-29 01:11:40,701 - INFO: Extending ...
+2026-10-29 01:11:40,702 - INFO: Adding initial words ...
+2026-10-29 01:11:40,789 - INFO: AW 25152
+2026-10-29 01:11:40,790 - INFO: Round 1: 1/543 AI 1 AW 25152",16.01,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,15,,,1,1656,completed,,39.48,16555,0,0.9998490110221954,99.96980676328502,0.9996980676328503,1.0,16555,0,5,results/thetas/macaca/GetOrganelle/Macaca_silenus__Macaca_tonkeana__15X__r1.fa.gz,6b020d4ceab287de025b9e74584b488c1536e2205edd2c5f1b1a1a823d21def5,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,20,,,2,2208,completed,,32.82,16518,0,0.9987302738980591,99.7463768115942,0.9974637681159421,1.0,16518,0,42,results/thetas/macaca/GetOrganelle/Macaca_silenus__Macaca_tonkeana__20X__r2.fa.gz,434d666be7475c94e7169aae419c7201d1caa727900d3d2bbacbf850a431da75,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,20,,,1,2208,completed,,33.55,16542,0,0.9994562262098966,99.8913043478261,0.9989130434782608,1.0,16542,0,18,results/thetas/macaca/GetOrganelle/Macaca_silenus__Macaca_tonkeana__20X__r1.fa.gz,d61f417a8bcbdcf906bbb529d50f1a859aeb7a31bae589265edab8199c638997,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,15,,,2,1656,completed,,38.97,16519,0,0.9987605429426525,99.7524154589372,0.9975241545893719,1.0,16519,0,41,results/thetas/macaca/GetOrganelle/Macaca_silenus__Macaca_tonkeana__15X__r2.fa.gz,4b9f4440c639eb88f83163523c8f01bdc5aa3d04ea09585986262bdc3eb647bb,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,30,,,1,3312,completed,,32.81,16542,0,0.9994562262098966,99.8913043478261,0.9989130434782608,1.0,16542,0,18,results/thetas/macaca/GetOrganelle/Macaca_silenus__Macaca_tonkeana__30X__r1.fa.gz,91f3974c73fcb1dd601b46d27df58bb3c809b8ce47bb47575e45a38e8ca68c96,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,6,,,0,662,no_output_or_error,"no scaffold produced; stdout tail:
+
+
+2026-10-29 01:13:08,106 - INFO: Extending ...
+2026-10-29 01:13:08,106 - INFO: Adding initial words ...
+2026-10-29 01:13:08,230 - INFO: AW 27200
+2026-10-29 01:13:08,232 - INFO: Round 1: 1/655 AI 1 AW 27200",18.61,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,6,,,1,662,no_output_or_error,"no scaffold produced; stdout tail:
+
+
+2026-10-29 01:13:29,981 - INFO: Extending ...
+2026-10-29 01:13:29,981 - INFO: Adding initial words ...
+2026-10-29 01:13:30,061 - INFO: AW 26206
+2026-10-29 01:13:30,062 - INFO: Round 1: 1/652 AI 1 AW 26206",20.35,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,6,,,2,662,no_output_or_error,"no scaffold produced; stdout tail:
+
+
+2026-10-29 01:13:51,287 - INFO: Extending ...
+2026-10-29 01:13:51,287 - INFO: Adding initial words ...
+2026-10-29 01:13:51,409 - INFO: AW 26596
+2026-10-29 01:13:51,410 - INFO: Round 1: 1/651 AI 1 AW 26596",22.64,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,30,,,0,3312,completed,,36.72,16557,0,0.999909412084428,99.98188405797102,0.9998188405797102,1.0,16557,0,3,results/thetas/macaca/GetOrganelle/Macaca_silenus__Macaca_tonkeana__30X__r0.fa.gz,2a765abed39cd8a088fde20d51ae94afb919364985d1945dbcf95221b5554540,think
+macaca,GetOrganelle,Macaca_silenus,Macaca_tonkeana,,30,,,2,3312,completed,,35.43,16548,0,0.9996375498368975,99.92753623188406,0.9992753623188406,1.0,16548,0,12,results/thetas/macaca/GetOrganelle/Macaca_silenus__Macaca_tonkeana__30X__r2.fa.gz,518478c839a0f852adad42ea5efa0429e002c692023bc1bb9d59ef6d8a2d2291,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,7,,,0,772,no_output_or_error,"no scaffold produced; stdout tail:
+
+
+2026-10-29 01:14:15,518 - INFO: Extending ...
+2026-10-29 01:14:15,519 - INFO: Adding initial words ...
+2026-10-29 01:14:15,609 - INFO: AW 28630
+2026-10-29 01:14:15,610 - INFO: Round 1: 1/756 AI 1 AW 28630",23.52,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,7,,,1,772,no_output_or_error,"no scaffold produced; stdout tail:
+
+2026-10-29 01:14:12,871 - INFO: Extending ...
+2026-10-29 01:14:12,871 - INFO: Adding initial words ...
+2026-10-29 01:14:12,969 - INFO: AW 26946
+2026-10-29 01:14:12,970 - INFO: Round 1: 1/751 AI 1 AW 26946",23.91,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,7,,,2,772,no_output_or_error,"no scaffold produced; stdout tail:
+
+
+2026-10-29 01:14:18,320 - INFO: Extending ...
+2026-10-29 01:14:18,320 - INFO: Adding initial words ...
+2026-10-29 01:14:18,403 - INFO: AW 27530
+2026-10-29 01:14:18,404 - INFO: Round 1: 1/756 AI 1 AW 27530",20.81,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,8,,,1,883,no_output_or_error,"no scaffold produced; stdout tail:
+ INFO: Setting '--pre-w 41'
+2026-10-29 01:14:36,164 - INFO: 19/19 used/duplicated
+2026-10-29 01:14:36,173 - INFO: 1 groups made.
+2026-10-29 01:14:36,175 - INFO: Making read index finished.
+
+2026-10-29 01:14:36,176 - INFO: Extending ...
+2026-10-29 01:14:36,177 - INF",21.59,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,8,,,0,883,no_output_or_error,"no scaffold produced; stdout tail:
+
+2026-10-29 01:14:36,640 - INFO: Extending ...
+2026-10-29 01:14:36,641 - INFO: Adding initial words ...
+2026-10-29 01:14:36,749 - INFO: AW 28444
+2026-10-29 01:14:36,751 - INFO: Round 1: 1/858 AI 1 AW 28444",23.53,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,10,,,1,1103,no_output_or_error,"no scaffold produced; stdout tail:
+9,635 - INFO: Extending ...
+2026-10-29 01:14:39,636 - INFO: Adding initial words ...
+2026-10-29 01:14:39,762 - INFO: AW 28844
+2026-10-29 01:14:39,763 - INFO: Round 1: 1/1070 AI 1 AW 288442026-10-29 01:14:",23.05,,,,,,,,,,,,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,10,,,0,1103,completed,,28.71,16509,0,0.9990317700453858,99.8065413215646,0.998065413215646,1.0,16509,0,32,results/thetas/macaca/GetOrganelle/Macaca_tonkeana__Macaca_silenus__10X__r0.fa.gz,5068182fbde28d1c6bda42a5819346775a1376e5f1f3b91ed9d99ffa791fdfed,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,8,,,2,883,completed,,29.34,16467,0,0.9977581192438197,99.55262680611813,0.9955262680611813,1.0,16467,0,74,results/thetas/macaca/GetOrganelle/Macaca_tonkeana__Macaca_silenus__8X__r2.fa.gz,9c6bcbacc4693cb7d6bc596ef68f30e4759b775d2be8d31af2fdd1098b2f21ef,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,15,,,1,1655,completed,,29.29,16534,0,0.9997883597883598,99.95768091409225,0.9995768091409225,1.0,16534,0,7,results/thetas/macaca/GetOrganelle/Macaca_tonkeana__Macaca_silenus__15X__r1.fa.gz,f5d1bde89b86dda65adbf98db115aa2f75d7fad4722c0aacbc1d514d52220c80,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,10,,,2,1103,completed,,33.31,16526,0,0.9995463755405691,99.9093162444834,0.999093162444834,1.0,16526,0,15,results/thetas/macaca/GetOrganelle/Macaca_tonkeana__Macaca_silenus__10X__r2.fa.gz,fc3d14ab39e42182844596cf9d247028098c77051272406b1f963d3a79055b2c,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,15,,,2,1655,completed,,34.55,16537,0,0.9998790737045771,99.97581766519558,0.9997581766519558,1.0,16537,0,4,results/thetas/macaca/GetOrganelle/Macaca_tonkeana__Macaca_silenus__15X__r2.fa.gz,9d8a89a149c3f280711a33687e1c781416ebc5d6b8e0bb07dcb5bab41fede8f9,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,15,,,0,1655,completed,,37.41,16535,0,0.9998185995888257,99.96372649779336,0.9996372649779336,1.0,16535,0,6,results/thetas/macaca/GetOrganelle/Macaca_tonkeana__Macaca_silenus__15X__r0.fa.gz,785bbba4e9c849966ec3eaf16fc65950775d3bcfc861d82be689b032b6c10aba,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,20,,,1,2206,completed,,33.51,16516,0,0.9992437305260611,99.84886040747234,0.9984886040747234,1.0,16516,0,25,results/thetas/macaca/GetOrganelle/Macaca_tonkeana__Macaca_silenus__20X__r1.fa.gz,e8d61121615bd6a71f098f40a1825f8d1d665cf5444627bb5e639c418f649f09,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,20,,,0,2206,completed,,33.89,16538,0,0.9999093080201941,99.98186324889669,0.9998186324889669,1.0,16538,0,3,results/thetas/macaca/GetOrganelle/Macaca_tonkeana__Macaca_silenus__20X__r0.fa.gz,651d594a8b5111d34f45fd9df602a7de23b7bc10006c47b77c90df29d4b2da40,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,20,,,2,2206,completed,,34.16,16539,0,0.9999395405078597,99.98790883259778,0.9998790883259778,1.0,16539,0,2,results/thetas/macaca/GetOrganelle/Macaca_tonkeana__Macaca_silenus__20X__r2.fa.gz,a3c86bfac9eeeb7b2f276a3b622352d81942dc9829ff13d7b09f7784c404e879,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,30,,,2,3309,completed,,33.46,16522,0,0.9994253395033723,99.88513390967898,0.9988513390967898,1.0,16522,0,19,results/thetas/macaca/GetOrganelle/Macaca_tonkeana__Macaca_silenus__30X__r2.fa.gz,7c46d27a88330e1ab55c75147dfd2dfa60c725b16f1f69a775beccafbd1d2201,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,30,,,0,3309,completed,,40.12,16534,0,0.9997883597883598,99.95768091409225,0.9995768091409225,1.0,16534,0,7,results/thetas/macaca/GetOrganelle/Macaca_tonkeana__Macaca_silenus__30X__r0.fa.gz,c58fa1f653f07fb098541e1b9cce8a9ed6f9bdaa8a037c60af556d03c3deb65c,think
+macaca,GetOrganelle,Macaca_tonkeana,Macaca_silenus,,30,,,1,3309,completed,,45.74,16538,0,0.9999093080201941,99.98186324889669,0.9998186324889669,1.0,16538,0,3,results/thetas/macaca/GetOrganelle/Macaca_tonkeana__Macaca_silenus__30X__r1.fa.gz,651d594a8b5111d34f45fd9df602a7de23b7bc10006c47b77c90df29d4b2da40,think

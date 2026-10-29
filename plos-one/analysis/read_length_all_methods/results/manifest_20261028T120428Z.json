@@ -1,0 +1,25 @@
+{
+  "bench_scripts": "~/plos-reruns/bench-v1.3.0/scripts",
+  "methods": [
+    "ASEM",
+    "ASEM_recursive",
+    "ASEM_Hybrid",
+    "SRSC",
+    "Pilon",
+    "MIA",
+    "NOVOPlasty",
+    "GetOrganelle"
+  ],
+  "n_jobs": 504,
+  "parallel": 4,
+  "host": "think",
+  "python": "3.14.6 | packaged by conda-forge | (main, Aug 11 2026, 10:26:15) [GCC 14.4.0]",
+  "external_timeout_s": 3600,
+  "getorganelle_kmers": [
+    21,
+    45,
+    65,
+    85,
+    105
+  ]
+}

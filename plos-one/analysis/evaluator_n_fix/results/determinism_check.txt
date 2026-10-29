@@ -1,0 +1,10 @@
+MIA output determinism check (2026-10-29, think, run alone after the grid rerun).
+Two of the eight output_differs jobs (Homo_sapiens -> Gorilla_gorilla) were rerun
+twice each with grid_job() from rerun_external.py (results written to a scratch
+NFIX_RESULTS_DIR) and the theta sha256 compared with results/grid.csv.
+
+condition replicate run sha256_equal_to_grid.csv f1_new f1_grid.csv
+1 0 0 True 0.7685129440096327 0.7685129440096327
+1 0 1 True 0.7685129440096327 0.7685129440096327
+3 0 0 True 0.963418110410794 0.963418110410794
+3 0 1 True 0.963418110410794 0.963418110410794

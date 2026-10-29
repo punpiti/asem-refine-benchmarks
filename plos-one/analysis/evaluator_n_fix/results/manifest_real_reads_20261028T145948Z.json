@@ -1,0 +1,13 @@
+{
+  "experiment": "real_reads",
+  "methods": [
+    "MIA",
+    "Pilon",
+    "NOVOPlasty"
+  ],
+  "n_jobs": 144,
+  "pair_set": "phase1",
+  "bench_scripts": "~/plos-reruns/bench-v1.3.0/scripts",
+  "host": "think",
+  "python": "3.14.6 | packaged by conda-forge | (main, Aug 11 2026, 10:26:15) [GCC 14.4.0]"
+}

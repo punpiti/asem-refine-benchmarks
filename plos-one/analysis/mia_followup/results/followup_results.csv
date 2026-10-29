@@ -1,0 +1,287 @@
+reference,target,divergence,depth,replicate,n_reads,original_status,original_error,original_runtime_s,timeout_budget_s,status,returncode,wall_s,peak_rss_kb,output_present,theta_len,n_ambiguous,identity_pct,recall,precision,f1,c_theta,w_theta,u_t,stdout_log,stderr_log,assembly_fasta,assembly_sha256,error,started_utc,host
+Homo_sapiens,Gorilla_gorilla,same-family,3,2,328,timeout,timed out after 300s,300.2142493724823,3600,completed,0,52.09,127616,True,16561,1620,89.38329430132708,0.9938572477799292,0.9147615535889873,0.9526704854555347,14885,1387,92,results/logs/Homo_sapiens__Gorilla_gorilla__3X__r2__t3600.stdout.gz,results/logs/Homo_sapiens__Gorilla_gorilla__3X__r2__t3600.stderr.gz,results/assemblies/Homo_sapiens__Gorilla_gorilla__3X__r2__t3600.fasta,ea8d5f4045f86f26f4f20ec80bd40a00b67f9839a547519a3abc6dca2a91023a,,2026-10-28T11:42:13+00:00,think
+Homo_sapiens,Gorilla_gorilla,same-family,4,0,437,timeout,timed out after 300s,300.1955609321594,3600,completed,0,66.72,127616,True,16565,799,94.05197767240863,0.9939109476087784,0.9632407179739365,0.9783355185115814,15670,598,96,results/logs/Homo_sapiens__Gorilla_gorilla__4X__r0__t3600.stdout.gz,results/logs/Homo_sapiens__Gorilla_gorilla__4X__r0__t3600.stderr.gz,results/assemblies/Homo_sapiens__Gorilla_gorilla__4X__r0__t3600.fasta,f1891217b5127a72ac03759b20997c6706f9d7361fc2f5bdf7cde0d354aae9d0,,2026-10-28T11:42:13+00:00,think
+Homo_sapiens,Gorilla_gorilla,same-family,5,0,546,timeout,timed out after 300s,300.1836965084076,3600,completed,0,80.18,128000,True,16529,675,95.2076677316294,0.9962154661284218,0.9687193326790972,0.9822750171030536,15794,510,60,results/logs/Homo_sapiens__Gorilla_gorilla__5X__r0__t3600.stdout.gz,results/logs/Homo_sapiens__Gorilla_gorilla__5X__r0__t3600.stderr.gz,results/assemblies/Homo_sapiens__Gorilla_gorilla__5X__r0__t3600.fasta,f88b21fdc7da20400eb17dfd3dae845307ae35be272e5f0addbf8260fa1337f7,,2026-10-28T11:42:13+00:00,think
+Homo_sapiens,Gorilla_gorilla,same-family,6,0,655,timeout,timed out after 300s,300.2578909397125,3600,completed,0,93.63,127872,True,16555,414,96.40197020663143,0.9942386321397596,0.9863560936635732,0.9902816771048653,16049,222,93,results/logs/Homo_sapiens__Gorilla_gorilla__6X__r0__t3600.stdout.gz,results/logs/Homo_sapiens__Gorilla_gorilla__6X__r0__t3600.stderr.gz,results/assemblies/Homo_sapiens__Gorilla_gorilla__6X__r0__t3600.fasta,29838782dcd4961d2b34226afcd335e6d902e6ef4d930fcdd84b7a696116a733,,2026-10-28T11:42:13+00:00,think
+Homo_sapiens,Gorilla_gorilla,same-family,7,0,764,timeout,timed out after 300s,300.17592215538025,3600,completed,0,108.72,128256,True,16561,484,95.97093791281374,0.9942149788504603,0.9822997971851761,0.988221473397842,15983,288,93,results/logs/Homo_sapiens__Gorilla_gorilla__7X__r0__t3600.stdout.gz,results/logs/Homo_sapiens__Gorilla_gorilla__7X__r0__t3600.stderr.gz,results/assemblies/Homo_sapiens__Gorilla_gorilla__7X__r0__t3600.fasta,6452c3380698c7970a1a50de275edc85387eae6800fa9b4c81205a4d16e357ee,,2026-10-28T11:42:13+00:00,think
+Homo_sapiens,Gorilla_gorilla,same-family,8,0,873,timeout,timed out after 300s,300.1929452419281,3600,completed,0,123.14,128128,True,16522,282,98.28723597409672,0.9999384274367342,0.9924830410071502,0.9961967856704699,16240,123,1,results/logs/Homo_sapiens__Gorilla_gorilla__8X__r0__t3600.stdout.gz,results/logs/Homo_sapiens__Gorilla_gorilla__8X__r0__t3600.stderr.gz,results/assemblies/Homo_sapiens__Gorilla_gorilla__8X__r0__t3600.fasta,cb3f847ea38c1d10c6c2b641b071eb6775384a0fc4aa204cab999b7cb5f4b8ef,,2026-10-28T11:42:13+00:00,think
+Saimiri_boliviensis,Saimiri_sciureus,same-genus,5,0,550,timeout,timed out after 300s,300.11469078063965,3600,completed,0,83.45,127744,True,16473,199,98.59445050284745,0.9979763291837861,0.9898424670032236,0.9938927568095761,16274,167,33,results/logs/Saimiri_boliviensis__Saimiri_sciureus__5X__r0__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Saimiri_sciureus__5X__r0__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Saimiri_sciureus__5X__r0__t3600.fasta,a55247ab84573fe17c219ba499daabe83f2ce4c835f2235074f1c93c7f19ef67,,2026-10-28T11:43:16+00:00,think
+Saimiri_boliviensis,Saimiri_sciureus,same-genus,6,0,659,timeout,timed out after 300s,300.15191626548767,3600,completed,0,100.85,127872,True,16474,45,99.54556471158507,0.9981772890212042,0.9990878131841401,0.998632343555299,16429,15,30,results/logs/Saimiri_boliviensis__Saimiri_sciureus__6X__r0__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Saimiri_sciureus__6X__r0__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Saimiri_sciureus__6X__r0__t3600.fasta,47fa93c9f67e08d5b9c1ebf86c50a1b30a2d127deb31babb8030bd686355e42b,,2026-10-28T11:43:33+00:00,think
+Homo_sapiens,Saimiri_boliviensis,same-order,4,0,440,timeout,timed out after 300s,300.05656814575195,3600,completed,0,77.14,128128,True,16551,5907,58.925802879291254,0.8758126903135545,0.7112685469856971,0.7850108803894811,10642,4320,1509,results/logs/Homo_sapiens__Saimiri_boliviensis__4X__r0__t3600.stdout.gz,results/logs/Homo_sapiens__Saimiri_boliviensis__4X__r0__t3600.stderr.gz,results/assemblies/Homo_sapiens__Saimiri_boliviensis__4X__r0__t3600.fasta,21afda210d543a6bcd90cc0221dae396f2bec21ad5a877cab50104354af2980f,,2026-10-28T11:44:14+00:00,think
+Saimiri_boliviensis,Saimiri_sciureus,same-genus,7,0,769,timeout,timed out after 300s,300.14665365219116,3600,completed,0,117.96,127744,True,16474,33,99.7572962805655,0.9995744163424124,0.9984210845934293,0.998997417590764,16441,26,7,results/logs/Saimiri_boliviensis__Saimiri_sciureus__7X__r0__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Saimiri_sciureus__7X__r0__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Saimiri_sciureus__7X__r0__t3600.fasta,05d36cfb468bc6e2a4b95257d7bf69cc751d0cd4ee026f1d66940843e4bfaa65,,2026-10-28T11:43:45+00:00,think
+Homo_sapiens,Saimiri_boliviensis,same-order,5,0,550,timeout,timed out after 300s,300.16224122047424,3600,completed,0,86.09,128384,True,16623,5782,59.040610520577815,0.8628216362622481,0.734354871516713,0.7934217273459819,10831,3918,1722,results/logs/Homo_sapiens__Saimiri_boliviensis__5X__r0__t3600.stdout.gz,results/logs/Homo_sapiens__Saimiri_boliviensis__5X__r0__t3600.stderr.gz,results/assemblies/Homo_sapiens__Saimiri_boliviensis__5X__r0__t3600.fasta,3a92b658cb9b87825d69e0d6e99b5d72e518884cb1bf2ffdad06f49db1f548ed,,2026-10-28T11:44:32+00:00,think
+Saimiri_boliviensis,Saimiri_sciureus,same-genus,8,0,879,timeout,timed out after 300s,300.14554500579834,3600,completed,0,129.67,128000,True,16474,58,99.29833051052505,0.9964793007162802,1.0,0.998236546062633,16416,0,58,results/logs/Saimiri_boliviensis__Saimiri_sciureus__8X__r0__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Saimiri_sciureus__8X__r0__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Saimiri_sciureus__8X__r0__t3600.fasta,347f6bfb263943172507c0da2ce070f8a28c5eaea6dfcd9b2c63b1023f874474,,2026-10-28T11:43:59+00:00,think
+Homo_sapiens,Saimiri_boliviensis,same-order,6,0,659,timeout,timed out after 300s,300.13172006607056,3600,completed,0,89.21,128512,True,16567,5307,62.4722592099423,0.8854289533695053,0.7499666977487678,0.8120875554433666,11260,3754,1457,results/logs/Homo_sapiens__Saimiri_boliviensis__6X__r0__t3600.stdout.gz,results/logs/Homo_sapiens__Saimiri_boliviensis__6X__r0__t3600.stderr.gz,results/assemblies/Homo_sapiens__Saimiri_boliviensis__6X__r0__t3600.fasta,49f896eb3952639b706883174eb904ce8755e72701f9815e62f7ba4a34ffdb77,,2026-10-28T11:44:53+00:00,think
+Gorilla_gorilla,Varecia_variegata,same-order,7,0,792,timeout,timed out after 300s,300.05247807502747,3600,completed,0,88.15,128384,True,16387,6049,56.606253079997806,0.8464057638775176,0.6851348664590099,0.7572794198439732,10338,4751,1876,results/logs/Gorilla_gorilla__Varecia_variegata__7X__r0__t3600.stdout.gz,results/logs/Gorilla_gorilla__Varecia_variegata__7X__r0__t3600.stderr.gz,results/assemblies/Gorilla_gorilla__Varecia_variegata__7X__r0__t3600.fasta,eca20d1da79978e9138269ad4ab75d03abe596321416e950e79bfeba6701b314,,2026-10-28T11:45:26+00:00,think
+Gorilla_gorilla,Aotus_azarai,same-order,8,1,883,timeout,timed out after 300s,300.13563323020935,3600,completed,0,91.33,128512,True,16376,3983,69.54851104707012,0.9030743268031404,0.807929631088355,0.8528565984131934,12308,2926,1321,results/logs/Gorilla_gorilla__Aotus_azarai__8X__r1__t3600.stdout.gz,results/logs/Gorilla_gorilla__Aotus_azarai__8X__r1__t3600.stderr.gz,results/assemblies/Gorilla_gorilla__Aotus_azarai__8X__r1__t3600.fasta,3f9726b38e8691e92c9adc4afb930c571810e04d32266db7bc1494f5eefb1a40,,2026-10-28T11:45:43+00:00,think
+Homo_sapiens,Gorilla_gorilla,same-family,4,2,437,timeout,timed out after 300s,300.22688031196594,3600,completed,0,50.05,127872,True,16526,481,97.01682197749001,1.0,0.9797726717184062,0.9897830045991912,16033,331,0,results/logs/Homo_sapiens__Gorilla_gorilla__4X__r2__t3600.stdout.gz,results/logs/Homo_sapiens__Gorilla_gorilla__4X__r2__t3600.stderr.gz,results/assemblies/Homo_sapiens__Gorilla_gorilla__4X__r2__t3600.fasta,b321e2aa4381c2dfebde50eacd31789edb8a85d45962f0da2d871bf4069c7def,,2026-10-28T11:49:46+00:00,think
+Homo_sapiens,Gorilla_gorilla,same-family,4,1,437,timeout,timed out after 300s,300.1795754432678,3600,completed,0,50.25,127744,True,16533,555,96.64307748140084,1.0,0.9764116352969934,0.9880650547275988,15978,386,0,results/logs/Homo_sapiens__Gorilla_gorilla__4X__r1__t3600.stdout.gz,results/logs/Homo_sapiens__Gorilla_gorilla__4X__r1__t3600.stderr.gz,results/assemblies/Homo_sapiens__Gorilla_gorilla__4X__r1__t3600.fasta,1c324c6f2af7256c1e1011b7ec1d165f8904bb7271a545a60a6144c81ea6f69d,,2026-10-28T11:49:46+00:00,think
+Homo_sapiens,Gorilla_gorilla,same-family,5,2,546,timeout,timed out after 300s,300.18201899528503,3600,completed,0,63.69,127872,True,16528,367,97.76137463697967,1.0,0.9874113908579809,0.9936658262099501,16158,206,0,results/logs/Homo_sapiens__Gorilla_gorilla__5X__r2__t3600.stdout.gz,results/logs/Homo_sapiens__Gorilla_gorilla__5X__r2__t3600.stderr.gz,results/assemblies/Homo_sapiens__Gorilla_gorilla__5X__r2__t3600.fasta,a16de346c7ac53f19435728b783367669eeb26ebaf74536b2842f0d2b9a64ac9,,2026-10-28T11:49:46+00:00,think
+Homo_sapiens,Gorilla_gorilla,same-family,5,1,546,timeout,timed out after 300s,300.2947380542755,3600,completed,0,64.63,128000,True,16532,432,97.31446198512067,0.9999378495960224,0.9832549043573917,0.9915262071303115,16089,274,1,results/logs/Homo_sapiens__Gorilla_gorilla__5X__r1__t3600.stdout.gz,results/logs/Homo_sapiens__Gorilla_gorilla__5X__r1__t3600.stderr.gz,results/assemblies/Homo_sapiens__Gorilla_gorilla__5X__r1__t3600.fasta,4741f78228e73c34f5a63b195c6bf61f993811258d12d33c0a97398478cff666,,2026-10-28T11:49:46+00:00,think
+Homo_sapiens,Gorilla_gorilla,same-family,6,2,655,timeout,timed out after 300s,300.1675012111664,3600,completed,0,77.5,128128,True,16563,501,95.88712098468929,0.9942721952434317,0.981440511307768,0.9878146842333149,15970,302,92,results/logs/Homo_sapiens__Gorilla_gorilla__6X__r2__t3600.stdout.gz,results/logs/Homo_sapiens__Gorilla_gorilla__6X__r2__t3600.stderr.gz,results/assemblies/Homo_sapiens__Gorilla_gorilla__6X__r2__t3600.fasta,5bfdf3c8ddf7e2b1d64dbc905b8b0a0189d7d8d83455d36e4af16947ad5e6f41,,2026-10-28T11:49:46+00:00,think
+Homo_sapiens,Gorilla_gorilla,same-family,6,1,655,timeout,timed out after 300s,300.20484137535095,3600,completed,0,79.12,128000,True,16560,444,96.21667067018977,0.9942906789127467,0.9846361848574238,0.9894398814302476,16022,250,92,results/logs/Homo_sapiens__Gorilla_gorilla__6X__r1__t3600.stdout.gz,results/logs/Homo_sapiens__Gorilla_gorilla__6X__r1__t3600.stderr.gz,results/assemblies/Homo_sapiens__Gorilla_gorilla__6X__r1__t3600.fasta,a0200749df825d191021699af6b2cdfb822e5223c753b9e472da591f5a7d688b,,2026-10-28T11:49:46+00:00,think
+Homo_sapiens,Saimiri_boliviensis,same-order,4,1,440,timeout,timed out after 300s,300.04785442352295,3600,completed,0,55.27,128128,True,16573,5951,58.86395123302854,0.8782867537621961,0.7081805453696913,0.7841139777802384,10622,4377,1472,results/logs/Homo_sapiens__Saimiri_boliviensis__4X__r1__t3600.stdout.gz,results/logs/Homo_sapiens__Saimiri_boliviensis__4X__r1__t3600.stderr.gz,results/assemblies/Homo_sapiens__Saimiri_boliviensis__4X__r1__t3600.fasta,d55316852243849598f7eb6f3eb3eb29b7c998cb2cbda646bb73be96a0b222f8,,2026-10-28T11:51:17+00:00,think
+Homo_sapiens,Gorilla_gorilla,same-family,7,2,764,timeout,timed out after 300s,300.18159580230713,3600,completed,0,88.77,128128,True,16559,506,95.81956874286745,0.9943900766689522,0.9802752857318422,0.9872822353560046,15953,321,90,results/logs/Homo_sapiens__Gorilla_gorilla__7X__r2__t3600.stdout.gz,results/logs/Homo_sapiens__Gorilla_gorilla__7X__r2__t3600.stderr.gz,results/assemblies/Homo_sapiens__Gorilla_gorilla__7X__r2__t3600.fasta,3d826420cd775ccbda09aed630fd2b6d69ea93cc8604b4c4a3fcc654544ab60f,,2026-10-28T11:50:47+00:00,think
+Homo_sapiens,Gorilla_gorilla,same-family,7,1,764,timeout,timed out after 300s,300.2551312446594,3600,completed,0,91.31,128000,True,16522,290,98.24476455634911,1.0,0.9919335125886092,0.99595042336483,16232,132,0,results/logs/Homo_sapiens__Gorilla_gorilla__7X__r1__t3600.stdout.gz,results/logs/Homo_sapiens__Gorilla_gorilla__7X__r1__t3600.stderr.gz,results/assemblies/Homo_sapiens__Gorilla_gorilla__7X__r1__t3600.fasta,bc19e54b7c298c9400a71b509df37b17345d7e82c97e89d0ca50be34c9d7f171,,2026-10-28T11:50:47+00:00,think
+Homo_sapiens,Saimiri_boliviensis,same-order,5,1,550,timeout,timed out after 300s,300.1481578350067,3600,completed,0,63.45,128384,True,16593,5617,60.8021271881232,0.8826698833936469,0.731148414601652,0.7997959704157103,10976,4036,1459,results/logs/Homo_sapiens__Saimiri_boliviensis__5X__r1__t3600.stdout.gz,results/logs/Homo_sapiens__Saimiri_boliviensis__5X__r1__t3600.stderr.gz,results/assemblies/Homo_sapiens__Saimiri_boliviensis__5X__r1__t3600.fasta,352ceade9f4998b69ec5caee37321532072d8044b7afffa21cce389ea3fe6da8,,2026-10-28T11:51:17+00:00,think
+Homo_sapiens,Gorilla_gorilla,same-family,8,1,873,timeout,timed out after 300s,300.16618299484253,3600,completed,0,99.35,128512,True,16520,288,98.25665859564165,1.0,0.9919335125886092,0.99595042336483,16232,132,0,results/logs/Homo_sapiens__Gorilla_gorilla__8X__r1__t3600.stdout.gz,results/logs/Homo_sapiens__Gorilla_gorilla__8X__r1__t3600.stderr.gz,results/assemblies/Homo_sapiens__Gorilla_gorilla__8X__r1__t3600.fasta,806a69f56874f8d47048aa62487b3c40d28059acc6e4b39f3cd993411aa1bca4,,2026-10-28T11:51:03+00:00,think
+Homo_sapiens,Gorilla_gorilla,same-family,8,2,873,timeout,timed out after 300s,300.21339893341064,3600,completed,0,99.36,128128,True,16524,202,98.77753570564028,1.0,0.997433390369103,0.9987150461971487,16322,42,0,results/logs/Homo_sapiens__Gorilla_gorilla__8X__r2__t3600.stdout.gz,results/logs/Homo_sapiens__Gorilla_gorilla__8X__r2__t3600.stderr.gz,results/assemblies/Homo_sapiens__Gorilla_gorilla__8X__r2__t3600.fasta,93d5681b19eb169bcfde2b21083d66247e0f36c3d73cf6f5c7d56b3844fd0b65,,2026-10-28T11:51:03+00:00,think
+Homo_sapiens,Saimiri_boliviensis,same-order,5,2,550,timeout,timed out after 300s,300.1706557273865,3600,completed,0,69.43,128512,True,16593,5680,60.32079646017699,0.8800129105139999,0.7278430325680726,0.7967271797494246,10906,4078,1487,results/logs/Homo_sapiens__Saimiri_boliviensis__5X__r2__t3600.stdout.gz,results/logs/Homo_sapiens__Saimiri_boliviensis__5X__r2__t3600.stderr.gz,results/assemblies/Homo_sapiens__Saimiri_boliviensis__5X__r2__t3600.fasta,08f1bb2e8f04c2746fc73cfdd9ef332c8c7880db7b864a8fd6b61fd963a46968,,2026-10-28T11:52:23+00:00,think
+Homo_sapiens,Saimiri_boliviensis,same-order,6,1,659,timeout,timed out after 300s,300.1303827762604,3600,completed,0,76.97,128512,True,16599,5435,61.69707020453289,0.8821530192854885,0.7450600801068091,0.8078314997104805,11161,3819,1491,results/logs/Homo_sapiens__Saimiri_boliviensis__6X__r1__t3600.stdout.gz,results/logs/Homo_sapiens__Saimiri_boliviensis__6X__r1__t3600.stderr.gz,results/assemblies/Homo_sapiens__Saimiri_boliviensis__6X__r1__t3600.fasta,ace74328865d3c6b69ceea4a6bcb5b55b82991b76744abc713b11056d3bcf7e2,,2026-10-28T11:52:25+00:00,think
+Homo_sapiens,Saimiri_boliviensis,same-order,6,2,659,timeout,timed out after 300s,300.14844155311584,3600,completed,0,76.65,128512,True,16550,5235,62.7147766323024,0.8835012102756306,0.7553908805661259,0.8144389260778808,11315,3664,1492,results/logs/Homo_sapiens__Saimiri_boliviensis__6X__r2__t3600.stdout.gz,results/logs/Homo_sapiens__Saimiri_boliviensis__6X__r2__t3600.stderr.gz,results/assemblies/Homo_sapiens__Saimiri_boliviensis__6X__r2__t3600.fasta,1e98ad424b70ff12aa57025da3739e62b01bff8d810aa7c3e57da902aabe626a,,2026-10-28T11:52:27+00:00,think
+Homo_sapiens,Saimiri_boliviensis,same-order,7,0,769,timeout,timed out after 300s,300.16133165359497,3600,completed,0,88.09,128512,True,16579,5183,63.12873919787281,0.8855388919107934,0.7598346446192825,0.817884953529264,11396,3602,1473,results/logs/Homo_sapiens__Saimiri_boliviensis__7X__r0__t3600.stdout.gz,results/logs/Homo_sapiens__Saimiri_boliviensis__7X__r0__t3600.stderr.gz,results/assemblies/Homo_sapiens__Saimiri_boliviensis__7X__r0__t3600.fasta,df8477a52c6ddb0600eec1cd80e1593ccd9c727164d59a29d043415dbeed1a29,,2026-10-28T11:52:29+00:00,think
+Homo_sapiens,Saimiri_boliviensis,same-order,7,2,769,timeout,timed out after 300s,300.1496527194977,3600,completed,0,90.29,128768,True,16613,5108,63.67963690706814,0.8877999845667104,0.7661317173869614,0.8224907063197026,11505,3512,1454,results/logs/Homo_sapiens__Saimiri_boliviensis__7X__r2__t3600.stdout.gz,results/logs/Homo_sapiens__Saimiri_boliviensis__7X__r2__t3600.stderr.gz,results/assemblies/Homo_sapiens__Saimiri_boliviensis__7X__r2__t3600.fasta,4029dd294ddb91439265ba71a295ff27bb3328e60c1edc4e8e387a9962b9ea06,,2026-10-28T11:52:55+00:00,think
+Homo_sapiens,Saimiri_boliviensis,same-order,7,1,769,timeout,timed out after 300s,300.19934153556824,3600,completed,0,91.48,128896,True,16595,5201,63.12056737588652,0.8868820552744259,0.7585563989878812,0.8177152496141836,11392,3626,1453,results/logs/Homo_sapiens__Saimiri_boliviensis__7X__r1__t3600.stdout.gz,results/logs/Homo_sapiens__Saimiri_boliviensis__7X__r1__t3600.stderr.gz,results/assemblies/Homo_sapiens__Saimiri_boliviensis__7X__r1__t3600.fasta,7cf20974602f74c6d89bd3d857b5e7626c51331a5eba3bf12deac63bbd38a989,,2026-10-28T11:52:54+00:00,think
+Homo_sapiens,Saimiri_sciureus,same-order,8,1,879,timeout,timed out after 300s,300.0324809551239,3600,completed,0,100.06,129024,True,16588,4982,64.27068335363828,0.8875802997858673,0.7735270594508131,0.8266381766381767,11606,3398,1470,results/logs/Homo_sapiens__Saimiri_sciureus__8X__r1__t3600.stdout.gz,results/logs/Homo_sapiens__Saimiri_sciureus__8X__r1__t3600.stderr.gz,results/assemblies/Homo_sapiens__Saimiri_sciureus__8X__r1__t3600.fasta,0529765064562701562622f7d6d0c16fc632c62b6e542f489f6f407b889b17cf,,2026-10-28T11:53:44+00:00,think
+Gorilla_gorilla,Varecia_variegata,same-order,7,1,792,timeout,timed out after 300s,300.0491187572479,3600,completed,0,96.56,128384,True,16377,5891,57.52057048820625,0.849825755733852,0.6938856537850715,0.7639794543003898,10486,4626,1853,results/logs/Gorilla_gorilla__Varecia_variegata__7X__r1__t3600.stdout.gz,results/logs/Gorilla_gorilla__Varecia_variegata__7X__r1__t3600.stderr.gz,results/assemblies/Gorilla_gorilla__Varecia_variegata__7X__r1__t3600.fasta,4a822252541b758122e7bb2d96a2da901f3ad5a6d693db7563f7ff53698fe252,,2026-10-28T11:53:53+00:00,think
+Gorilla_gorilla,Varecia_variegata,same-order,7,2,792,timeout,timed out after 300s,300.1580185890198,3600,completed,0,92.62,128512,True,16391,5940,56.817440469718385,0.8391681387506023,0.6985028739473332,0.7624015173621242,10451,4511,2003,results/logs/Gorilla_gorilla__Varecia_variegata__7X__r2__t3600.stdout.gz,results/logs/Gorilla_gorilla__Varecia_variegata__7X__r2__t3600.stderr.gz,results/assemblies/Gorilla_gorilla__Varecia_variegata__7X__r2__t3600.fasta,37cb041b83358a37b71258b30c0c689bae698e8da32ebfefb006a9285422da1a,,2026-10-28T11:54:07+00:00,think
+Gorilla_gorilla,Aotus_azarai,same-order,8,2,883,timeout,timed out after 300s,300.03149151802063,3600,completed,0,113.37,128384,True,16373,3901,69.92039744820188,0.902367941712204,0.8139993427538613,0.8559087767795438,12385,2830,1340,results/logs/Gorilla_gorilla__Aotus_azarai__8X__r2__t3600.stdout.gz,results/logs/Gorilla_gorilla__Aotus_azarai__8X__r2__t3600.stderr.gz,results/assemblies/Gorilla_gorilla__Aotus_azarai__8X__r2__t3600.fasta,6cbeeb1fc07f7997cfb25fbf3646c920f29c66c8b26aba86ebf6c6f56221f755,,2026-10-28T11:53:51+00:00,think
+Gorilla_gorilla,Varecia_variegata,same-order,8,0,905,timeout,timed out after 300s,300.15515184402466,3600,process_error,-6,102.3,128640,False,0,0,,,,,,,,results/logs/Gorilla_gorilla__Varecia_variegata__8X__r0__t3600.stdout.gz,results/logs/Gorilla_gorilla__Varecia_variegata__8X__r0__t3600.stderr.gz,,,"MIA exited -6; stderr tail: rting assembly iteration 2
+Repeat and score filtering
+Starting assembly iteration 3
+Repeat and score filtering
+Starting assembly iteration 4
+Repeat and score filtering
+Starting assembly iteration 5
+Repeat and score filtering
+Starting assembly iteration 6
+*** buffer overflow detected ***: terminated
+",2026-10-28T11:54:37+00:00,think
+Gorilla_gorilla,Varecia_variegata,same-order,8,1,905,timeout,timed out after 300s,300.144015789032,3600,completed,0,99.39,128384,True,16397,5683,58.524061834271045,0.8487008871989861,0.7116572567253404,0.7741609162180715,10714,4341,1910,results/logs/Gorilla_gorilla__Varecia_variegata__8X__r1__t3600.stdout.gz,results/logs/Gorilla_gorilla__Varecia_variegata__8X__r1__t3600.stderr.gz,results/assemblies/Gorilla_gorilla__Varecia_variegata__8X__r1__t3600.fasta,65cc82d1d632d5fc3cdddc030baa13947ff3fe94128c97384865db5bcc1ad7db,,2026-10-28T11:54:37+00:00,think
+Saimiri_boliviensis,Homo_sapiens,same-order,5,0,553,timeout,timed out after 300s,300.05376291275024,3600,completed,0,58.06,128128,True,16526,6339,56.31599314500525,0.8669787234042553,0.6788617886178862,0.7614740618926595,10187,4819,1563,results/logs/Saimiri_boliviensis__Homo_sapiens__5X__r0__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Homo_sapiens__5X__r0__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Homo_sapiens__5X__r0__t3600.fasta,ad183f7edab1333f3551853e4fd0f983b3a733eed4a5afb91ffae1a4349d5ea8,,2026-10-28T11:55:41+00:00,think
+Saimiri_boliviensis,Homo_sapiens,same-order,5,2,553,timeout,timed out after 300s,300.07237434387207,3600,completed,0,58.6,128128,True,16487,5686,59.53811387311911,0.8670733665114786,0.7243344732783478,0.7893025464908114,10802,4111,1656,results/logs/Saimiri_boliviensis__Homo_sapiens__5X__r2__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Homo_sapiens__5X__r2__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Homo_sapiens__5X__r2__t3600.fasta,e316978bfb68b9c8bc396c8dedb07584be2529a66957df574643ea2494f27474,,2026-10-28T11:55:53+00:00,think
+Saimiri_boliviensis,Homo_sapiens,same-order,5,1,553,timeout,timed out after 300s,300.0796184539795,3600,completed,0,62.08,128128,True,16499,5374,61.83873482570442,0.8838745622413244,0.7349437458636664,0.8025583580255835,11105,4005,1459,results/logs/Saimiri_boliviensis__Homo_sapiens__5X__r1__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Homo_sapiens__5X__r1__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Homo_sapiens__5X__r1__t3600.fasta,808d33e7c4696d88ab5a157e62c73f2af0fce7913b49494c244c9befd0cf8936,,2026-10-28T11:55:51+00:00,think
+Gorilla_gorilla,Varecia_variegata,same-order,8,2,905,timeout,timed out after 300s,300.1900019645691,3600,completed,0,99.2,128768,True,16438,5690,58.81934176660643,0.8549028971665075,0.7093514727248712,0.775355518660218,10741,4401,1823,results/logs/Gorilla_gorilla__Varecia_variegata__8X__r2__t3600.stdout.gz,results/logs/Gorilla_gorilla__Varecia_variegata__8X__r2__t3600.stderr.gz,results/assemblies/Gorilla_gorilla__Varecia_variegata__8X__r2__t3600.fasta,33e419c10da911556c1f92b8df471cc43397cfd177a51e3b58968b19a33386b8,,2026-10-28T11:55:35+00:00,think
+Saimiri_boliviensis,Homo_sapiens,same-order,6,0,663,timeout,timed out after 300s,300.1446714401245,3600,completed,0,69.34,128384,True,16511,4857,64.64281746472614,0.8864259597806216,0.7717867091126144,0.8251435864709635,11637,3441,1491,results/logs/Saimiri_boliviensis__Homo_sapiens__6X__r0__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Homo_sapiens__6X__r0__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Homo_sapiens__6X__r0__t3600.fasta,989b25acbb3abd5533b01c3a05b12b4c9cfd26c59a34b41c9fcb467244825921,,2026-10-28T11:56:19+00:00,think
+Saimiri_boliviensis,Homo_sapiens,same-order,6,1,663,timeout,timed out after 300s,300.1543869972229,3600,completed,0,71.07,128384,True,16521,5557,60.981178304933735,0.8840006457862447,0.7236981231826592,0.7958575581395348,10951,4181,1437,results/logs/Saimiri_boliviensis__Homo_sapiens__6X__r1__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Homo_sapiens__6X__r1__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Homo_sapiens__6X__r1__t3600.fasta,4e566d942e782dfed3386151b9dc6cc6fcb2b1344665e672e47133a81e554c34,,2026-10-28T11:56:29+00:00,think
+Saimiri_boliviensis,Homo_sapiens,same-order,6,2,663,timeout,timed out after 300s,300.14551758766174,3600,completed,0,76.9,128256,True,16505,5286,62.31030073934071,0.8830851650516033,0.7430560159098443,0.8070415436676507,11209,3876,1484,results/logs/Saimiri_boliviensis__Homo_sapiens__6X__r2__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Homo_sapiens__6X__r2__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Homo_sapiens__6X__r2__t3600.fasta,575c90f6624aa5f34440adea973b29aadd37cc34b65b45abf34ef61ae15c857d,,2026-10-28T11:56:50+00:00,think
+Saimiri_boliviensis,Homo_sapiens,same-order,7,1,774,timeout,timed out after 300s,300.15460443496704,3600,completed,0,90.95,128640,True,16496,5064,63.46677030703459,0.8829754364282404,0.7593330676232231,0.8165,11431,3623,1515,results/logs/Saimiri_boliviensis__Homo_sapiens__7X__r1__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Homo_sapiens__7X__r1__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Homo_sapiens__7X__r1__t3600.fasta,e4c2f24a6ff6deb03a4d77c4d6cf1235c8148ab1850ae5592eeb6efe2fcf1347,,2026-10-28T11:57:03+00:00,think
+Saimiri_boliviensis,Homo_sapiens,same-order,7,0,774,timeout,timed out after 300s,300.14123487472534,3600,completed,0,94.47,128512,True,16534,5234,62.566548358473824,0.8827856025039124,0.7485900072987858,0.8101683961078597,11282,3789,1498,results/logs/Saimiri_boliviensis__Homo_sapiens__7X__r0__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Homo_sapiens__7X__r0__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Homo_sapiens__7X__r0__t3600.fasta,82f8d8782826b926b9bc57c149b1649c538c085cb035a48bcdc10caf253c8cef,,2026-10-28T11:57:01+00:00,think
+Saimiri_boliviensis,Homo_sapiens,same-order,7,2,774,timeout,timed out after 300s,300.15366864204407,3600,completed,0,96.22,128384,True,16507,5050,63.52849855843868,0.8822668822668822,0.7618351063829787,0.8176401327291539,11458,3582,1529,results/logs/Saimiri_boliviensis__Homo_sapiens__7X__r2__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Homo_sapiens__7X__r2__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Homo_sapiens__7X__r2__t3600.fasta,a00d2da094c894169d397c8fdc4784f0f837532e952ca885c99907a6e2993d52,,2026-10-28T11:57:25+00:00,think
+Saimiri_boliviensis,Homo_sapiens,same-order,8,0,884,timeout,timed out after 300s,300.15325951576233,3600,completed,0,108.78,128512,True,16506,5387,61.80745030346901,0.8842507767067633,0.734321249007674,0.8023419711590589,11100,4016,1453,results/logs/Saimiri_boliviensis__Homo_sapiens__8X__r0__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Homo_sapiens__8X__r0__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Homo_sapiens__8X__r0__t3600.fasta,e0f88d37714f03f3bfba57e29470122e59f2f0b2a32fdffe523ed8659b8927d1,,2026-10-28T11:57:39+00:00,think
+Saimiri_boliviensis,Homo_sapiens,same-order,8,1,884,timeout,timed out after 300s,300.14781165122986,3600,completed,0,107.3,128512,True,16514,4792,64.9780835598957,0.8858547655068079,0.7776228419654715,0.8282178217821782,11711,3349,1509,results/logs/Saimiri_boliviensis__Homo_sapiens__8X__r1__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Homo_sapiens__8X__r1__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Homo_sapiens__8X__r1__t3600.fasta,a1f5718bde3a501ee1aa17db84a3794b1697a4dd5be6bbe7c0c7804ebaee8bcf,,2026-10-28T11:57:51+00:00,think
+Saimiri_boliviensis,Gorilla_gorilla,same-order,5,2,546,timeout,timed out after 300s,300.17240810394287,3600,completed,0,74.35,128256,True,16516,5576,61.25762920656252,0.8906618904176504,0.7283136941615073,0.8013477878699091,10940,4081,1343,results/logs/Saimiri_boliviensis__Gorilla_gorilla__5X__r2__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Gorilla_gorilla__5X__r2__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Gorilla_gorilla__5X__r2__t3600.fasta,dce3209af1be544d3b70c54e9c248ea3ce641b7e9f6234a8c75123649a9fddfd,,2026-10-28T11:58:44+00:00,think
+Saimiri_boliviensis,Homo_sapiens,same-order,8,2,884,timeout,timed out after 300s,300.14879751205444,3600,completed,0,113.12,128512,True,16507,4929,64.23410404624278,0.8861370955374942,0.7661760806152215,0.8218018914883026,11557,3527,1485,results/logs/Saimiri_boliviensis__Homo_sapiens__8X__r2__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Homo_sapiens__8X__r2__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Homo_sapiens__8X__r2__t3600.fasta,6656003099137b54eaabcb2b4e5d288f297b39219eaa0a407ba5bff6511f3ff3,,2026-10-28T11:58:18+00:00,think
+Saimiri_boliviensis,Gorilla_gorilla,same-order,6,0,655,timeout,timed out after 300s,300.15687799453735,3600,completed,0,86.79,128256,True,16485,4931,64.0134717934325,0.8955552065336894,0.7585472928029799,0.8213771247479114,11404,3630,1330,results/logs/Saimiri_boliviensis__Gorilla_gorilla__6X__r0__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Gorilla_gorilla__6X__r0__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Gorilla_gorilla__6X__r0__t3600.fasta,8ab861483521ac72d22c70970deac7e3753dfa74ae97d172fbe6104bb19ac264,,2026-10-28T11:58:45+00:00,think
+Saimiri_boliviensis,Gorilla_gorilla,same-order,6,1,655,timeout,timed out after 300s,300.14556527137756,3600,completed,0,121.31,128128,True,16493,4864,65.18472837360542,0.8963842417701026,0.7741011984021305,0.8307670322603695,11627,3393,1344,results/logs/Saimiri_boliviensis__Gorilla_gorilla__6X__r1__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Gorilla_gorilla__6X__r1__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Gorilla_gorilla__6X__r1__t3600.fasta,f9c04ce1439b7a1e32ea46661aa491c0106a851b6f1a8265bdf16b2257bb15ec,,2026-10-28T11:59:13+00:00,think
+Saimiri_boliviensis,Gorilla_gorilla,same-order,6,2,655,timeout,timed out after 300s,300.1479272842407,3600,completed,0,136.74,128000,True,16525,5336,62.639269917697774,0.893324816352603,0.7444769763108864,0.812137049941928,11188,3840,1336,results/logs/Saimiri_boliviensis__Gorilla_gorilla__6X__r2__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Gorilla_gorilla__6X__r2__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Gorilla_gorilla__6X__r2__t3600.fasta,88631c72876ebf12c2d97935b64eac23f6c2598a94a00a5f1c116b2af4b35b1b,,2026-10-28T11:59:40+00:00,think
+Saimiri_boliviensis,Gorilla_gorilla,same-order,7,0,764,timeout,timed out after 300s,300.14686942100525,3600,completed,0,185.9,128384,True,16481,4903,64.79646116803852,0.8935907335907336,0.7721873748832243,0.8284650630011455,11572,3414,1378,results/logs/Saimiri_boliviensis__Gorilla_gorilla__7X__r0__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Gorilla_gorilla__7X__r0__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Gorilla_gorilla__7X__r0__t3600.fasta,8f16c12a18297401fd00aa6ed9bb3c56421004a88b4dff66db11ef79459f2dd5,,2026-10-28T11:59:49+00:00,think
+Saimiri_boliviensis,Gorilla_gorilla,same-order,7,1,764,timeout,timed out after 300s,300.14235043525696,3600,completed,0,192.83,128256,True,16503,5192,62.38066331880139,0.8747871846463395,0.7665807676658076,0.8171172473615729,11304,3442,1618,results/logs/Saimiri_boliviensis__Gorilla_gorilla__7X__r1__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Gorilla_gorilla__7X__r1__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Gorilla_gorilla__7X__r1__t3600.fasta,7d310d7902051f67c5f2fbc9cd8d47806caa79b2f11cf4a09eff14ab808ac84e,,2026-10-28T12:00:11+00:00,think
+Saimiri_boliviensis,Gorilla_gorilla,same-order,7,2,764,timeout,timed out after 300s,300.1468198299408,3600,completed,0,202.33,128512,True,16528,5096,63.74233128834356,0.8907333800950822,0.7638684667825157,0.8224373043572123,11429,3533,1402,results/logs/Saimiri_boliviensis__Gorilla_gorilla__7X__r2__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Gorilla_gorilla__7X__r2__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Gorilla_gorilla__7X__r2__t3600.fasta,00dd5ae77e480a48b72de6c6c23f174a2bd51d30b6dd0626fd6545444c57fe2d,,2026-10-28T12:00:23+00:00,think
+Saimiri_boliviensis,Gorilla_gorilla,same-order,8,0,873,timeout,timed out after 300s,300.1494312286377,3600,completed,0,241.14,128256,True,16487,4413,67.76673963068978,0.9007758877946882,0.8031129439936144,0.8491455095295027,12074,2960,1330,results/logs/Saimiri_boliviensis__Gorilla_gorilla__8X__r0__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Gorilla_gorilla__8X__r0__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Gorilla_gorilla__8X__r0__t3600.fasta,a708f8b2324d4da5fc464f5d6282fb3e3149aaf8bfd6688f6b11b7817819e13a,,2026-10-28T12:00:25+00:00,think
+Saimiri_boliviensis,Saimiri_sciureus,same-genus,5,1,550,timeout,timed out after 300s,300.16848134994507,3600,completed,0,203.83,127616,True,16474,160,98.40159237589722,0.9936049698520008,0.9966399902254262,0.9951201659143588,16314,55,105,results/logs/Saimiri_boliviensis__Saimiri_sciureus__5X__r1__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Saimiri_sciureus__5X__r1__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Saimiri_sciureus__5X__r1__t3600.fasta,2193dc01d1d6ce5edf86146c0ac4064f06c8842358bb41417bcafd522314bcce,,2026-10-28T12:03:09+00:00,think
+Saimiri_boliviensis,Gorilla_gorilla,same-order,8,1,873,timeout,timed out after 300s,300.145667552948,3600,completed,0,314.46,128384,True,16525,5173,63.589513779968634,0.8953387491127061,0.7549378200438918,0.8191658247943427,11352,3685,1327,results/logs/Saimiri_boliviensis__Gorilla_gorilla__8X__r1__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Gorilla_gorilla__8X__r1__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Gorilla_gorilla__8X__r1__t3600.fasta,2bf3405e92593d6ae28f590e9da8bf0aa36a6073b644ed847ba9a6fb46759c2e,,2026-10-28T12:01:27+00:00,think
+Saimiri_boliviensis,Gorilla_gorilla,same-order,8,2,873,timeout,timed out after 300s,300.1502540111542,3600,completed,0,295.8,128256,True,16512,5006,64.37083869523863,0.894217316959428,0.7668466306738653,0.8256485700958055,11505,3498,1361,results/logs/Saimiri_boliviensis__Gorilla_gorilla__8X__r2__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Gorilla_gorilla__8X__r2__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Gorilla_gorilla__8X__r2__t3600.fasta,f5af0e3812a6fadbf6a39c2f0a55419fff2056ff6fb6691fc0fa65f446578491,,2026-10-28T12:02:10+00:00,think
+Saimiri_boliviensis,Saimiri_sciureus,same-genus,6,1,659,timeout,timed out after 300s,300.14923214912415,3600,completed,0,232.61,127744,True,16474,36,99.56390066626287,0.9978147383756222,1.0,0.9989061740398639,16438,0,36,results/logs/Saimiri_boliviensis__Saimiri_sciureus__6X__r1__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Saimiri_sciureus__6X__r1__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Saimiri_sciureus__6X__r1__t3600.fasta,a0185f81a67dd62afd49241c3c0105a1e1d0a50ef6e9fc7a8dfe7c7552eb8216,,2026-10-28T12:03:37+00:00,think
+Saimiri_boliviensis,Saimiri_sciureus,same-genus,6,2,659,timeout,timed out after 300s,300.2391495704651,3600,completed,0,221.61,127872,True,16474,87,99.32719117468784,0.9985375662665286,0.9961702127659574,0.9973524847083168,16387,63,24,results/logs/Saimiri_boliviensis__Saimiri_sciureus__6X__r2__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Saimiri_sciureus__6X__r2__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Saimiri_sciureus__6X__r2__t3600.fasta,69a148a89d4039834f68c53595556778799893cd5187fb1d088319df60effa76,,2026-10-28T12:03:59+00:00,think
+Saimiri_boliviensis,Saimiri_sciureus,same-genus,7,1,769,timeout,timed out after 300s,300.1438844203949,3600,completed,0,230.4,127872,True,16474,30,99.69081539860564,0.9987245672638931,0.9994529872971495,0.9990886445106022,16444,9,21,results/logs/Saimiri_boliviensis__Saimiri_sciureus__7X__r1__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Saimiri_sciureus__7X__r1__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Saimiri_sciureus__7X__r1__t3600.fasta,c0bd92618a95e6ba3ad54dd5cdf9054d2fa3abe1e7b541d605b0ccb647a1c51f,,2026-10-28T12:04:43+00:00,think
+Saimiri_boliviensis,Saimiri_sciureus,same-genus,7,2,769,timeout,timed out after 300s,300.14229583740234,3600,completed,0,145.8,127872,True,16474,46,99.46116122782588,0.9973893509805112,0.9998174182946868,0.9986019086985594,16428,3,43,results/logs/Saimiri_boliviensis__Saimiri_sciureus__7X__r2__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Saimiri_sciureus__7X__r2__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Saimiri_sciureus__7X__r2__t3600.fasta,bfbb2b3566420166752d1a766e9875f0186d17cd246530189a86dc78e8a1e825,,2026-10-28T12:06:50+00:00,think
+Saimiri_boliviensis,Saimiri_sciureus,same-genus,8,1,879,timeout,timed out after 300s,300.12663173675537,3600,completed,0,169.32,128000,True,16474,39,99.52764488584751,0.9976326332402574,1.0,0.9988149138533532,16435,0,39,results/logs/Saimiri_boliviensis__Saimiri_sciureus__8X__r1__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Saimiri_sciureus__8X__r1__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Saimiri_sciureus__8X__r1__t3600.fasta,d52af47f17db292abeb64f609a58b8e10e5019150ebb885e198c8be5c886fe89,,2026-10-28T12:06:55+00:00,think
+Saimiri_boliviensis,Saimiri_sciureus,same-genus,8,2,879,timeout,timed out after 300s,300.13443326950073,3600,completed,0,155.01,127744,True,16474,64,99.22602491232314,0.9961150904455506,1.0,0.9980537647488139,16410,0,64,results/logs/Saimiri_boliviensis__Saimiri_sciureus__8X__r2__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Saimiri_sciureus__8X__r2__t3600.stderr.gz,results/assemblies/Saimiri_boliviensis__Saimiri_sciureus__8X__r2__t3600.fasta,1fc84737485b0ebf826982e8fa252ac306443f8bb44a185a7c0255e6b2f958e8,,2026-10-28T12:07:19+00:00,think
+Saimiri_boliviensis,Homo_sapiens,same-order,1,0,111,process_error,MIA exited -6; stdout tail:,38.60004496574402,3600,process_error,-6,30.12,127616,False,0,0,,,,,,,,results/logs/Saimiri_boliviensis__Homo_sapiens__1X__r0__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Homo_sapiens__1X__r0__t3600.stderr.gz,,,"MIA exited -6; stderr tail: rting assembly iteration 2
+Repeat and score filtering
+Starting assembly iteration 3
+Repeat and score filtering
+Starting assembly iteration 4
+Repeat and score filtering
+Starting assembly iteration 5
+Repeat and score filtering
+Starting assembly iteration 6
+*** buffer overflow detected ***: terminated
+",2026-10-28T12:10:11+00:00,think
+Saimiri_boliviensis,Varecia_variegata,same-order,2,0,227,process_error,MIA exited -11; stdout tail:,69.68072605133057,3600,process_error,-11,62.19,127872,False,0,0,,,,,,,,results/logs/Saimiri_boliviensis__Varecia_variegata__2X__r0__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Varecia_variegata__2X__r0__t3600.stderr.gz,,,"MIA exited -11; stderr tail: mbly consensus
+Starting assembly iteration 2
+Repeat and score filtering
+Starting assembly iteration 3
+Repeat and score filtering
+Starting assembly iteration 4
+Repeat and score filtering
+Starting assembly iteration 5
+Repeat and score filtering
+Starting assembly iteration 6
+Repeat and score filtering
+",2026-10-28T12:10:11+00:00,think
+Saimiri_boliviensis,Varecia_variegata,same-order,3,2,340,process_error,MIA exited -6; stdout tail:,91.83203864097595,3600,process_error,-6,86.85,128000,False,0,0,,,,,,,,results/logs/Saimiri_boliviensis__Varecia_variegata__3X__r2__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Varecia_variegata__3X__r2__t3600.stderr.gz,,,"MIA exited -6; stderr tail: and score filtering
+Generating new assembly consensus
+Starting assembly iteration 2
+Repeat and score filtering
+Starting assembly iteration 3
+Repeat and score filtering
+Starting assembly iteration 4
+Repeat and score filtering
+Starting assembly iteration 5
+*** buffer overflow detected ***: terminated
+",2026-10-28T12:10:11+00:00,think
+Saimiri_sciureus,Homo_sapiens,same-order,1,0,111,process_error,MIA exited -6; stdout tail:,28.487271547317505,3600,process_error,-6,34.54,127616,False,0,0,,,,,,,,results/logs/Saimiri_sciureus__Homo_sapiens__1X__r0__t3600.stdout.gz,results/logs/Saimiri_sciureus__Homo_sapiens__1X__r0__t3600.stderr.gz,,,"MIA exited -6; stderr tail: rting assembly iteration 3
+Repeat and score filtering
+Starting assembly iteration 4
+Repeat and score filtering
+Starting assembly iteration 5
+Repeat and score filtering
+Starting assembly iteration 6
+Repeat and score filtering
+Starting assembly iteration 7
+*** buffer overflow detected ***: terminated
+",2026-10-28T12:11:13+00:00,think
+Saimiri_boliviensis,Varecia_variegata,same-order,4,0,453,process_error,MIA exited -11; stdout tail:,135.48465156555176,3600,process_error,-11,114.32,128128,False,0,0,,,,,,,,results/logs/Saimiri_boliviensis__Varecia_variegata__4X__r0__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Varecia_variegata__4X__r0__t3600.stderr.gz,,,"MIA exited -11; stderr tail:  filtering
+Repeat and score filtering
+Generating new assembly consensus
+Starting assembly iteration 2
+Repeat and score filtering
+Starting assembly iteration 3
+Repeat and score filtering
+Starting assembly iteration 4
+Repeat and score filtering
+Starting assembly iteration 5
+Repeat and score filtering
+",2026-10-28T12:10:11+00:00,think
+Gorilla_gorilla,Varecia_variegata,same-order,4,0,453,process_error,MIA exited -6; stdout tail:,162.5801784992218,3600,process_error,-6,117.16,127872,False,0,0,,,,,,,,results/logs/Gorilla_gorilla__Varecia_variegata__4X__r0__t3600.stdout.gz,results/logs/Gorilla_gorilla__Varecia_variegata__4X__r0__t3600.stderr.gz,,,"MIA exited -6; stderr tail: and score filtering
+Generating new assembly consensus
+Starting assembly iteration 2
+Repeat and score filtering
+Starting assembly iteration 3
+Repeat and score filtering
+Starting assembly iteration 4
+Repeat and score filtering
+Starting assembly iteration 5
+*** buffer overflow detected ***: terminated
+",2026-10-28T12:10:11+00:00,think
+Saimiri_boliviensis,Varecia_variegata,same-order,4,2,453,process_error,MIA exited -6; stdout tail:,116.32218194007874,3600,process_error,-6,110.28,128256,False,0,0,,,,,,,,results/logs/Saimiri_boliviensis__Varecia_variegata__4X__r2__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Varecia_variegata__4X__r2__t3600.stderr.gz,,,"MIA exited -6; stderr tail: rting assembly iteration 2
+Repeat and score filtering
+Starting assembly iteration 3
+Repeat and score filtering
+Starting assembly iteration 4
+Repeat and score filtering
+Starting assembly iteration 5
+Repeat and score filtering
+Starting assembly iteration 6
+*** buffer overflow detected ***: terminated
+",2026-10-28T12:10:41+00:00,think
+Saimiri_sciureus,Varecia_variegata,same-order,2,1,227,process_error,MIA exited -11; stdout tail:,52.3168408870697,3600,process_error,-11,59.14,127744,False,0,0,,,,,,,,results/logs/Saimiri_sciureus__Varecia_variegata__2X__r1__t3600.stdout.gz,results/logs/Saimiri_sciureus__Varecia_variegata__2X__r1__t3600.stderr.gz,,,"MIA exited -11; stderr tail:  to align sequences to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assembly consensus
+Starting assembly iteration 2
+Repeat and score filtering
+Starting assembly iteration 3
+Repeat and score filtering
+Starting assembly iteration 4
+Repeat and score filtering
+",2026-10-28T12:11:48+00:00,think
+Saimiri_sciureus,Varecia_variegata,same-order,3,2,340,process_error,MIA exited -6; stdout tail:,72.35631680488586,3600,process_error,-6,77.03,128000,False,0,0,,,,,,,,results/logs/Saimiri_sciureus__Varecia_variegata__3X__r2__t3600.stdout.gz,results/logs/Saimiri_sciureus__Varecia_variegata__3X__r2__t3600.stderr.gz,,,"MIA exited -6; stderr tail: s to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assembly consensus
+Starting assembly iteration 2
+Repeat and score filtering
+Starting assembly iteration 3
+Repeat and score filtering
+Starting assembly iteration 4
+*** buffer overflow detected ***: terminated
+",2026-10-28T12:12:05+00:00,think
+Saimiri_boliviensis,Varecia_variegata,same-order,5,2,566,process_error,MIA exited -6; stdout tail:,139.77759909629822,3600,process_error,-6,122.85,128512,False,0,0,,,,,,,,results/logs/Saimiri_boliviensis__Varecia_variegata__5X__r2__t3600.stdout.gz,results/logs/Saimiri_boliviensis__Varecia_variegata__5X__r2__t3600.stderr.gz,,,"MIA exited -6; stderr tail: s to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assembly consensus
+Starting assembly iteration 2
+Repeat and score filtering
+Starting assembly iteration 3
+Repeat and score filtering
+Starting assembly iteration 4
+*** buffer overflow detected ***: terminated
+",2026-10-28T12:11:38+00:00,think
+Homo_sapiens,Varecia_variegata,same-order,8,1,905,process_error,MIA exited -11; stdout tail:,267.5333662033081,3600,process_error,-11,212.5,129152,False,0,0,,,,,,,,results/logs/Homo_sapiens__Varecia_variegata__8X__r1__t3600.stdout.gz,results/logs/Homo_sapiens__Varecia_variegata__8X__r1__t3600.stderr.gz,,,"MIA exited -11; stderr tail:  filtering
+Repeat and score filtering
+Generating new assembly consensus
+Starting assembly iteration 2
+Repeat and score filtering
+Starting assembly iteration 3
+Repeat and score filtering
+Starting assembly iteration 4
+Repeat and score filtering
+Starting assembly iteration 5
+Repeat and score filtering
+",2026-10-28T12:10:11+00:00,think
+Saimiri_sciureus,Varecia_variegata,same-order,4,0,453,process_error,MIA exited -11; stdout tail:,116.22400975227356,3600,process_error,-11,97.82,128128,False,0,0,,,,,,,,results/logs/Saimiri_sciureus__Varecia_variegata__4X__r0__t3600.stdout.gz,results/logs/Saimiri_sciureus__Varecia_variegata__4X__r0__t3600.stderr.gz,,,"MIA exited -11; stderr tail:  filtering
+Repeat and score filtering
+Generating new assembly consensus
+Starting assembly iteration 2
+Repeat and score filtering
+Starting assembly iteration 3
+Repeat and score filtering
+Starting assembly iteration 4
+Repeat and score filtering
+Starting assembly iteration 5
+Repeat and score filtering
+",2026-10-28T12:12:08+00:00,think
+Saimiri_sciureus,Varecia_variegata,same-order,4,2,453,process_error,MIA exited -6; stdout tail:,110.33557891845703,3600,process_error,-6,91.19,128256,False,0,0,,,,,,,,results/logs/Saimiri_sciureus__Varecia_variegata__4X__r2__t3600.stdout.gz,results/logs/Saimiri_sciureus__Varecia_variegata__4X__r2__t3600.stderr.gz,,,"MIA exited -6; stderr tail: and score filtering
+Generating new assembly consensus
+Starting assembly iteration 2
+Repeat and score filtering
+Starting assembly iteration 3
+Repeat and score filtering
+Starting assembly iteration 4
+Repeat and score filtering
+Starting assembly iteration 5
+*** buffer overflow detected ***: terminated
+",2026-10-28T12:12:31+00:00,think
+Saimiri_sciureus,Varecia_variegata,same-order,5,2,566,process_error,MIA exited -6; stdout tail:,143.7419731616974,3600,process_error,-6,113.71,128384,False,0,0,,,,,,,,results/logs/Saimiri_sciureus__Varecia_variegata__5X__r2__t3600.stdout.gz,results/logs/Saimiri_sciureus__Varecia_variegata__5X__r2__t3600.stderr.gz,,,"MIA exited -6; stderr tail: s to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assembly consensus
+Starting assembly iteration 2
+Repeat and score filtering
+Starting assembly iteration 3
+Repeat and score filtering
+Starting assembly iteration 4
+*** buffer overflow detected ***: terminated
+",2026-10-28T12:12:47+00:00,think
+Varecia_variegata,Homo_sapiens,same-order,6,1,663,process_error,MIA exited -11; stdout tail:,166.04018759727478,3600,process_error,-11,126.31,129536,False,0,0,,,,,,,,results/logs/Varecia_variegata__Homo_sapiens__6X__r1__t3600.stdout.gz,results/logs/Varecia_variegata__Homo_sapiens__6X__r1__t3600.stderr.gz,,,"MIA exited -11; stderr tail: wo/reads.fasta
+using /tmp/mia_followup_thzokywo/reference.fasta
+as reference at Wed Oct 28 19:13:22 2026
+
+Starting to align sequences to the reference...
+
+Repeat and score filtering
+Repeat and score filtering
+Generating new assembly consensus
+Starting assembly iteration 2
+Repeat and score filtering
+",2026-10-28T12:13:22+00:00,think
+Varecia_variegata,Aotus_azarai,same-order,6,0,663,process_error,MIA exited -6; stdout tail:,162.90516543388367,3600,process_error,-6,127.23,129536,False,0,0,,,,,,,,results/logs/Varecia_variegata__Aotus_azarai__6X__r0__t3600.stdout.gz,results/logs/Varecia_variegata__Aotus_azarai__6X__r0__t3600.stderr.gz,,,"MIA exited -6; stderr tail: and score filtering
+Generating new assembly consensus
+Starting assembly iteration 2
+Repeat and score filtering
+Starting assembly iteration 3
+Repeat and score filtering
+Starting assembly iteration 4
+Repeat and score filtering
+Starting assembly iteration 5
+*** buffer overflow detected ***: terminated
+",2026-10-28T12:13:41+00:00,think
+Varecia_variegata,Aotus_azarai,same-order,6,2,663,process_error,MIA exited -6; stdout tail:,146.75567412376404,3600,process_error,-6,126.94,129408,False,0,0,,,,,,,,results/logs/Varecia_variegata__Aotus_azarai__6X__r2__t3600.stdout.gz,results/logs/Varecia_variegata__Aotus_azarai__6X__r2__t3600.stderr.gz,,,"MIA exited -6; stderr tail: and score filtering
+Generating new assembly consensus
+Starting assembly iteration 2
+Repeat and score filtering
+Starting assembly iteration 3
+Repeat and score filtering
+Starting assembly iteration 4
+Repeat and score filtering
+Starting assembly iteration 5
+*** buffer overflow detected ***: terminated
+",2026-10-28T12:13:43+00:00,think
+Varecia_variegata,Aotus_azarai,same-order,8,1,883,process_error,MIA exited -6; stdout tail:,139.14162755012512,3600,process_error,-6,155.46,129792,False,0,0,,,,,,,,results/logs/Varecia_variegata__Aotus_azarai__8X__r1__t3600.stdout.gz,results/logs/Varecia_variegata__Aotus_azarai__8X__r1__t3600.stderr.gz,,,"MIA exited -6; stderr tail: rting assembly iteration 2
+Repeat and score filtering
+Starting assembly iteration 3
+Repeat and score filtering
+Starting assembly iteration 4
+Repeat and score filtering
+Starting assembly iteration 5
+Repeat and score filtering
+Starting assembly iteration 6
+*** buffer overflow detected ***: terminated
+",2026-10-28T12:13:46+00:00,think

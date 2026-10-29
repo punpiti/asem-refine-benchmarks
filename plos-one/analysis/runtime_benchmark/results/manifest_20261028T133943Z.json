@@ -1,0 +1,40 @@
+{
+  "host": "think",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.42",
+  "cpu_count": 16,
+  "python": "3.14.6 | packaged by conda-forge | (main, Aug 11 2026, 10:26:15) [GCC 14.4.0]",
+  "n_jobs": 288,
+  "timeout_s": 3600,
+  "methods": [
+    "ASEM",
+    "ASEM_recursive",
+    "ASEM_Hybrid",
+    "SRSC",
+    "Pilon",
+    "MIA",
+    "NOVOPlasty",
+    "GetOrganelle"
+  ],
+  "pairs": [
+    [
+      "Saimiri_boliviensis",
+      "Saimiri_sciureus"
+    ],
+    [
+      "Homo_sapiens",
+      "Gorilla_gorilla"
+    ],
+    [
+      "Homo_sapiens",
+      "Varecia_variegata"
+    ]
+  ],
+  "depths": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "replicates": 3,
+  "bench_scripts": "~/plos-reruns/bench-v1.3.0/scripts"
+}

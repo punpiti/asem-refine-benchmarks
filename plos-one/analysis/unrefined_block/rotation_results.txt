@@ -1,0 +1,12 @@
+Gorilla_gorilla->Homo_sapiens original rep0: F1=0.9790 identity=93.12 mismatch=1 missing_target=680
+Gorilla_gorilla->Homo_sapiens original rep1: F1=0.9790 identity=93.16 mismatch=1 missing_target=680
+Gorilla_gorilla->Homo_sapiens original rep2: F1=0.9790 identity=93.12 mismatch=1 missing_target=680
+Gorilla_gorilla->Homo_sapiens rotated rep0: F1=0.9772 identity=92.33 mismatch=5 missing_target=733
+Gorilla_gorilla->Homo_sapiens rotated rep1: F1=0.9761 identity=92.12 mismatch=13 missing_target=760
+Gorilla_gorilla->Homo_sapiens rotated rep2: F1=0.9761 identity=92.11 mismatch=13 missing_target=762
+Homo_sapiens->Gorilla_gorilla original rep0: F1=0.9851 identity=93.73 mismatch=1 missing_target=479
+Homo_sapiens->Gorilla_gorilla original rep1: F1=0.9849 identity=93.69 mismatch=7 missing_target=479
+Homo_sapiens->Gorilla_gorilla original rep2: F1=0.9851 identity=93.27 mismatch=1 missing_target=479
+Homo_sapiens->Gorilla_gorilla rotated rep0: F1=0.9818 identity=92.23 mismatch=7 missing_target=579
+Homo_sapiens->Gorilla_gorilla rotated rep1: F1=0.9817 identity=92.55 mismatch=8 missing_target=579
+Homo_sapiens->Gorilla_gorilla rotated rep2: F1=0.9819 identity=92.59 mismatch=2 missing_target=579

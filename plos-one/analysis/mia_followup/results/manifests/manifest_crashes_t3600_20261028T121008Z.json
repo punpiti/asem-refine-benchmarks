@@ -1,0 +1,137 @@
+{
+  "created_utc": "2026-10-28T12:10:08+00:00",
+  "host": "think",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.42",
+  "cpu_count": 16,
+  "python": "3.14.6 | packaged by conda-forge | (main, Aug 11 2026, 10:26:15) [GCC 14.4.0]",
+  "selection": "crashes",
+  "timeout_s": 3600,
+  "parallel": 6,
+  "n_jobs": 18,
+  "jobs": [
+    [
+      "Homo_sapiens",
+      "Varecia_variegata",
+      8,
+      1
+    ],
+    [
+      "Gorilla_gorilla",
+      "Varecia_variegata",
+      4,
+      0
+    ],
+    [
+      "Saimiri_boliviensis",
+      "Homo_sapiens",
+      1,
+      0
+    ],
+    [
+      "Saimiri_boliviensis",
+      "Varecia_variegata",
+      2,
+      0
+    ],
+    [
+      "Saimiri_boliviensis",
+      "Varecia_variegata",
+      3,
+      2
+    ],
+    [
+      "Saimiri_boliviensis",
+      "Varecia_variegata",
+      4,
+      0
+    ],
+    [
+      "Saimiri_boliviensis",
+      "Varecia_variegata",
+      4,
+      2
+    ],
+    [
+      "Saimiri_sciureus",
+      "Homo_sapiens",
+      1,
+      0
+    ],
+    [
+      "Saimiri_boliviensis",
+      "Varecia_variegata",
+      5,
+      2
+    ],
+    [
+      "Saimiri_sciureus",
+      "Varecia_variegata",
+      2,
+      1
+    ],
+    [
+      "Saimiri_sciureus",
+      "Varecia_variegata",
+      3,
+      2
+    ],
+    [
+      "Saimiri_sciureus",
+      "Varecia_variegata",
+      4,
+      0
+    ],
+    [
+      "Saimiri_sciureus",
+      "Varecia_variegata",
+      4,
+      2
+    ],
+    [
+      "Saimiri_sciureus",
+      "Varecia_variegata",
+      5,
+      2
+    ],
+    [
+      "Varecia_variegata",
+      "Homo_sapiens",
+      6,
+      1
+    ],
+    [
+      "Varecia_variegata",
+      "Aotus_azarai",
+      6,
+      0
+    ],
+    [
+      "Varecia_variegata",
+      "Aotus_azarai",
+      6,
+      2
+    ],
+    [
+      "Varecia_variegata",
+      "Aotus_azarai",
+      8,
+      1
+    ]
+  ],
+  "mia_bin": "~/.local/share/mamba/envs/mia-assembler/bin/mia",
+  "mia_sha256": "d8a7169fd769815c3b1da6e4ef6dd49d24299fc872b5ac7925fd7d79c7f77fa9",
+  "ma_bin": "~/.local/share/mamba/envs/mia-assembler/bin/ma",
+  "ma_sha256": "cb2035cba13c722c3a7b9e1f8f6ca80e4b56bde1361cc590e49d23a3af20a40b",
+  "mia_package": "bioconda mapping-iterative-assembler 1.0 h503566f_7",
+  "mia_flags": [
+    "-c",
+    "-D",
+    "-F"
+  ],
+  "read_length": 150,
+  "benchmark_repo_commit": "284b3472044f3e564d8e67bfe7d099ac3ed405cb",
+  "benchmark_repo_describe": "v1.3.0",
+  "benchmark_repo_dirty_scripts": "",
+  "original_csv": "asem-refine-benchmarks/scripts/results/ext_mia/grid_results.csv",
+  "original_csv_sha256": "7ed4d176aeb2e77f41249be75e3fb8d41041cd831bcf26c4ad1303491cd2d5d6"
+}
